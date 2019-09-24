@@ -15,6 +15,7 @@ do_tools_cpupower = true
 do_tools_perf   = true
 do_tools_x86	= true
 do_tools_hyperv	= false
+do_tools_bpftool = true
 do_extras_package = true
 do_tools_common = true
 do_zfs		= true
