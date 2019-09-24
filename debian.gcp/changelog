@@ -1,3 +1,9 @@
+linux-gcp (5.3.0-1001.1) eoan; urgency=medium
+
+  * Dummy entry.
+
+ -- Paolo Pisati <paolo.pisati@canonical.com>  Tue, 24 Sep 2019 13:02:18 +0200
+
 linux-gcp (5.0.0-1018.18) disco; urgency=medium
 
   * disco/linux-gcp: 5.0.0-1018.18 -proposed tracker (LP: #1844351)
