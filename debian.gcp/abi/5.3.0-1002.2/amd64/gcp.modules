@@ -1,4 +1,3 @@
-104-quad-8
 3c509
 3c574_cs
 3c589_cs
@@ -26,6 +25,7 @@
 842_decompress
 88pg86x
 88pm800
+88pm800-regulator
 88pm805
 88pm80x
 88pm80x_onkey
@@ -119,7 +119,6 @@ ad714x
 ad714x-i2c
 ad714x-spi
 ad7150
-ad7152
 ad7192
 ad7266
 ad7280a
@@ -444,7 +443,6 @@ authenc
 authencesn
 autofs4
 avm_cs
-avma1_cs
 avmfritz
 ax25
 ax88179_178a
@@ -483,7 +481,6 @@ baycom_par
 baycom_ser_fdx
 baycom_ser_hdx
 bcache
-bch
 bcm-phy-lib
 bcm-sf2
 bcm203x
@@ -609,7 +606,6 @@ ca8210
 cachefiles
 cadence_wdt
 cafe_ccic
-cafe_nand
 caif
 caif_hsi
 caif_serial
@@ -626,7 +622,6 @@ can-dev
 can-gw
 can-raw
 capi
-capidrv
 capmode
 capsule-loader
 carl9170
@@ -687,7 +682,6 @@ chacha20poly1305
 chacha_generic
 chaoskey
 charlcd
-chash
 chcr
 chipone_icn8505
 chipreg
@@ -776,7 +770,6 @@ cp210x
 cpcihp_generic
 cpcihp_zt5550
 cpia2
-cpsw_ale
 cpu5wdt
 cpuid
 cqhci
@@ -794,17 +787,20 @@ cros-ec-cec
 cros_ec_accel_legacy
 cros_ec_baro
 cros_ec_core
-cros_ec_ctl
+cros_ec_debugfs
 cros_ec_dev
 cros_ec_i2c
 cros_ec_keyb
 cros_ec_light_prox
+cros_ec_lightbar
 cros_ec_lpcs
 cros_ec_sensors
 cros_ec_sensors_core
 cros_ec_spi
+cros_ec_sysfs
 cros_kbd_led_backlight
 cros_usbpd-charger
+cros_usbpd_logger
 crvml
 cryptd
 crypto_engine
@@ -895,7 +891,6 @@ da9055_wdt
 da9062-core
 da9062-regulator
 da9062_wdt
-da9063-regulator
 da9063_onkey
 da9063_wdt
 da9150-charger
@@ -917,6 +912,8 @@ das6402
 das800
 davicom
 dax_pmem
+dax_pmem_compat
+dax_pmem_core
 db9
 dc395x
 dca
@@ -941,13 +938,10 @@ dell-wmi-aio
 dell-wmi-descriptor
 dell-wmi-led
 dell_rbu
-denali
-denali_pci
 des3_ede-x86_64
 des_generic
 designware_i2s
 device_dax
-devlink
 dfl
 dfl-afu
 dfl-fme
@@ -966,7 +960,6 @@ dib7000p
 dib8000
 dibx000_common
 digi_acceleport
-diskonchip
 dl2k
 dlci
 dlink-dir685-touchkeys
@@ -1022,6 +1015,7 @@ dptf_power
 drbd
 drm
 drm_kms_helper
+drm_vram_helper
 drm_xen_front
 drop_monitor
 drv260x
@@ -1046,7 +1040,6 @@ ds620
 dsa_core
 dsbr100
 dscc4
-dss1_divert
 dst
 dst_ca
 dstr
@@ -1155,6 +1148,7 @@ ebtables
 ec100
 ec_bhf
 ec_sys
+ecc
 ecdh_generic
 echainiv
 echo
@@ -1177,7 +1171,6 @@ einj
 ektf2127
 elan_i2c
 elo
-elsa_cs
 em28xx
 em28xx-alsa
 em28xx-dvb
@@ -1228,7 +1221,6 @@ ethoc
 eurotechwdt
 evbug
 exc3000
-exofs
 extcon-adc-jack
 extcon-arizona
 extcon-axp288
@@ -1322,11 +1314,6 @@ flexfb
 fm10k
 fm801-gp
 fm_drv
-fmc
-fmc-chardev
-fmc-fakedev
-fmc-trivial
-fmc-write-eeprom
 fmvj18x_cs
 fnic
 forcedeth
@@ -1341,7 +1328,6 @@ fpga-region
 freevxfs
 friq
 frpw
-fsa9480
 fscache
 fschmd
 fsl_lpuart
@@ -1432,7 +1418,6 @@ gp2ap002a00f
 gp2ap020a00f
 gp8psk-fe
 gpd-pocket-fan
-gpio
 gpio-104-dio-48e
 gpio-104-idi-48
 gpio-104-idio-16
@@ -1591,8 +1576,6 @@ hecubafb
 helene
 hexium_gemini
 hexium_orion
-hfc4s8s_l1
-hfc_usb
 hfcmulti
 hfcpci
 hfcsusb
@@ -1719,10 +1702,6 @@ hidp
 hih6130
 hinic
 hio
-hisax
-hisax_fcpcipnp
-hisax_isac
-hisax_st5481
 hmc5843_core
 hmc5843_i2c
 hmc5843_spi
@@ -1892,6 +1871,8 @@ ifb
 ife
 ifi_canfd
 iforce
+iforce-serio
+iforce-usb
 igb
 igbvf
 igc
@@ -1920,7 +1901,6 @@ imm
 imon
 imon_raw
 ims-pcu
-imx074
 ina209
 ina2xx
 ina2xx-adc
@@ -1976,7 +1956,8 @@ intel_powerclamp
 intel_punit_ipc
 intel_qat
 intel_quark_i2c_gpio
-intel_rapl
+intel_rapl_common
+intel_rapl_msr
 intel_soc_dts_iosf
 intel_soc_dts_thermal
 intel_soc_pmic_bxtwc
@@ -2007,7 +1988,6 @@ ip6_tables
 ip6_tunnel
 ip6_udp_tunnel
 ip6_vti
-ip6t_MASQUERADE
 ip6t_NPT
 ip6t_REJECT
 ip6t_SYNPROXY
@@ -2080,7 +2060,6 @@ ipr
 ips
 ipt_CLUSTERIP
 ipt_ECN
-ipt_MASQUERADE
 ipt_REJECT
 ipt_SYNPROXY
 ipt_ah
@@ -2118,8 +2097,6 @@ iscsi_boot_sysfs
 iscsi_ibft
 iscsi_target_mod
 iscsi_tcp
-isdn
-isdn_bsdcomp
 isdnhdlc
 isicom
 isight_firmware
@@ -2152,7 +2129,6 @@ ivtvfb
 iw_cm
 iw_cxgb3
 iw_cxgb4
-iw_nes
 iwl3945
 iwl4965
 iwldvm
@@ -2197,6 +2173,7 @@ keywrap
 kfifo_buf
 khazad
 kl5kusb105
+kmem
 kmx61
 kobil_sct
 ks0108
@@ -2272,7 +2249,6 @@ leds-lp5562
 leds-lp55xx-common
 leds-lp8501
 leds-lp8788
-leds-lt3593
 leds-max8997
 leds-mc13783
 leds-menf21bmc
@@ -2317,6 +2293,7 @@ lib80211_crypt_tkip
 lib80211_crypt_wep
 libahci
 libahci_platform
+libarc4
 libceph
 libcomposite
 libcxgb
@@ -2332,8 +2309,6 @@ libfcoe
 libipw
 libiscsi
 libiscsi_tcp
-libore
-libosd
 libsas
 lightning
 lineage-pem
@@ -2409,7 +2384,6 @@ ltc2945
 ltc2978
 ltc2990
 ltc3589
-ltc3651-charger
 ltc3676
 ltc3815
 ltc4151
@@ -2554,6 +2528,7 @@ maxim_thermocouple
 mb862xxfb
 mb86a16
 mb86a20s
+mc
 mc13783-adc
 mc13783-pwrbutton
 mc13783-regulator
@@ -2603,7 +2578,6 @@ mdio-mscc-miim
 mdio-thunder
 me4000
 me_daq
-media
 megaraid
 megaraid_mbox
 megaraid_mm
@@ -2719,7 +2693,6 @@ mptsas
 mptscsih
 mptspi
 mpu3050
-mq-deadline
 mrf24j40
 mrp
 ms5611_core
@@ -2762,7 +2735,6 @@ mt76x2-common
 mt76x2e
 mt76x2u
 mt9m111
-mt9t031
 mt9v011
 mtd
 mtd_blkdevs
@@ -2774,7 +2746,6 @@ mtdram
 mtdswap
 mtip32xx
 mtk-pmic-keys
-mtk-quadspi
 mtk-sd
 mtouch
 multipath
@@ -2814,11 +2785,8 @@ n_gsm
 n_hdlc
 n_tracerouter
 n_tracesink
-nand
-nand_bch
 nand_ecc
 nandcore
-nandsim
 national
 natsemi
 nau7802
@@ -2858,7 +2826,6 @@ nf_conntrack_h323
 nf_conntrack_irc
 nf_conntrack_netbios_ns
 nf_conntrack_pptp
-nf_conntrack_proto_gre
 nf_conntrack_sane
 nf_conntrack_sip
 nf_conntrack_snmp
@@ -2880,8 +2847,6 @@ nf_nat
 nf_nat_amanda
 nf_nat_ftp
 nf_nat_h323
-nf_nat_ipv4
-nf_nat_ipv6
 nf_nat_irc
 nf_nat_pptp
 nf_nat_sip
@@ -2918,10 +2883,7 @@ nfsd
 nfsv2
 nfsv3
 nfsv4
-nft_chain_nat_ipv4
-nft_chain_nat_ipv6
-nft_chain_route_ipv4
-nft_chain_route_ipv6
+nft_chain_nat
 nft_compat
 nft_connlimit
 nft_counter
@@ -2940,8 +2902,6 @@ nft_hash
 nft_limit
 nft_log
 nft_masq
-nft_masq_ipv4
-nft_masq_ipv6
 nft_nat
 nft_numgen
 nft_objref
@@ -2949,8 +2909,6 @@ nft_osf
 nft_queue
 nft_quota
 nft_redir
-nft_redir_ipv4
-nft_redir_ipv6
 nft_reject
 nft_reject_bridge
 nft_reject_inet
@@ -3045,7 +3003,6 @@ nls_utf8
 nmclan_cs
 nosy
 notifier-error-inject
-nouveau
 nozomi
 npcm750-pwm-fan
 ns558
@@ -3095,7 +3052,6 @@ ocfs2_stackglue
 ocrdma
 of_xilinx_wdt
 ofb
-olpc_apsp
 omfs
 omninet
 on20
@@ -3117,8 +3073,6 @@ orinoco_nortel
 orinoco_plx
 orinoco_tmd
 orinoco_usb
-osd
-osst
 oti6858
 otm3225a
 ov2640
@@ -3292,7 +3246,6 @@ pktcdvd
 pktgen
 pl2303
 plat-ram
-plat_nand
 platform_lcd
 plip
 plusb
@@ -3418,10 +3371,8 @@ r8188eu
 r8192e_pci
 r8192u_usb
 r820t
-r852
 r8712u
 r8723bs
-r8822be
 r8a66597-hcd
 r8a66597-udc
 radeon
@@ -3590,10 +3541,10 @@ rds
 rds_rdma
 rds_tcp
 realtek
+realtek-smi
 redboot
 redrat3
 reed_solomon
-regmap-sdw
 regmap-spmi
 regmap-w1
 regulator-haptic
@@ -3915,7 +3866,6 @@ sdhci_f_sdh30
 sdio_uart
 sdricoh_cs
 seco-cec
-sedlbauer_cs
 seed
 sensorhub
 ser_gigaset
@@ -3996,7 +3946,6 @@ sm501
 sm501fb
 sm712fb
 sm750fb
-sm_common
 sm_ftl
 smartpqi
 smb347-charger
@@ -4302,7 +4251,6 @@ snd-soc-sst-byt-cht-da7213
 snd-soc-sst-byt-cht-es8316
 snd-soc-sst-bytcr-rt5640
 snd-soc-sst-bytcr-rt5651
-snd-soc-sst-bytcr-rt5660
 snd-soc-sst-cht-bsw-max98090_ti
 snd-soc-sst-cht-bsw-nau8824
 snd-soc-sst-cht-bsw-rt5645
@@ -4390,18 +4338,6 @@ snd_xen_front
 snic
 snps_udc_core
 soc_button_array
-soc_camera
-soc_camera_platform
-soc_mediabus
-soc_mt9m001
-soc_mt9t112
-soc_mt9v022
-soc_ov5642
-soc_ov772x
-soc_ov9640
-soc_ov9740
-soc_rj54n1cb0c
-soc_tw9910
 softdog
 softing
 softing_cs
@@ -4410,7 +4346,6 @@ solos-pci
 sony-btf-mpx
 sony-laptop
 soundcore
-soundwire-bus
 soundwire-cadence
 soundwire-intel
 soundwire-intel-init
@@ -4465,7 +4400,6 @@ spi_ks8995
 spidev
 spinand
 spl
-splat
 spmi
 sr9700
 sr9800
@@ -4581,6 +4515,15 @@ sysimgblt
 sysv
 t1pci
 t5403
+tag_brcm
+tag_dsa
+tag_edsa
+tag_gswip
+tag_ksz
+tag_lan9303
+tag_mtk
+tag_qca
+tag_trailer
 tap
 target_core_file
 target_core_iblock
@@ -4659,7 +4602,6 @@ team_mode_random
 team_mode_roundrobin
 tef6862
 tehuti
-teles_cs
 teranetics
 test_power
 tg3
@@ -4704,7 +4646,6 @@ tm6000
 tm6000-alsa
 tm6000-dvb
 tmdc
-tmem
 tmp006
 tmp007
 tmp102
@@ -5001,7 +4942,6 @@ videobuf2-dvb
 videobuf2-memops
 videobuf2-v4l2
 videobuf2-vmalloc
-videocodec
 videodev
 vim2m
 viperboard
@@ -5188,14 +5128,7 @@ xen-scsifront
 xen-tpmfront
 xen_wdt
 xenfs
-xfrm4_mode_beet
-xfrm4_mode_transport
-xfrm4_mode_tunnel
 xfrm4_tunnel
-xfrm6_mode_beet
-xfrm6_mode_ro
-xfrm6_mode_transport
-xfrm6_mode_tunnel
 xfrm6_tunnel
 xfrm_algo
 xfrm_interface
@@ -5203,7 +5136,6 @@ xfrm_ipcomp
 xfrm_user
 xfs
 xgene-hwmon
-xgifb
 xhci-plat-hcd
 xilinx-pr-decoupler
 xilinx-spi
@@ -5228,6 +5160,7 @@ xt_HMARK
 xt_IDLETIMER
 xt_LED
 xt_LOG
+xt_MASQUERADE
 xt_NETMAP
 xt_NFLOG
 xt_NFQUEUE
@@ -5314,16 +5247,12 @@ zl10036
 zl10039
 zl10353
 zl6100
+zlua
 znvpair
 zopt2201
 zpa2326
 zpa2326_i2c
 zpa2326_spi
-zpios
-zr36016
-zr36050
-zr36060
-zr36067
 zr364xx
 zram
 zstd
