@@ -1,0 +1,12 @@
+repo_list=(
+	"http://archive.ubuntu.com/ubuntu/pool/main/l/linux-gcp-5.3"
+	"http://ports.ubuntu.com/ubuntu-ports/pool/main/l/linux-gcp-5.3"
+	"http://archive.ubuntu.com/ubuntu/pool/universe/l/linux-gcp-5.3"
+	"http://ports.ubuntu.com/ubuntu-ports/pool/universe/l/linux-gcp-5.3"
+	"http://ppa.launchpad.net/canonical-kernel-team/ppa/ubuntu/pool/main/l/linux-gcp-5.3"
+)
+
+package_prefixes linux-buildinfo
+
+getall amd64 gcp
+
