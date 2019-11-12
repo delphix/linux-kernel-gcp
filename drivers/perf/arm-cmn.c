@@ -1215,7 +1215,7 @@ static int arm_cmn_init_irqs(struct arm_cmn *cmn)
 			}
 		}
 		err = devm_request_irq(cmn->dev, irq, arm_cmn_handle_irq,
-				       IRQF_NOBALANCING | IRQF_NO_THREAD,
+				       IRQF_NOBALANCING | IRQF_NO_THREAD | IRQF_SHARED,
 				       dev_name(cmn->dev), &cmn->dtc[i]);
 		if (err)
 			return err;
