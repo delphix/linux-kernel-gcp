@@ -1641,7 +1641,7 @@ lio_xmit_failed:
 /** \brief Network device Tx timeout
  * @param netdev    pointer to network device
  */
-static void liquidio_tx_timeout(struct net_device *netdev)
+static void liquidio_tx_timeout(struct net_device *netdev, unsigned int txqueue)
 {
 	struct lio *lio;
 
