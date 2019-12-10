@@ -593,7 +593,7 @@ err_hw:
 }
 
 static void
-ltq_etop_tx_timeout(struct net_device *dev)
+ltq_etop_tx_timeout(struct net_device *dev, unsigned int txqueue)
 {
 	int err;
 
