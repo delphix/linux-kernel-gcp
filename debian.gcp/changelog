@@ -1,3 +1,9 @@
+linux-gcp-5.4 (5.4.0-1000.0) focal; urgency=medium
+
+  * Empty entry.
+
+ -- Paolo Pisati <paolo.pisati@canonical.com>  Wed, 05 Feb 2020 16:05:06 +0100
+
 linux-gcp (5.3.0-1012.13) eoan; urgency=medium
 
   * eoan/linux-gcp: 5.3.0-1012.13 -proposed tracker (LP: #1861205)
