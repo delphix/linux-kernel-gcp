@@ -1513,6 +1513,7 @@ gtco
 gtp
 guillemot
 gunze
+gve
 hackrf
 hamachi
 hampshire
@@ -4310,6 +4311,7 @@ solos-pci
 sony-btf-mpx
 sony-laptop
 soundcore
+soundwire-bus
 soundwire-cadence
 soundwire-intel
 soundwire-intel-init
