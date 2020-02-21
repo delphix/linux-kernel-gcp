@@ -1,3 +1,9 @@
+linux-gcp (5.4.0-1001.1) focal; urgency=medium
+
+  * Empty entry.
+
+ -- Paolo Pisati <paolo.pisati@canonical.com>  Fri, 21 Feb 2020 15:22:13 +0100
+
 linux-gcp-5.4 (5.4.0-1001.1) focal; urgency=medium
 
   * focal/linux-gcp-5.4: 5.4.0-1001.1 -proposed tracker (LP: #1862252)
