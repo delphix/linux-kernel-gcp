@@ -90,3 +90,6 @@ CONFIG_SND_SOC_SOF_HDA_COMMON_HDMI_CODEC	note<LP:#1848490> note<Ignored for linu
 
 CONFIG_LATENCYTOP								policy<{'amd64': '-'}>
 CONFIG_LATENCYTOP								note<Unnecessary for linux-gcp>
+
+CONFIG_X86_UV									policy<{'amd64': 'n'}>
+CONFIG_X86_UV									note<Unnecessary for linux-gcp>
