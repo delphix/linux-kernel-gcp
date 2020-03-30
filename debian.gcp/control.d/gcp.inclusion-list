@@ -89,6 +89,7 @@ drivers/net/ethernet/broadcom/bnx2x/*
 drivers/net/ethernet/broadcom/tg3.ko
 drivers/net/ethernet/dec/tulip/*
 drivers/net/ethernet/emulex/benet/*
+drivers/net/ethernet/google/gve/gve.ko
 drivers/net/ethernet/ibm/*
 drivers/net/ethernet/intel/e1000/e1000.ko
 drivers/net/ethernet/intel/e1000e/e1000e.ko
