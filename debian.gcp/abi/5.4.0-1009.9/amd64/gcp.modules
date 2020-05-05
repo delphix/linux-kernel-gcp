@@ -4033,6 +4033,7 @@ snd-indigodj
 snd-indigodjx
 snd-indigoio
 snd-indigoiox
+snd-intel-dspcfg
 snd-intel-sst-acpi
 snd-intel-sst-core
 snd-intel-sst-pci
