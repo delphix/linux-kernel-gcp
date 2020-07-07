@@ -4942,7 +4942,7 @@ EXPORT_SYMBOL	 net/rxrpc/rxrpc 0x00000000	rxrpc_kernel_end_call
 EXPORT_SYMBOL	 net/rxrpc/rxrpc 0x00000000	rxrpc_kernel_get_epoch
 EXPORT_SYMBOL	 net/rxrpc/rxrpc 0x00000000	rxrpc_kernel_get_peer
 EXPORT_SYMBOL	 net/rxrpc/rxrpc 0x00000000	rxrpc_kernel_get_reply_time
-EXPORT_SYMBOL	 net/rxrpc/rxrpc 0x00000000	rxrpc_kernel_get_rtt
+EXPORT_SYMBOL	 net/rxrpc/rxrpc 0x00000000	rxrpc_kernel_get_srtt
 EXPORT_SYMBOL	 net/rxrpc/rxrpc 0x00000000	rxrpc_kernel_new_call_notification
 EXPORT_SYMBOL	 net/rxrpc/rxrpc 0x00000000	rxrpc_kernel_recv_data
 EXPORT_SYMBOL	 net/rxrpc/rxrpc 0x00000000	rxrpc_kernel_send_data
@@ -5567,6 +5567,7 @@ EXPORT_SYMBOL	 vmlinux 0x00000000	__block_write_full_page
 EXPORT_SYMBOL	 vmlinux 0x00000000	__blockdev_direct_IO
 EXPORT_SYMBOL	 vmlinux 0x00000000	__bread_gfp
 EXPORT_SYMBOL	 vmlinux 0x00000000	__breadahead
+EXPORT_SYMBOL	 vmlinux 0x00000000	__breadahead_gfp
 EXPORT_SYMBOL	 vmlinux 0x00000000	__break_lease
 EXPORT_SYMBOL	 vmlinux 0x00000000	__brelse
 EXPORT_SYMBOL	 vmlinux 0x00000000	__cachemode2pte_tbl
@@ -16686,6 +16687,7 @@ EXPORT_SYMBOL_GPL	 net/sunrpc/sunrpc 0x00000000	write_bytes_to_xdr_buf
 EXPORT_SYMBOL_GPL	 net/sunrpc/sunrpc 0x00000000	xdr_buf_from_iov
 EXPORT_SYMBOL_GPL	 net/sunrpc/sunrpc 0x00000000	xdr_buf_read_mic
 EXPORT_SYMBOL_GPL	 net/sunrpc/sunrpc 0x00000000	xdr_buf_subsegment
+EXPORT_SYMBOL_GPL	 net/sunrpc/sunrpc 0x00000000	xdr_buf_trim
 EXPORT_SYMBOL_GPL	 net/sunrpc/sunrpc 0x00000000	xdr_commit_encode
 EXPORT_SYMBOL_GPL	 net/sunrpc/sunrpc 0x00000000	xdr_decode_array2
 EXPORT_SYMBOL_GPL	 net/sunrpc/sunrpc 0x00000000	xdr_decode_netobj
@@ -17025,7 +17027,9 @@ EXPORT_SYMBOL_GPL	 sound/hda/snd-hda-core 0x00000000	snd_hdac_regmap_add_vendor_
 EXPORT_SYMBOL_GPL	 sound/hda/snd-hda-core 0x00000000	snd_hdac_regmap_exit
 EXPORT_SYMBOL_GPL	 sound/hda/snd-hda-core 0x00000000	snd_hdac_regmap_init
 EXPORT_SYMBOL_GPL	 sound/hda/snd-hda-core 0x00000000	snd_hdac_regmap_read_raw
+EXPORT_SYMBOL_GPL	 sound/hda/snd-hda-core 0x00000000	snd_hdac_regmap_sync
 EXPORT_SYMBOL_GPL	 sound/hda/snd-hda-core 0x00000000	snd_hdac_regmap_update_raw
+EXPORT_SYMBOL_GPL	 sound/hda/snd-hda-core 0x00000000	snd_hdac_regmap_update_raw_once
 EXPORT_SYMBOL_GPL	 sound/hda/snd-hda-core 0x00000000	snd_hdac_regmap_write_raw
 EXPORT_SYMBOL_GPL	 sound/hda/snd-hda-core 0x00000000	snd_hdac_set_codec_wakeup
 EXPORT_SYMBOL_GPL	 sound/hda/snd-hda-core 0x00000000	snd_hdac_setup_channel_mapping
@@ -18361,6 +18365,7 @@ EXPORT_SYMBOL_GPL	 vmlinux 0x00000000	bd_link_disk_holder
 EXPORT_SYMBOL_GPL	 vmlinux 0x00000000	bd_unlink_disk_holder
 EXPORT_SYMBOL_GPL	 vmlinux 0x00000000	bdev_read_page
 EXPORT_SYMBOL_GPL	 vmlinux 0x00000000	bdev_write_page
+EXPORT_SYMBOL_GPL	 vmlinux 0x00000000	bdi_dev_name
 EXPORT_SYMBOL_GPL	 vmlinux 0x00000000	bind_evtchn_to_irq
 EXPORT_SYMBOL_GPL	 vmlinux 0x00000000	bind_evtchn_to_irqhandler
 EXPORT_SYMBOL_GPL	 vmlinux 0x00000000	bind_interdomain_evtchn_to_irq
