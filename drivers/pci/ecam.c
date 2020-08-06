@@ -166,7 +166,7 @@ struct pci_ecam_ops pci_32b_ops = {
 };
 
 /* ECAM ops for 32-bit read only (non-compliant) */
-struct pci_ecam_ops pci_32b_read_ops = {
+const struct pci_ecam_ops pci_32b_read_ops = {
 	.bus_shift	= 20,
 	.pci_ops	= {
 		.map_bus	= pci_ecam_map_bus,
