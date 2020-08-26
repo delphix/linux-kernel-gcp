@@ -1,3 +1,9 @@
+linux-gcp (5.8.0-1000.0) groovy; urgency=medium
+
+  * Empty entry.
+
+ -- Seth Forshee <seth.forshee@canonical.com>  Wed, 26 Aug 2020 12:48:52 -0500
+
 linux-gcp (5.4.0-1022.22) focal; urgency=medium
 
   * focal/linux-gcp: 5.4.0-1022.22 -proposed tracker (LP: #1890739)
