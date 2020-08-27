@@ -41,6 +41,7 @@ drivers/gpu/drm/ast/ast.ko
 drivers/gpu/drm/drm_kms_helper.ko
 drivers/gpu/drm/drm.ko
 drivers/gpu/drm/ttm/ttm.ko
+drivers/gpu/drm/vboxvideo/vboxvideo.ko
 drivers/hid/hid-generic.ko
 drivers/hid/hid-hyperv.ko
 drivers/hid/hid.ko
@@ -173,6 +174,7 @@ drivers/vfio/*
 drivers/vhost/*
 drivers/video/fbdev/*
 drivers/video/vgastate.ko
+drivers/virt/vboxguest/vboxguest.ko
 drivers/virtio/*
 drivers/watchdog/softdog.ko
 drivers/xen/*
@@ -205,6 +207,7 @@ fs/overlayfs/*
 fs/squashfs/*
 fs/udf/*
 fs/ufs/*
+fs/vboxsf/vboxsf.ko
 fs/xfs/*
 lib/*
 net/6lowpan/*
@@ -250,6 +253,4 @@ net/xfrm/*
 sound/drivers/pcsp/snd-pcsp.ko
 sound/pci/snd-ens1370.ko
 sound/soundcore.ko
-ubuntu/vbox/vboxguest/vboxguest.ko
-ubuntu/vbox/vboxsf/vboxsf.ko
 zfs/*
