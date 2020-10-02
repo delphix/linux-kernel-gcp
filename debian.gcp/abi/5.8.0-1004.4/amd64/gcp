@@ -20118,7 +20118,6 @@ EXPORT_SYMBOL_GPL	 vmlinux 0x00000000	edac_stop_work
 EXPORT_SYMBOL_GPL	 vmlinux 0x00000000	edid_info
 EXPORT_SYMBOL_GPL	 vmlinux 0x00000000	efi_capsule_supported
 EXPORT_SYMBOL_GPL	 vmlinux 0x00000000	efi_capsule_update
-EXPORT_SYMBOL_GPL	 vmlinux 0x00000000	efi_embedded_fw_list
 EXPORT_SYMBOL_GPL	 vmlinux 0x00000000	efi_get_embedded_fw
 EXPORT_SYMBOL_GPL	 vmlinux 0x00000000	efi_mm
 EXPORT_SYMBOL_GPL	 vmlinux 0x00000000	efi_query_variable_store
@@ -24024,6 +24023,8 @@ MCB EXPORT_SYMBOL_GPL 0x00000000	mcb_release_bus	drivers/mcb/mcb
 MCB EXPORT_SYMBOL_GPL 0x00000000	mcb_release_mem	drivers/mcb/mcb
 MCB EXPORT_SYMBOL_GPL 0x00000000	mcb_request_mem	drivers/mcb/mcb
 MCB EXPORT_SYMBOL_GPL 0x00000000	mcb_unregister_driver	drivers/mcb/mcb
+TEST_FIRMWARE EXPORT_SYMBOL_GPL 0x00000000	efi_embedded_fw_checked	vmlinux
+TEST_FIRMWARE EXPORT_SYMBOL_GPL 0x00000000	efi_embedded_fw_list	vmlinux
 USB_STORAGE EXPORT_SYMBOL_GPL 0x00000000	fill_inquiry_response	drivers/usb/storage/usb-storage
 USB_STORAGE EXPORT_SYMBOL_GPL 0x00000000	usb_stor_Bulk_reset	drivers/usb/storage/usb-storage
 USB_STORAGE EXPORT_SYMBOL_GPL 0x00000000	usb_stor_Bulk_transport	drivers/usb/storage/usb-storage
