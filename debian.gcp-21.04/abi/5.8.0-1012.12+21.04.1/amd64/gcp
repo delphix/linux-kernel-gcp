@@ -1218,8 +1218,8 @@ EXPORT_SYMBOL	 drivers/infiniband/core/ib_cm 0x00000000	ib_send_cm_rtu
 EXPORT_SYMBOL	 drivers/infiniband/core/ib_cm 0x00000000	ib_send_cm_sidr_rep
 EXPORT_SYMBOL	 drivers/infiniband/core/ib_cm 0x00000000	ib_send_cm_sidr_req
 EXPORT_SYMBOL	 drivers/infiniband/core/ib_cm 0x00000000	ibcm_reject_msg
+EXPORT_SYMBOL	 drivers/infiniband/core/ib_core 0x00000000	__ib_alloc_cq
 EXPORT_SYMBOL	 drivers/infiniband/core/ib_core 0x00000000	__ib_alloc_cq_any
-EXPORT_SYMBOL	 drivers/infiniband/core/ib_core 0x00000000	__ib_alloc_cq_user
 EXPORT_SYMBOL	 drivers/infiniband/core/ib_core 0x00000000	__ib_alloc_pd
 EXPORT_SYMBOL	 drivers/infiniband/core/ib_core 0x00000000	__ib_alloc_xrcd
 EXPORT_SYMBOL	 drivers/infiniband/core/ib_core 0x00000000	__ib_create_cq
@@ -1267,7 +1267,7 @@ EXPORT_SYMBOL	 drivers/infiniband/core/ib_core 0x00000000	ib_find_cached_pkey
 EXPORT_SYMBOL	 drivers/infiniband/core/ib_core 0x00000000	ib_find_exact_cached_pkey
 EXPORT_SYMBOL	 drivers/infiniband/core/ib_core 0x00000000	ib_find_gid
 EXPORT_SYMBOL	 drivers/infiniband/core/ib_core 0x00000000	ib_find_pkey
-EXPORT_SYMBOL	 drivers/infiniband/core/ib_core 0x00000000	ib_free_cq_user
+EXPORT_SYMBOL	 drivers/infiniband/core/ib_core 0x00000000	ib_free_cq
 EXPORT_SYMBOL	 drivers/infiniband/core/ib_core 0x00000000	ib_free_recv_mad
 EXPORT_SYMBOL	 drivers/infiniband/core/ib_core 0x00000000	ib_free_send_mad
 EXPORT_SYMBOL	 drivers/infiniband/core/ib_core 0x00000000	ib_get_cached_lmc
@@ -8542,6 +8542,7 @@ EXPORT_SYMBOL	 vmlinux 0x00000000	md_reap_sync_thread
 EXPORT_SYMBOL	 vmlinux 0x00000000	md_register_thread
 EXPORT_SYMBOL	 vmlinux 0x00000000	md_reload_sb
 EXPORT_SYMBOL	 vmlinux 0x00000000	md_set_array_sectors
+EXPORT_SYMBOL	 vmlinux 0x00000000	md_submit_discard_bio
 EXPORT_SYMBOL	 vmlinux 0x00000000	md_unregister_thread
 EXPORT_SYMBOL	 vmlinux 0x00000000	md_update_sb
 EXPORT_SYMBOL	 vmlinux 0x00000000	md_wait_for_blocked_rdev
@@ -10400,7 +10401,6 @@ EXPORT_SYMBOL	 vmlinux 0x00000000	tcf_idr_check_alloc
 EXPORT_SYMBOL	 vmlinux 0x00000000	tcf_idr_cleanup
 EXPORT_SYMBOL	 vmlinux 0x00000000	tcf_idr_create
 EXPORT_SYMBOL	 vmlinux 0x00000000	tcf_idr_create_from_flags
-EXPORT_SYMBOL	 vmlinux 0x00000000	tcf_idr_insert
 EXPORT_SYMBOL	 vmlinux 0x00000000	tcf_idr_search
 EXPORT_SYMBOL	 vmlinux 0x00000000	tcf_idrinfo_destroy
 EXPORT_SYMBOL	 vmlinux 0x00000000	tcf_queue_work
@@ -11199,6 +11199,8 @@ EXPORT_SYMBOL_GPL	 arch/x86/kvm/kvm 0x00000000	halt_poll_ns_shrink
 EXPORT_SYMBOL_GPL	 arch/x86/kvm/kvm 0x00000000	handle_fastpath_set_msr_irqoff
 EXPORT_SYMBOL_GPL	 arch/x86/kvm/kvm 0x00000000	handle_ud
 EXPORT_SYMBOL_GPL	 arch/x86/kvm/kvm 0x00000000	host_efer
+EXPORT_SYMBOL_GPL	 arch/x86/kvm/kvm 0x00000000	kvm_apic_clear_irr
+EXPORT_SYMBOL_GPL	 arch/x86/kvm/kvm 0x00000000	kvm_apic_has_interrupt
 EXPORT_SYMBOL_GPL	 arch/x86/kvm/kvm 0x00000000	kvm_apic_match_dest
 EXPORT_SYMBOL_GPL	 arch/x86/kvm/kvm 0x00000000	kvm_apic_set_eoi_accelerated
 EXPORT_SYMBOL_GPL	 arch/x86/kvm/kvm 0x00000000	kvm_apic_update_apicv
@@ -13671,7 +13673,6 @@ EXPORT_SYMBOL_GPL	 drivers/net/dsa/realtek-smi 0x00000000	realtek_smi_write_reg_
 EXPORT_SYMBOL_GPL	 drivers/net/dsa/realtek-smi 0x00000000	rtl8366_enable_vlan
 EXPORT_SYMBOL_GPL	 drivers/net/dsa/realtek-smi 0x00000000	rtl8366_enable_vlan4k
 EXPORT_SYMBOL_GPL	 drivers/net/dsa/realtek-smi 0x00000000	rtl8366_get_ethtool_stats
-EXPORT_SYMBOL_GPL	 drivers/net/dsa/realtek-smi 0x00000000	rtl8366_get_pvid
 EXPORT_SYMBOL_GPL	 drivers/net/dsa/realtek-smi 0x00000000	rtl8366_get_sset_count
 EXPORT_SYMBOL_GPL	 drivers/net/dsa/realtek-smi 0x00000000	rtl8366_get_strings
 EXPORT_SYMBOL_GPL	 drivers/net/dsa/realtek-smi 0x00000000	rtl8366_init_vlan
@@ -16699,6 +16700,7 @@ EXPORT_SYMBOL_GPL	 net/netfilter/nf_log_common 0x00000000	nf_log_dump_packet_com
 EXPORT_SYMBOL_GPL	 net/netfilter/nf_log_common 0x00000000	nf_log_dump_sk_uid_gid
 EXPORT_SYMBOL_GPL	 net/netfilter/nf_log_common 0x00000000	nf_log_dump_tcp_header
 EXPORT_SYMBOL_GPL	 net/netfilter/nf_log_common 0x00000000	nf_log_dump_udp_header
+EXPORT_SYMBOL_GPL	 net/netfilter/nf_log_common 0x00000000	nf_log_dump_vlan
 EXPORT_SYMBOL_GPL	 net/netfilter/nf_log_common 0x00000000	nf_log_l2packet
 EXPORT_SYMBOL_GPL	 net/netfilter/nf_nat 0x00000000	nf_ct_nat_ext_add
 EXPORT_SYMBOL_GPL	 net/netfilter/nf_nat 0x00000000	nf_nat_alloc_null_binding
