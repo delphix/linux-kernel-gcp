@@ -14346,6 +14346,7 @@ EXPORT_SYMBOL_GPL	 drivers/nvme/host/nvme-core 0x00000000	nvme_stop_ctrl
 EXPORT_SYMBOL_GPL	 drivers/nvme/host/nvme-core 0x00000000	nvme_stop_keep_alive
 EXPORT_SYMBOL_GPL	 drivers/nvme/host/nvme-core 0x00000000	nvme_stop_queues
 EXPORT_SYMBOL_GPL	 drivers/nvme/host/nvme-core 0x00000000	nvme_submit_sync_cmd
+EXPORT_SYMBOL_GPL	 drivers/nvme/host/nvme-core 0x00000000	nvme_sync_io_queues
 EXPORT_SYMBOL_GPL	 drivers/nvme/host/nvme-core 0x00000000	nvme_sync_queues
 EXPORT_SYMBOL_GPL	 drivers/nvme/host/nvme-core 0x00000000	nvme_try_sched_reset
 EXPORT_SYMBOL_GPL	 drivers/nvme/host/nvme-core 0x00000000	nvme_unfreeze
@@ -18374,9 +18375,13 @@ EXPORT_SYMBOL_GPL	 vmlinux 0x00000000	bdev_read_page
 EXPORT_SYMBOL_GPL	 vmlinux 0x00000000	bdev_write_page
 EXPORT_SYMBOL_GPL	 vmlinux 0x00000000	bdi_dev_name
 EXPORT_SYMBOL_GPL	 vmlinux 0x00000000	bind_evtchn_to_irq
+EXPORT_SYMBOL_GPL	 vmlinux 0x00000000	bind_evtchn_to_irq_lateeoi
 EXPORT_SYMBOL_GPL	 vmlinux 0x00000000	bind_evtchn_to_irqhandler
+EXPORT_SYMBOL_GPL	 vmlinux 0x00000000	bind_evtchn_to_irqhandler_lateeoi
 EXPORT_SYMBOL_GPL	 vmlinux 0x00000000	bind_interdomain_evtchn_to_irq
+EXPORT_SYMBOL_GPL	 vmlinux 0x00000000	bind_interdomain_evtchn_to_irq_lateeoi
 EXPORT_SYMBOL_GPL	 vmlinux 0x00000000	bind_interdomain_evtchn_to_irqhandler
+EXPORT_SYMBOL_GPL	 vmlinux 0x00000000	bind_interdomain_evtchn_to_irqhandler_lateeoi
 EXPORT_SYMBOL_GPL	 vmlinux 0x00000000	bind_virq_to_irqhandler
 EXPORT_SYMBOL_GPL	 vmlinux 0x00000000	bio_alloc_mddev
 EXPORT_SYMBOL_GPL	 vmlinux 0x00000000	bio_associate_blkg
@@ -23295,6 +23300,7 @@ EXPORT_SYMBOL_GPL	 vmlinux 0x00000000	xen_have_vector_callback
 EXPORT_SYMBOL_GPL	 vmlinux 0x00000000	xen_hvm_evtchn_do_upcall
 EXPORT_SYMBOL_GPL	 vmlinux 0x00000000	xen_in_preemptible_hcall
 EXPORT_SYMBOL_GPL	 vmlinux 0x00000000	xen_irq_from_gsi
+EXPORT_SYMBOL_GPL	 vmlinux 0x00000000	xen_irq_lateeoi
 EXPORT_SYMBOL_GPL	 vmlinux 0x00000000	xen_max_p2m_pfn
 EXPORT_SYMBOL_GPL	 vmlinux 0x00000000	xen_p2m_addr
 EXPORT_SYMBOL_GPL	 vmlinux 0x00000000	xen_p2m_size
