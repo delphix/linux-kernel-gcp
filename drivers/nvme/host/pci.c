@@ -2631,6 +2631,15 @@ static void nvme_reset_work(struct work_struct *work)
 	 */
 	dma_set_max_seg_size(dev->dev, 0xffffffff);
 
+	/*
+	 * LP #1943902
+	 * The following 2 defines are from 6c3c05b087ada8947cd31895f67e433070446234
+	 * in Linux 5.12 and not intended to be changed.
+	 */
+	#define NVME_CTRL_PAGE_SHIFT   12
+	#define NVME_CTRL_PAGE_SIZE    (1 << NVME_CTRL_PAGE_SHIFT)
+	dma_set_min_align_mask(dev->dev, NVME_CTRL_PAGE_SIZE - 1);
+
 	mutex_unlock(&dev->shutdown_lock);
 
 	/*
