@@ -3518,7 +3518,6 @@ rc5t583-regulator
 rcuperf
 rdc321x-southbridge
 rdma_cm
-rdma_rxe
 rdma_ucm
 rdmavt
 rds
