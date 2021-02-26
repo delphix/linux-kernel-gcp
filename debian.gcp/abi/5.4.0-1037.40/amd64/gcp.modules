@@ -494,7 +494,6 @@ bd6107
 bd9571mwv
 bd9571mwv-regulator
 bdc
-
 be2iscsi
 be2net
 befs
@@ -3518,6 +3517,7 @@ rc5t583-regulator
 rcuperf
 rdc321x-southbridge
 rdma_cm
+rdma_rxe
 rdma_ucm
 rdmavt
 rds
