@@ -1,3 +1,9 @@
+linux-gcp (5.11.0-1000.0) hirsute; urgency=medium
+
+  * Empty entry.
+
+ -- Seth Forshee <seth.forshee@canonical.com>  Wed, 10 Mar 2021 10:57:53 -0600
+
 linux-gcp (5.8.0-1024.25) groovy; urgency=medium
 
   * groovy/linux-gcp: 5.8.0-1024.25 -proposed tracker (LP: #1916132)
