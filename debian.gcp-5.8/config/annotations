@@ -98,3 +98,6 @@ CONFIG_SND_SOC_AMD_RENOIR                       policy<{'amd64': 'n'}>
 CONFIG_SND_SOC_AMD_RENOIR                       note<Unnecessary for linux-gcp>
 CONFIG_SND_SOC_AMD_RENOIR_MACH                  policy<{'amd64': 'n'}>
 CONFIG_SND_SOC_AMD_RENOIR_MACH                  note<Unnecessary for linux-gcp>
+
+CONFIG_DEBUG_INFO_BTF                           policy<{'amd64': 'n', 'arm64': 'n', 'armhf': 'n', 'ppc64el': 'n', 's390x': 'n'}>
+CONFIG_DEBUG_INFO_BTF                           flag<REVIEW> note<Might be useful for bpf, reuquires pahole to build>
