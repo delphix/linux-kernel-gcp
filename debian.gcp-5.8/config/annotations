@@ -101,3 +101,6 @@ CONFIG_SND_SOC_AMD_RENOIR_MACH                  note<Unnecessary for linux-gcp>
 
 CONFIG_DEBUG_INFO_BTF                           policy<{'amd64': 'n', 'arm64': 'n', 'armhf': 'n', 'ppc64el': 'n', 's390x': 'n'}>
 CONFIG_DEBUG_INFO_BTF                           flag<REVIEW> note<Might be useful for bpf, reuquires pahole to build>
+# Menu: Security options
+CONFIG_SECURITY_DMESG_RESTRICT                    policy<{'amd64': 'n', 'arm64': 'n', 'armhf': 'n', 'ppc64el': 'n', 's390x': 'n'}>
+CONFIG_SECURITY_DMESG_RESTRICT                    mark<ENFORCED>
