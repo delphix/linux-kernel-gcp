@@ -98,3 +98,5 @@ CONFIG_SND_SOC_AMD_RENOIR                       policy<{'amd64': 'n'}>
 CONFIG_SND_SOC_AMD_RENOIR                       note<Unnecessary for linux-gcp>
 CONFIG_SND_SOC_AMD_RENOIR_MACH                  policy<{'amd64': 'n'}>
 CONFIG_SND_SOC_AMD_RENOIR_MACH                  note<Unnecessary for linux-gcp>
+CONFIG_ATARI_PARTITION                             policy<{'amd64': 'n'}>
+CONFIG_ATARI_PARTITION                             mark<ENFORCED> note<LP:1908264>
