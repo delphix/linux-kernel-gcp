@@ -87,6 +87,7 @@ CONFIG_SND_SOC_SOF_HDA_LINK 			note<LP:#1848490> note<Ignored for linux-gcp>
 CONFIG_SND_SOC_SOF_NOCODEC_SUPPORT 		note<LP:#1848490> note<Ignored for linux-gcp>
 CONFIG_SND_SOC_SOF_HDA_AUDIO_CODEC 		note<LP:#1848490> note<Ignored for linux-gcp>
 CONFIG_SND_SOC_SOF_HDA_COMMON_HDMI_CODEC	note<LP:#1848490> note<Ignored for linux-gcp>
+CONFIG_SND_SOC_SOF_HDA_ALWAYS_ENABLE_DMI_L1		note<LP:#1848490> note<Ignored for linux-gcp>
 
 CONFIG_LATENCYTOP								policy<{'amd64': '-'}>
 CONFIG_LATENCYTOP								note<Unnecessary for linux-gcp>
