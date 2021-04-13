@@ -7177,7 +7177,6 @@ EXPORT_SYMBOL	 vmlinux 0x4dc7b9d5	inet_sk_set_state
 EXPORT_SYMBOL	 vmlinux 0x4dca08ee	sync_file_get_fence
 EXPORT_SYMBOL	 vmlinux 0x4dcfec3a	request_firmware
 EXPORT_SYMBOL	 vmlinux 0x4dd1e516	md_bitmap_end_sync
-EXPORT_SYMBOL	 vmlinux 0x4dd210d1	follow_pte_pmd
 EXPORT_SYMBOL	 vmlinux 0x4ddb2a98	mr_rtm_dumproute
 EXPORT_SYMBOL	 vmlinux 0x4dddbdfb	gro_cells_init
 EXPORT_SYMBOL	 vmlinux 0x4de995ec	gen_pool_dma_alloc_algo
@@ -18702,6 +18701,7 @@ EXPORT_SYMBOL_GPL	 vmlinux 0x2e7279ce	debugfs_create_blob
 EXPORT_SYMBOL_GPL	 vmlinux 0x2e78702e	kmsg_dump_get_line
 EXPORT_SYMBOL_GPL	 vmlinux 0x2e7eccf9	lp8788_update_bits
 EXPORT_SYMBOL_GPL	 vmlinux 0x2e7f08f9	serial8250_release_dma
+EXPORT_SYMBOL_GPL	 vmlinux 0x2e992168	follow_pte
 EXPORT_SYMBOL_GPL	 vmlinux 0x2e9be673	sysfs_rename_link_ns
 EXPORT_SYMBOL_GPL	 vmlinux 0x2eaa24ac	serial8250_init_port
 EXPORT_SYMBOL_GPL	 vmlinux 0x2eb6156f	phy_led_triggers_unregister
@@ -18713,7 +18713,6 @@ EXPORT_SYMBOL_GPL	 vmlinux 0x2ece1002	nf_ct_netns_get
 EXPORT_SYMBOL_GPL	 vmlinux 0x2ee300ce	security_file_ioctl
 EXPORT_SYMBOL_GPL	 vmlinux 0x2ee7c52b	btree_visitor
 EXPORT_SYMBOL_GPL	 vmlinux 0x2ef1a81e	edac_raw_mc_handle_error
-EXPORT_SYMBOL_GPL	 vmlinux 0x2ef4a88a	xhci_init_driver
 EXPORT_SYMBOL_GPL	 vmlinux 0x2ef506f5	i2c_recover_bus
 EXPORT_SYMBOL_GPL	 vmlinux 0x2ef6bf89	xenbus_dev_changed
 EXPORT_SYMBOL_GPL	 vmlinux 0x2f0621a3	pci_load_and_free_saved_state
@@ -20369,6 +20368,7 @@ EXPORT_SYMBOL_GPL	 vmlinux 0x77ae495d	usb_speed_string
 EXPORT_SYMBOL_GPL	 vmlinux 0x77b0f761	i2c_acpi_find_bus_speed
 EXPORT_SYMBOL_GPL	 vmlinux 0x77c99ad7	sock_diag_register
 EXPORT_SYMBOL_GPL	 vmlinux 0x77ca08a5	xsk_reuseq_prepare
+EXPORT_SYMBOL_GPL	 vmlinux 0x77d495a3	xhci_init_driver
 EXPORT_SYMBOL_GPL	 vmlinux 0x77e94cc1	account_locked_vm
 EXPORT_SYMBOL_GPL	 vmlinux 0x77eb2fe7	__hrtimer_get_remaining
 EXPORT_SYMBOL_GPL	 vmlinux 0x77ecf68d	memalloc_socks_key
@@ -21802,6 +21802,7 @@ EXPORT_SYMBOL_GPL	 vmlinux 0xb7329c06	clk_set_phase
 EXPORT_SYMBOL_GPL	 vmlinux 0xb73713d7	nvmem_add_cell_lookups
 EXPORT_SYMBOL_GPL	 vmlinux 0xb7534f4f	perf_event_disable
 EXPORT_SYMBOL_GPL	 vmlinux 0xb75e5db1	devm_gpiod_put_array
+EXPORT_SYMBOL_GPL	 vmlinux 0xb761318b	sev_active
 EXPORT_SYMBOL_GPL	 vmlinux 0xb76aa141	raw_hash_sk
 EXPORT_SYMBOL_GPL	 vmlinux 0xb77e677d	nf_ct_helper_expectfn_find_by_symbol
 EXPORT_SYMBOL_GPL	 vmlinux 0xb78017ed	acpi_initialize_hp_context
