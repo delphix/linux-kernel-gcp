@@ -4,6 +4,9 @@
 
 include "../../debian.master/config/annotations"
 
+CONFIG_SAMPLE_TRACE_PRINTK                     policy<{'amd64': '-'}>
+CONFIG_SND_SOC_SOF_HDA_ALWAYS_ENABLE_DMI_L1    policy<{'amd64': '-'}>
+
 # Menu: Device Drivers >> Block devices
 CONFIG_BLK_DEV_FD                               policy<{'amd64': 'n'}>
 #
