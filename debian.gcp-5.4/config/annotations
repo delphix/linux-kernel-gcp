@@ -83,6 +83,11 @@ CONFIG_NF_CT_NETLINK                            flag<ENFORCE> note<initial packa
 CONFIG_NF_CONNTRACK_PROCFS                      flag<DEPRECATED>
 
 #
+CONFIG_SAMPLE_TRACE_PRINTK                      policy<{'amd64': '-'}>
+#
+CONFIG_SAMPLE_TRACE_PRINTK                      mark<ENFORCED> note<Required for ftrace selftests>
+
+#
 CONFIG_SND_SOC_SOF_HDA_LINK 			note<LP:#1848490> note<Ignored for linux-gcp>
 CONFIG_SND_SOC_SOF_NOCODEC_SUPPORT 		note<LP:#1848490> note<Ignored for linux-gcp>
 CONFIG_SND_SOC_SOF_HDA_AUDIO_CODEC 		note<LP:#1848490> note<Ignored for linux-gcp>
@@ -98,3 +103,5 @@ CONFIG_SND_SOC_AMD_RENOIR                       policy<{'amd64': 'n'}>
 CONFIG_SND_SOC_AMD_RENOIR                       note<Unnecessary for linux-gcp>
 CONFIG_SND_SOC_AMD_RENOIR_MACH                  policy<{'amd64': 'n'}>
 CONFIG_SND_SOC_AMD_RENOIR_MACH                  note<Unnecessary for linux-gcp>
+CONFIG_ATARI_PARTITION                             policy<{'amd64': 'n'}>
+CONFIG_ATARI_PARTITION                             mark<ENFORCED> note<LP:1908264>
