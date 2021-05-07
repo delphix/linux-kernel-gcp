@@ -3161,8 +3161,6 @@ null_blk
 nuvoton-cir
 nv_tco
 nvidiafb
-nvme
-nvme-core
 nvme-fabrics
 nvme-fc
 nvme-loop
