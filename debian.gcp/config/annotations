@@ -15,12 +15,12 @@ CONFIG_I2C_AMD_MP2				policy<{'amd64': 'n'}>
 CONFIG_I2C_AMD_MP2				mark<ENFORCED> note<not relevant for gcp>
 
 # Menu: Device Drivers >> Network device support >> Wireless LAN >> Atheros/Qualcomm devices
-CONFIG_WCN36XX_SNAPDRAGON_HACKS			policy<{'amd64': 'n'}>
+CONFIG_WCN36XX_SNAPDRAGON_HACKS			policy<{'amd64': '-'}>
 #
 CONFIG_WCN36XX_SNAPDRAGON_HACKS			mark<ENFORCED> note<not relevant for gcp>
 
 # Menu: Device Drivers >> PTP clock support >> PTP clock support
-CONFIG_DP83640_PHY                              policy<{'amd64': 'n'}>
+CONFIG_DP83640_PHY                              policy<{'amd64': '-'}>
 #
 CONFIG_DP83640_PHY                              mark<ENFORCED> note<LP:1785816> note<not relevant for gcp>
 
@@ -49,14 +49,14 @@ CONFIG_BOOTPARAM_HARDLOCKUP_PANIC               mark<ENFORCED> note<initial pack
 CONFIG_BOOTPARAM_SOFTLOCKUP_PANIC               mark<ENFORCED> note<initial packaging>
 
 # Menu: Library routines
-CONFIG_RAID6_PQ_DEFAULT_ALG			policy<'amd64': 'avx2x4'>
-CONFIG_RAID6_PQ_DEFAULT_ALG_BOOL		policy<'amd64': 'y'>
+CONFIG_RAID6_PQ_DEFAULT_ALG			policy<{'amd64': '-'}>
+CONFIG_RAID6_PQ_DEFAULT_ALG_BOOL		policy<{'amd64': '-'}>
 #
 CONFIG_RAID6_PQ_DEFAULT_ALG			mark<ENFORCED> note<LP:1812728>
 CONFIG_RAID6_PQ_DEFAULT_ALG_BOOL		mark<ENFORCED> note<LP:1812728>
 
 # Menu: Networking support >> Bluetooth subsystem support >> Bluetooth device drivers
-CONFIG_BT_QCOMSMD_HACK				policy<{'amd64': 'n'}>
+CONFIG_BT_QCOMSMD_HACK				policy<{'amd64': '-'}>
 #
 CONFIG_BT_QCOMSMD_HACK				mark<ENFORCED> note<not relevant for gcp>
 
