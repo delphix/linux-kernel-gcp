@@ -108,3 +108,5 @@ CONFIG_SND_SOC_AMD_RENOIR_MACH                  note<Unnecessary for linux-gcp>
 
 CONFIG_BLK_DEV_NVME                             policy<{'amd64': 'y'}>
 CONFIG_BLK_DEV_NVME                             mark<ENFORCED> note<Needed for minimal images>
+CONFIG_SECURITY_DMESG_RESTRICT                  policy<{'amd64': 'n', 'arm64': 'n', 'armhf': 'n', 'ppc64el': 'n', 's390x': 'n'}>
+CONFIG_SECURITY_DMESG_RESTRICT                    mark<ENFORCED>
