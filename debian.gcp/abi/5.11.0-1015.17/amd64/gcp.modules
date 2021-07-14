@@ -417,7 +417,6 @@ ath10k_sdio
 ath10k_usb
 ath11k
 ath11k_pci
-ath3k
 ath5k
 ath6kl_core
 ath6kl_sdio
@@ -497,7 +496,6 @@ bcache
 bch
 bcm-phy-lib
 bcm-sf2
-bcm203x
 bcm3510
 bcm54140
 bcm590xx
@@ -522,7 +520,6 @@ belkin_sa
 bfa
 bfq
 bfs
-bfusb
 bh1750
 bh1770glc
 bh1780
@@ -535,9 +532,6 @@ blocklayoutdriver
 blowfish-x86_64
 blowfish_common
 blowfish_generic
-bluecard_cs
-bluetooth
-bluetooth_6lowpan
 bma150
 bma220_spi
 bma400_core
@@ -562,7 +556,6 @@ bmp280
 bmp280-i2c
 bmp280-spi
 bna
-bnep
 bnx2
 bnx2fc
 bnx2i
@@ -570,7 +563,6 @@ bnx2x
 bnxt_en
 bnxt_re
 bonding
-bpa10x
 bpck
 bpfilter
 bpqether
@@ -593,24 +585,13 @@ brd
 bridge
 broadcom
 bsd_comp
-bt3c_cs
 bt819
 bt856
 bt866
 bt878
-btbcm
 btcoexist
-btintel
-btmrvl
-btmrvl_sdio
-btmtkuart
-btqca
 btrfs
-btrsi
-btrtl
-btsdio
 bttv
-btusb
 bu21013_ts
 bu21029_ts
 budget
@@ -762,7 +743,6 @@ cma3000_d0x
 cma3000_d0x_i2c
 cmac
 cmdlinepart
-cmtp
 cnic
 cobalt
 cobra
@@ -1094,7 +1074,6 @@ dt282x
 dt3000
 dt3155
 dt9812
-dtl1_cs
 dummy
 dummy-irq
 dummy_stm
@@ -1608,9 +1587,6 @@ hampshire
 hangcheck-timer
 hanwang
 hci
-hci_nokia
-hci_uart
-hci_vhci
 hd3ss3220
 hd44780
 hd44780_common
@@ -1695,7 +1671,6 @@ hid-lenovo
 hid-lg-g15
 hid-logitech
 hid-logitech-dj
-hid-logitech-hidpp
 hid-magicmouse
 hid-mcp2221
 hid-mf
@@ -1761,7 +1736,6 @@ hid-xinmo
 hid-zpff
 hid-zydacron
 hideep
-hidp
 hih6130
 hinic
 hio
@@ -2254,7 +2228,6 @@ kcomedilib
 ke_counter
 kempld-core
 kempld_wdt
-kernelcapi
 keyspan
 keyspan_pda
 keyspan_remote
@@ -3748,7 +3721,6 @@ retu-pwrbutton
 retu_wdt
 rfc1051
 rfc1201
-rfcomm
 rfd77402
 rfd_ftl
 rfkill-gpio
@@ -4886,7 +4858,6 @@ tmp421
 tmp513
 topstar-laptop
 toshiba_acpi
-toshiba_bluetooth
 toshiba_haps
 toshsd
 touchit213
