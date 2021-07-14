@@ -61,11 +61,6 @@ CONFIG_RAID6_PQ_DEFAULT_ALG_BOOL		policy<{'amd64': '-'}>
 CONFIG_RAID6_PQ_DEFAULT_ALG			mark<ENFORCED> note<LP:1812728>
 CONFIG_RAID6_PQ_DEFAULT_ALG_BOOL		mark<ENFORCED> note<LP:1812728>
 
-# Menu: Networking support >> Bluetooth subsystem support >> Bluetooth device drivers
-CONFIG_BT_QCOMSMD_HACK				policy<{'amd64': '-'}>
-#
-CONFIG_BT_QCOMSMD_HACK				mark<ENFORCED> note<not relevant for gcp>
-
 # Menu: Networking support >> Networking options
 CONFIG_NETWORK_PHY_TIMESTAMPING                 policy<{'amd64': 'n'}>
 #
