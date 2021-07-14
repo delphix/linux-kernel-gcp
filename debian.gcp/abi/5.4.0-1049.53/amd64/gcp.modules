@@ -398,7 +398,6 @@ ath10k_core
 ath10k_pci
 ath10k_sdio
 ath10k_usb
-ath3k
 ath5k
 ath6kl_core
 ath6kl_sdio
@@ -480,7 +479,6 @@ baycom_ser_hdx
 bcache
 bcm-phy-lib
 bcm-sf2
-bcm203x
 bcm3510
 bcm590xx
 bcm590xx-regulator
@@ -501,7 +499,6 @@ belkin_sa
 bfa
 bfq
 bfs
-bfusb
 bh1750
 bh1770glc
 bh1780
@@ -511,9 +508,6 @@ blocklayoutdriver
 blowfish-x86_64
 blowfish_common
 blowfish_generic
-bluecard_cs
-bluetooth
-bluetooth_6lowpan
 bma150
 bma180
 bma220_spi
@@ -536,7 +530,6 @@ bmp280
 bmp280-i2c
 bmp280-spi
 bna
-bnep
 bnx2
 bnx2fc
 bnx2i
@@ -545,7 +538,6 @@ bnxt_en
 bnxt_re
 bochs-drm
 bonding
-bpa10x
 bpck
 bpfilter
 bpqether
@@ -566,25 +558,13 @@ brd
 bridge
 broadcom
 bsd_comp
-bt3c_cs
 bt819
 bt856
 bt866
 bt878
-btbcm
 btcoexist
-btintel
-btmrvl
-btmrvl_sdio
-btmtkuart
-btqca
 btrfs
-btrsi
-btrtl
-btsdio
 bttv
-btusb
-btwilink
 bu21013_ts
 bu21029_ts
 budget
@@ -736,7 +716,6 @@ cma3000_d0x
 cma3000_d0x_i2c
 cmac
 cmdlinepart
-cmtp
 cnic
 cobalt
 cobra
@@ -1055,7 +1034,6 @@ dt282x
 dt3000
 dt3155
 dt9812
-dtl1_cs
 dummy
 dummy-irq
 dummy_stm
@@ -1528,9 +1506,6 @@ hampshire
 hangcheck-timer
 hanwang
 hci
-hci_nokia
-hci_uart
-hci_vhci
 hd44780
 hdaps
 hdc100x
@@ -1673,7 +1648,6 @@ hid-xinmo
 hid-zpff
 hid-zydacron
 hideep
-hidp
 hih6130
 hinic
 hio
@@ -3539,7 +3513,6 @@ retu-pwrbutton
 retu_wdt
 rfc1051
 rfc1201
-rfcomm
 rfd77402
 rfd_ftl
 rfkill-gpio
