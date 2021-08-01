@@ -103,3 +103,15 @@ CONFIG_SND_SOC_AMD_RENOIR_MACH                  note<Unnecessary for linux-gcp>
 
 CONFIG_BLK_DEV_NVME                             policy<{'amd64': 'y'}>
 CONFIG_BLK_DEV_NVME                             mark<ENFORCED> note<Needed for minimal images>
+
+CONFIG_ANDROID                                  policy<{'amd64': 'y'}>
+CONFIG_ANDROID                                  mark<ENFORCED> note<needed for Anbox - LP #1928686>
+CONFIG_ANDROID_BINDERFS                         policy<{'amd64': 'm'}>
+CONFIG_ANDROID_BINDERFS                         mark<ENFORCED> note<needed for Anbox - LP #1928686>
+CONFIG_ANDROID_BINDER_DEVICES                   policy<{'amd64': '""'}>
+CONFIG_ANDROID_BINDER_DEVICES                   mark<ENFORCED> note<needed for Anbox - LP #1928686>
+CONFIG_ANDROID_BINDER_IPC                       policy<{'amd64': 'm'}>
+CONFIG_ANDROID_BINDER_IPC                       mark<ENFORCED> note<needed for Anbox - LP #1928686>
+CONFIG_ASHMEM                                   policy<{'amd64': 'm'}>
+CONFIG_ASHMEM                                   mark<ENFORCED> note<needed for Anbox - LP #1928686>
+
