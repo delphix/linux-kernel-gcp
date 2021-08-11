@@ -388,6 +388,7 @@ as73211
 asb100
 asc7621
 ascot2e
+ashmem_linux
 asix
 aspeed-pwm-tacho
 aspeed-video
@@ -523,6 +524,7 @@ bfs
 bh1750
 bh1770glc
 bh1780
+binder_linux
 binfmt_misc
 blake2b_generic
 blake2s-x86_64
@@ -1671,6 +1673,7 @@ hid-lenovo
 hid-lg-g15
 hid-logitech
 hid-logitech-dj
+hid-logitech-hidpp
 hid-magicmouse
 hid-mcp2221
 hid-mf
@@ -4858,6 +4861,7 @@ tmp421
 tmp513
 topstar-laptop
 toshiba_acpi
+toshiba_bluetooth
 toshiba_haps
 toshsd
 touchit213
