@@ -371,6 +371,7 @@ as5011
 asb100
 asc7621
 ascot2e
+ashmem_linux
 asix
 aspeed-pwm-tacho
 aspeed-video
@@ -502,6 +503,7 @@ bfs
 bh1750
 bh1770glc
 bh1780
+binder_linux
 binfmt_misc
 block2mtd
 blocklayoutdriver
@@ -4943,6 +4945,7 @@ vport-vxlan
 vpx3220
 vrf
 vringh
+vsoc
 vsock
 vsock_diag
 vsockmon
