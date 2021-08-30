@@ -5349,7 +5349,6 @@ xhci-pci-renesas
 xhci-plat-hcd
 xilinx-pr-decoupler
 xilinx-spi
-xilinx_dpdma
 xilinx_gmii2rgmii
 xillybus_core
 xillybus_pcie
