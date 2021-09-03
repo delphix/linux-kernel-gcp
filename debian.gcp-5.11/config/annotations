@@ -115,5 +115,8 @@ CONFIG_ANDROID_BINDER_IPC                       mark<ENFORCED> note<needed for A
 CONFIG_ASHMEM                                   policy<{'amd64': 'm'}>
 CONFIG_ASHMEM                                   mark<ENFORCED> note<needed for Anbox - LP #1928686>
 
+
+CONFIG_SND_SOC_INTEL_SKYLAKE_HDAUDIO_CODEC      policy<{'amd64': 'n'}>
+CONFIG_SND_SOC_INTEL_SKYLAKE_HDAUDIO_CODEC      mark<ENFORCED> note<required in master but not gcp>
 CONFIG_SECURITY_DMESG_RESTRICT                  policy<{'amd64': 'n', 'arm64': 'n', 'armhf': 'n', 'ppc64el': 'n', 's390x': 'n'}>
 CONFIG_SECURITY_DMESG_RESTRICT                    mark<ENFORCED>
