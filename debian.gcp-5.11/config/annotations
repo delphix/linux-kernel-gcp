@@ -118,5 +118,10 @@ CONFIG_ASHMEM                                   mark<ENFORCED> note<needed for A
 
 CONFIG_SND_SOC_INTEL_SKYLAKE_HDAUDIO_CODEC      policy<{'amd64': 'n'}>
 CONFIG_SND_SOC_INTEL_SKYLAKE_HDAUDIO_CODEC      mark<ENFORCED> note<required in master but not gcp>
+
+CONFIG_ACCESSIBILITY                            policy<{'amd64': 'n'}>
+CONFIG_ACCESSIBILITY                            mark<ENFORCED> note<not applicable for cloud env>
+CONFIG_SPEAKUP                                  policy<{'amd64': '-'}>
+CONFIG_SPEAKUP                                  mark<ENFORCED> note<not applicable for cloud env>
 CONFIG_SECURITY_DMESG_RESTRICT                  policy<{'amd64': 'n', 'arm64': 'n', 'armhf': 'n', 'ppc64el': 'n', 's390x': 'n'}>
 CONFIG_SECURITY_DMESG_RESTRICT                    mark<ENFORCED>
