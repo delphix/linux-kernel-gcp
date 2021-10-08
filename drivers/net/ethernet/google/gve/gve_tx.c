@@ -190,12 +190,10 @@ static int gve_tx_alloc_ring(struct gve_priv *priv, int idx)
 		goto abort_with_info;
 
 	tx->tx_fifo.qpl = gve_assign_tx_qpl(priv);
-	if (!tx->tx_fifo.qpl)
-		goto abort_with_desc;
 
 	/* map Tx FIFO */
 	if (gve_tx_fifo_init(priv, &tx->tx_fifo))
-		goto abort_with_qpl;
+		goto abort_with_desc;
 
 	tx->q_resources =
 		dma_alloc_coherent(hdev,
@@ -214,8 +212,6 @@ static int gve_tx_alloc_ring(struct gve_priv *priv, int idx)
 
 abort_with_fifo:
 	gve_tx_fifo_release(priv, &tx->tx_fifo);
-abort_with_qpl:
-	gve_unassign_qpl(priv, tx->tx_fifo.qpl->id);
 abort_with_desc:
 	dma_free_coherent(hdev, bytes, tx->desc, tx->bus);
 	tx->desc = NULL;
