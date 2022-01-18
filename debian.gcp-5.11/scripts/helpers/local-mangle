@@ -9,10 +9,6 @@ echo "CONFIG_SECURITY_DMESG_RESTRICT                    mark<ENFORCED>" >> ${DEB
 
 cp ${DEBIAN}/config/annotations /tmp/
 
-# Disable DEBUG_INFO_BTF (pahole version is too old in focal)
-sed -i 's/CONFIG_DEBUG_INFO_BTF=y/# CONFIG_DEBUG_INFO_BTF is not set/' ${DEBIAN}/config/config.common.ubuntu
-sed -i "s/CONFIG_DEBUG_INFO_BTF                           policy<{'amd64': 'y', 'arm64': 'y', 'armhf': 'y', 'ppc64el': 'y', 's390x': 'y'}>/CONFIG_DEBUG_INFO_BTF                           policy<{'amd64': 'n', 'arm64': 'n', 'armhf': 'n', 'ppc64el': 'n', 's390x': 'n'}>/" ${DEBIAN}/config/annotations
-
 # Focal does not build for i386 and thus not care. This option was made only available for
 # 64bit/amd64 builds.
 sed -i "s/CONFIG_INTEL_IOMMU_SVM                          policy<{'amd64': 'y', 'i386': 'y'}>/CONFIG_INTEL_IOMMU_SVM                          policy<{'amd64': 'y'}>/" ${DEBIAN}/config/annotations
