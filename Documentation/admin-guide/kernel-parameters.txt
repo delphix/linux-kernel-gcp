@@ -5293,6 +5293,10 @@
 
 	serialnumber	[BUGS=X86-32]
 
+	sev_debug	[X86-64]
+			Enable verbose debug messages related to AMD Secure
+			Encrypted Virtualization.
+
 	shapers=	[NET]
 			Maximal number of shapers.
 
