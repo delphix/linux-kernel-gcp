@@ -70,5 +70,22 @@ CONFIG_ACCESSIBILITY                            policy<{'amd64': 'n'}>
 
 
 ##############
-# Configs just to override master configs go next
+# Configs just to override master annotations go next
 ##############
+
+
+CONFIG_GPIO_AAEON        policy<{'amd64': '-'}>
+CONFIG_MFD_AAEON           policy<{'amd64': '-'}>
+CONFIG_COMEDI_TESTS_EXAMPLE    policy<{'amd64': 'n'}>
+CONFIG_HZ_250     policy<{'amd64': 'y'}>
+CONFIG_LEDS_AAEON    policy<{'amd64': '-'}>
+CONFIG_COMEDI_TESTS_NI_ROUTES   policy<{'amd64': 'n'}>
+CONFIG_TEST_DIV64        policy<{'amd64': 'n'}>
+CONFIG_PREEMPT_NONE      policy<{'amd64': 'y'}> 
+CONFIG_AAEON_IWMI_WDT   policy<{'amd64': '-'}>
+CONFIG_LIBCRC32C        policy<{'amd64': 'y'}>
+CONFIG_LATENCYTOP       policy<{'amd64': 'n'}>
+CONFIG_SENSORS_AAEON    policy<{'amd64': '-'}>
+CONFIG_PREEMPT          policy<{'amd64': 'n'}>
+CONFIG_PREEMPT_VOLUNTARY   policy<{'amd64': 'n'}>
+CONFIG_HZ_1000   policy<{'amd64': 'n'}>
