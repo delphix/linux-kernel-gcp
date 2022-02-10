@@ -4,67 +4,34 @@
 
 include "../../debian.master/config/annotations"
 
-CONFIG_RTW89                                    policy<{'amd64': 'n'}>
 
-CONFIG_SND_SOC_INTEL_USER_FRIENDLY_LONG_NAMES   policy<{'amd64': 'n'}>
-CONFIG_SND_SOC_INTEL_USER_FRIENDLY_LONG_NAMES   mark<ENFORCED> note<LP:1921632>
-
-CONFIG_SND_SOC_INTEL_SOUNDWIRE_SOF_MACH         policy<{'amd64': '-'}>
-CONFIG_SND_SOC_INTEL_SOUNDWIRE_SOF_MACH         mark<ENFORCED> note<LP:1921632>
+###################
+# Configs required for gcp spceifically go first
+###################
 
 # Menu: Device Drivers >> Block devices
 CONFIG_BLK_DEV_FD                               policy<{'amd64': 'n'}>
-#
 CONFIG_BLK_DEV_FD                               mark<ENFORCED> note<LP:1729673>
-
-# Menu: Device Drivers >> I2C support >> I2C support >> I2C Hardware Bus support
-CONFIG_I2C_AMD_MP2				policy<{'amd64': 'n'}>
-#
-CONFIG_I2C_AMD_MP2				mark<ENFORCED> note<not relevant for gcp>
-
-# Menu: Device Drivers >> Network device support >> Wireless LAN >> Atheros/Qualcomm devices
-CONFIG_WCN36XX_SNAPDRAGON_HACKS			policy<{'amd64': '-'}>
-#
-CONFIG_WCN36XX_SNAPDRAGON_HACKS			mark<ENFORCED> note<not relevant for gcp>
-
-# Menu: Device Drivers >> PTP clock support >> PTP clock support
-CONFIG_DP83640_PHY                              policy<{'amd64': '-'}>
-#
-CONFIG_DP83640_PHY                              mark<ENFORCED> note<LP:1785816> note<not relevant for gcp>
 
 # Menu: Device Drivers >> SCSI device support >> SCSI device support >> SCSI low-level drivers
 CONFIG_SCSI_VIRTIO                              policy<{'amd64': 'y'}>
-#
 CONFIG_SCSI_VIRTIO                              mark<ENFORCED> note<LP:1669657> note<tech preview of new feature>
-
-# Menu: Device Drivers >> X86 Platform Specific Device Drivers
-CONFIG_DELL_UART_BACKLIGHT			policy<{'amd64': 'n'}>
-#
-CONFIG_DELL_UART_BACKLIGHT			mark<ENFORCED> note<not relevant for gcp>
 
 # Menu: Kernel hacking
 CONFIG_PANIC_ON_OOPS                            policy<{'amd64': 'y'}>
-#
 CONFIG_PANIC_ON_OOPS  				mark<ENFORCED> note<initial packaging> note<keep working if at all possible>
 
 # Menu: Kernel hacking >> Debug Lockups and Hangs
 CONFIG_BOOTPARAM_HARDLOCKUP_PANIC               policy<{'amd64': 'y'}>
-CONFIG_BOOTPARAM_SOFTLOCKUP_PANIC               policy<{'amd64': 'y'}>
-#
 CONFIG_BOOTPARAM_HARDLOCKUP_PANIC               mark<ENFORCED> note<initial packaging>
+CONFIG_BOOTPARAM_SOFTLOCKUP_PANIC               policy<{'amd64': 'y'}>
 CONFIG_BOOTPARAM_SOFTLOCKUP_PANIC               mark<ENFORCED> note<initial packaging>
 
 # Menu: Library routines
 CONFIG_RAID6_PQ_DEFAULT_ALG			policy<{'amd64': '-'}>
-CONFIG_RAID6_PQ_DEFAULT_ALG_BOOL		policy<{'amd64': '-'}>
-#
 CONFIG_RAID6_PQ_DEFAULT_ALG			mark<ENFORCED> note<LP:1812728>
+CONFIG_RAID6_PQ_DEFAULT_ALG_BOOL		policy<{'amd64': '-'}>
 CONFIG_RAID6_PQ_DEFAULT_ALG_BOOL		mark<ENFORCED> note<LP:1812728>
-
-# Menu: Networking support >> Networking options
-CONFIG_NETWORK_PHY_TIMESTAMPING                 policy<{'amd64': 'n'}>
-#
-CONFIG_NETWORK_PHY_TIMESTAMPING			mark<ENFORCED> note<LP:1785816> note<not relevant for gcp>
 
 # Menu: Networking support >> Networking options >> Network packet filtering framework (Netfilter) >> Core Netfilter Configuration
 CONFIG_NETFILTER_NETLINK_QUEUE                  policy<{'amd64': 'y'}>
@@ -83,24 +50,6 @@ CONFIG_NF_CONNTRACK_PROCFS                      mark<ENFORCED> note<initial pack
 CONFIG_NF_CT_NETLINK                            mark<ENFORCED> note<initial packaging>
 CONFIG_NF_CONNTRACK_PROCFS                      flag<DEPRECATED>
 
-#
-CONFIG_SND_SOC_SOF_HDA_LINK 			note<LP:#1848490> note<Ignored for linux-gcp>
-CONFIG_SND_SOC_SOF_NOCODEC_SUPPORT 		note<LP:#1848490> note<Ignored for linux-gcp>
-CONFIG_SND_SOC_SOF_HDA_AUDIO_CODEC 		note<LP:#1848490> note<Ignored for linux-gcp>
-CONFIG_SND_SOC_SOF_HDA_COMMON_HDMI_CODEC	note<LP:#1848490> note<Ignored for linux-gcp>
-CONFIG_SND_SOC_SOF_HDA_ALWAYS_ENABLE_DMI_L1		note<LP:#1848490> note<Ignored for linux-gcp>
-
-CONFIG_LATENCYTOP								policy<{'amd64': '-'}>
-CONFIG_LATENCYTOP								note<Unnecessary for linux-gcp>
-
-CONFIG_X86_UV									policy<{'amd64': 'n'}>
-CONFIG_X86_UV									note<Unnecessary for linux-gcp>
-
-CONFIG_SND_SOC_AMD_RENOIR                       policy<{'amd64': 'n'}>
-CONFIG_SND_SOC_AMD_RENOIR                       note<Unnecessary for linux-gcp>
-CONFIG_SND_SOC_AMD_RENOIR_MACH                  policy<{'amd64': 'n'}>
-CONFIG_SND_SOC_AMD_RENOIR_MACH                  note<Unnecessary for linux-gcp>
-
 CONFIG_BLK_DEV_NVME                             policy<{'amd64': 'y'}>
 CONFIG_BLK_DEV_NVME                             mark<ENFORCED> note<Needed for minimal images>
 
@@ -115,3 +64,11 @@ CONFIG_ANDROID_BINDER_IPC                       mark<ENFORCED> note<needed for A
 CONFIG_ASHMEM                                   policy<{'amd64': 'm'}>
 CONFIG_ASHMEM                                   mark<ENFORCED> note<needed for Anbox - LP #1928686>
 CONFIG_ACCESSIBILITY                            policy<{'amd64': 'n'}>
+
+
+
+
+
+##############
+# Configs just to override master configs go next
+##############
