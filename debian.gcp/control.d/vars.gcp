@@ -1,6 +1,6 @@
-arch="amd64"
+arch="amd64 arm64"
 supported="amd64"
 target="Geared toward GCP/GKE systems."
 desc="=HUMAN= SMP"
-bootloader="grub-pc | grub-efi-amd64 | grub-efi-ia32 | grub | lilo"
+bootloader="grub-pc | grub-efi-amd64 | grub-efi-ia32 | grub | lilo | grub-efi-arm64 [arm64]"
 provides=""
