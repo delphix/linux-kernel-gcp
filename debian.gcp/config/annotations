@@ -14,17 +14,17 @@ CONFIG_BLK_DEV_FD                               policy<{'amd64': 'n'}>
 CONFIG_BLK_DEV_FD                               mark<ENFORCED> note<LP:1729673>
 
 # Menu: Device Drivers >> SCSI device support >> SCSI device support >> SCSI low-level drivers
-CONFIG_SCSI_VIRTIO                              policy<{'amd64': 'y'}>
+CONFIG_SCSI_VIRTIO                              policy<{'amd64': 'y', 'arm64': 'y'}>
 CONFIG_SCSI_VIRTIO                              mark<ENFORCED> note<LP:1669657> note<tech preview of new feature>
 
 # Menu: Kernel hacking
-CONFIG_PANIC_ON_OOPS                            policy<{'amd64': 'y'}>
+CONFIG_PANIC_ON_OOPS                            policy<{'amd64': 'y', 'arm64': 'y'}>
 CONFIG_PANIC_ON_OOPS  				mark<ENFORCED> note<initial packaging> note<keep working if at all possible>
 
 # Menu: Kernel hacking >> Debug Lockups and Hangs
 CONFIG_BOOTPARAM_HARDLOCKUP_PANIC               policy<{'amd64': 'y'}>
 CONFIG_BOOTPARAM_HARDLOCKUP_PANIC               mark<ENFORCED> note<initial packaging>
-CONFIG_BOOTPARAM_SOFTLOCKUP_PANIC               policy<{'amd64': 'y'}>
+CONFIG_BOOTPARAM_SOFTLOCKUP_PANIC               policy<{'amd64': 'y', 'arm64': 'y'}>
 CONFIG_BOOTPARAM_SOFTLOCKUP_PANIC               mark<ENFORCED> note<initial packaging>
 
 # Menu: Library routines
@@ -34,36 +34,36 @@ CONFIG_RAID6_PQ_DEFAULT_ALG_BOOL		policy<{'amd64': '-'}>
 CONFIG_RAID6_PQ_DEFAULT_ALG_BOOL		mark<ENFORCED> note<LP:1812728>
 
 # Menu: Networking support >> Networking options >> Network packet filtering framework (Netfilter) >> Core Netfilter Configuration
-CONFIG_NETFILTER_NETLINK_QUEUE                  policy<{'amd64': 'y'}>
-CONFIG_NETFILTER_NETLINK_LOG                    policy<{'amd64': 'y'}>
+CONFIG_NETFILTER_NETLINK_QUEUE                  policy<{'amd64': 'y', 'arm64': 'y'}>
+CONFIG_NETFILTER_NETLINK_LOG                    policy<{'amd64': 'y', 'arm64': 'y'}>
 #
 CONFIG_NETFILTER_NETLINK_QUEUE                  mark<ENFORCED> note<initial packaging>
 CONFIG_NETFILTER_NETLINK_LOG                    mark<ENFORCED> note<initial packaging>
 
 # Menu: Networking support >> Networking options >> Network packet filtering framework (Netfilter) >> Core Netfilter Configuration >> Netfilter connection tracking support
-CONFIG_NF_CONNTRACK                             policy<{'amd64': 'y'}>
-CONFIG_NF_CONNTRACK_PROCFS                      policy<{'amd64': 'y'}>
-CONFIG_NF_CT_NETLINK                            policy<{'amd64': 'y'}>
+CONFIG_NF_CONNTRACK                             policy<{'amd64': 'y', 'arm64': 'y'}>
+CONFIG_NF_CONNTRACK_PROCFS                      policy<{'amd64': 'y', 'arm64': 'y'}>
+CONFIG_NF_CT_NETLINK                            policy<{'amd64': 'y', 'arm64': 'y'}>
 #
 CONFIG_NF_CONNTRACK                             mark<ENFORCED> note<initial packaging>
 CONFIG_NF_CONNTRACK_PROCFS                      mark<ENFORCED> note<initial packaging>
 CONFIG_NF_CT_NETLINK                            mark<ENFORCED> note<initial packaging>
 CONFIG_NF_CONNTRACK_PROCFS                      flag<DEPRECATED>
 
-CONFIG_BLK_DEV_NVME                             policy<{'amd64': 'y'}>
+CONFIG_BLK_DEV_NVME                             policy<{'amd64': 'y', 'arm64': 'y'}>
 CONFIG_BLK_DEV_NVME                             mark<ENFORCED> note<Needed for minimal images>
 
-CONFIG_ANDROID                                  policy<{'amd64': 'y'}>
+CONFIG_ANDROID                                  policy<{'amd64': 'y', 'arm64': 'y'}>
 CONFIG_ANDROID                                  mark<ENFORCED> note<needed for Anbox - LP #1928686>
-CONFIG_ANDROID_BINDERFS                         policy<{'amd64': 'm'}>
+CONFIG_ANDROID_BINDERFS                         policy<{'amd64': 'm', 'arm64': 'm'}>
 CONFIG_ANDROID_BINDERFS                         mark<ENFORCED> note<needed for Anbox - LP #1928686>
-CONFIG_ANDROID_BINDER_DEVICES                   policy<{'amd64': '""'}>
+CONFIG_ANDROID_BINDER_DEVICES                   policy<{'amd64': '""', 'arm64': '""'}>
 CONFIG_ANDROID_BINDER_DEVICES                   mark<ENFORCED> note<needed for Anbox - LP #1928686>
-CONFIG_ANDROID_BINDER_IPC                       policy<{'amd64': 'm'}>
+CONFIG_ANDROID_BINDER_IPC                       policy<{'amd64': 'm', 'arm64': 'm'}>
 CONFIG_ANDROID_BINDER_IPC                       mark<ENFORCED> note<needed for Anbox - LP #1928686>
-CONFIG_ASHMEM                                   policy<{'amd64': 'm'}>
+CONFIG_ASHMEM                                   policy<{'amd64': 'm', 'arm64': 'm'}>
 CONFIG_ASHMEM                                   mark<ENFORCED> note<needed for Anbox - LP #1928686>
-CONFIG_ACCESSIBILITY                            policy<{'amd64': 'n'}>
+CONFIG_ACCESSIBILITY                            policy<{'amd64': 'n', 'arm64': 'n'}>
 
 
 
@@ -72,20 +72,28 @@ CONFIG_ACCESSIBILITY                            policy<{'amd64': 'n'}>
 ##############
 # Configs just to override master annotations go next
 ##############
+CONFIG_HZ_250                                   policy<{'amd64': 'y', 'arm64': 'y'}>
+CONFIG_HZ_1000                                  policy<{'amd64': 'n', 'arm64': 'n'}>
+CONFIG_SENSORS_AAEON                            policy<{'amd64': '-'}>
+CONFIG_VIDEO_ADV7511_CEC                        policy<{'amd64': 'n'}>
+CONFIG_AAEON_IWMI_WDT                           policy<{'amd64': '-'}>
+CONFIG_LEDS_AAEON                               policy<{'amd64': '-'}>
+CONFIG_COMEDI_TESTS_NI_ROUTES                   policy<{'amd64': 'n', 'arm64': 'm'}>
+CONFIG_MFD_AAEON                                policy<{'amd64': '-'}>
+CONFIG_PREEMPT_VOLUNTARY                        policy<{'amd64': 'y', 'arm64': 'y'}>
+CONFIG_GPIO_AAEON                               policy<{'amd64': '-'}>
+CONFIG_TEST_DIV64                               policy<{'amd64': 'n', 'arm64': 'm'}>
+CONFIG_COMEDI_TESTS_EXAMPLE                     policy<{'amd64': 'n', 'arm64': 'm'}>
+CONFIG_PREEMPT                                  policy<{'amd64': 'n', 'arm64': 'n'}>
+CONFIG_LATENCYTOP                               policy<{'amd64': 'n', 'arm64': 'n'}>
 
-
-CONFIG_GPIO_AAEON        policy<{'amd64': '-'}>
-CONFIG_MFD_AAEON           policy<{'amd64': '-'}>
-CONFIG_COMEDI_TESTS_EXAMPLE    policy<{'amd64': 'n'}>
-CONFIG_HZ_250     policy<{'amd64': 'y'}>
-CONFIG_LEDS_AAEON    policy<{'amd64': '-'}>
-CONFIG_COMEDI_TESTS_NI_ROUTES   policy<{'amd64': 'n'}>
-CONFIG_TEST_DIV64        policy<{'amd64': 'n'}>
-CONFIG_PREEMPT_NONE      policy<{'amd64': 'y'}> 
-CONFIG_AAEON_IWMI_WDT   policy<{'amd64': '-'}>
-CONFIG_LIBCRC32C        policy<{'amd64': 'y'}>
-CONFIG_LATENCYTOP       policy<{'amd64': 'n'}>
-CONFIG_SENSORS_AAEON    policy<{'amd64': '-'}>
-CONFIG_PREEMPT          policy<{'amd64': 'n'}>
-CONFIG_PREEMPT_VOLUNTARY   policy<{'amd64': 'n'}>
-CONFIG_HZ_1000   policy<{'amd64': 'n'}>
+CONFIG_MESON_EFUSE                              policy<{'arm64': 'm'}>
+CONFIG_MESON_SECURE_PM_DOMAINS                  policy<{'arm64': 'y'}>
+CONFIG_FORCE_MAX_ZONEORDER                      policy<{'arm64': '13'}>
+CONFIG_INFINIBAND_VMWARE_PVRDMA                 policy<{'amd64': 'm', 'arm64': 'm'}>
+CONFIG_ARM64_VA_BITS_39                         policy<{'arm64': 'n'}>
+CONFIG_VMXNET3                                  policy<{'amd64': 'm', 'arm64': 'm'}>
+CONFIG_LIBCRC32C                                policy<{'amd64': 'y', 'arm64': 'y'}>
+CONFIG_ARM64_4K_PAGES                           policy<{'arm64': 'y'}>
+CONFIG_ARM64_64K_PAGES                          policy<{'arm64': 'n'}>
+CONFIG_MESON_SM                                 policy<{'arm64': 'y'}>
