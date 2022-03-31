@@ -97,3 +97,5 @@ CONFIG_LIBCRC32C                                policy<{'amd64': 'y', 'arm64': '
 CONFIG_ARM64_4K_PAGES                           policy<{'arm64': 'y'}>
 CONFIG_ARM64_64K_PAGES                          policy<{'arm64': 'n'}>
 CONFIG_MESON_SM                                 policy<{'arm64': 'y'}>
+
+CONFIG_SYSFB_SIMPLEFB				policy<{'amd64': 'y', 'arm64': 'y'}>
