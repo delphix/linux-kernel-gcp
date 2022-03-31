@@ -11,4 +11,4 @@ repo_list=(
 package_prefixes linux-image linux-modules linux-modules-extra
 
 getall amd64 gcp
-
+getall arm64 gcp
