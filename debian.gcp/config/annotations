@@ -5,44 +5,44 @@
 include "../../debian.master/config/annotations"
 
 # Menu: Device Drivers >> Block devices
-CONFIG_BLK_DEV_FD                               policy<{'amd64': 'n'}>
+CONFIG_BLK_DEV_FD                               policy<{'amd64': 'n', 'arm64': 'n'}>
 #
 CONFIG_BLK_DEV_FD                               flag<ENFORCE> note<LP:1729673>
 # Menu: Device Drivers >> SCSI device support >> SCSI device support >> SCSI low-level drivers
-CONFIG_SCSI_VIRTIO                              policy<{'amd64': 'y'}>
+CONFIG_SCSI_VIRTIO                              policy<{'amd64': 'y', 'arm64': 'y'}>
 #
 CONFIG_SCSI_VIRTIO                              flag<ENFORCE> note<LP:1669657> note<tech preview of new feature>
 
 # Menu: Kernel hacking
-CONFIG_PANIC_ON_OOPS                            policy<{'amd64': 'y'}>
+CONFIG_PANIC_ON_OOPS                            policy<{'amd64': 'y', 'arm64': 'y'}>
 #
 CONFIG_PANIC_ON_OOPS  				flag<ENFORCE> note<initial packaging> note<keep working if at all possible>
 
 # Menu: Kernel hacking >> Debug Lockups and Hangs
-CONFIG_BOOTPARAM_HARDLOCKUP_PANIC               policy<{'amd64': 'y'}>
-CONFIG_BOOTPARAM_SOFTLOCKUP_PANIC               policy<{'amd64': 'y'}>
+CONFIG_BOOTPARAM_HARDLOCKUP_PANIC               policy<{'amd64': 'y', 'arm64': 'y'}>
+CONFIG_BOOTPARAM_SOFTLOCKUP_PANIC               policy<{'amd64': 'y', 'arm64': 'y'}>
 #
 CONFIG_BOOTPARAM_HARDLOCKUP_PANIC               flag<ENFORCE> note<initial packaging>
 CONFIG_BOOTPARAM_SOFTLOCKUP_PANIC               flag<ENFORCE> note<initial packaging>
 
 # Menu: Library routines
-CONFIG_RAID6_PQ_DEFAULT_ALG			policy<'amd64': 'avx2x4'>
-CONFIG_RAID6_PQ_DEFAULT_ALG_BOOL		policy<'amd64': 'y'>
+CONFIG_RAID6_PQ_DEFAULT_ALG			policy<'amd64': 'avx2x4', 'arm64': 'avx2x4'>
+CONFIG_RAID6_PQ_DEFAULT_ALG_BOOL		policy<'amd64': 'y', 'arm64': 'y'>
 #
 CONFIG_RAID6_PQ_DEFAULT_ALG			mark<ENFORCE> note<LP:1812728>
 CONFIG_RAID6_PQ_DEFAULT_ALG_BOOL		mark<ENFORCE> note<LP:1812728>
 
 # Menu: Networking support >> Networking options >> Network packet filtering framework (Netfilter) >> Core Netfilter Configuration
-CONFIG_NETFILTER_NETLINK_QUEUE                  policy<{'amd64': 'y'}>
-CONFIG_NETFILTER_NETLINK_LOG                    policy<{'amd64': 'y'}>
+CONFIG_NETFILTER_NETLINK_QUEUE                  policy<{'amd64': 'y', 'arm64': 'y'}>
+CONFIG_NETFILTER_NETLINK_LOG                    policy<{'amd64': 'y', 'arm64': 'y'}>
 #
 CONFIG_NETFILTER_NETLINK_QUEUE                  flag<ENFORCE> note<initial packaging>
 CONFIG_NETFILTER_NETLINK_LOG                    flag<ENFORCE> note<initial packaging>
 
 # Menu: Networking support >> Networking options >> Network packet filtering framework (Netfilter) >> Core Netfilter Configuration >> Netfilter connection tracking support
-CONFIG_NF_CONNTRACK                             policy<{'amd64': 'y'}>
-CONFIG_NF_CONNTRACK_PROCFS                      policy<{'amd64': 'y'}>
-CONFIG_NF_CT_NETLINK                            policy<{'amd64': 'y'}>
+CONFIG_NF_CONNTRACK                             policy<{'amd64': 'y', 'arm64': 'y'}>
+CONFIG_NF_CONNTRACK_PROCFS                      policy<{'amd64': 'y', 'arm64': 'y'}>
+CONFIG_NF_CT_NETLINK                            policy<{'amd64': 'y', 'arm64': 'y'}>
 #
 CONFIG_NF_CONNTRACK                             flag<ENFORCE> note<initial packaging>
 CONFIG_NF_CONNTRACK_PROCFS                      flag<ENFORCE> note<initial packaging>
