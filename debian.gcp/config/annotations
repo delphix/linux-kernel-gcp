@@ -56,8 +56,7 @@ CONFIG_NF_CT_NETLINK                            mark<ENFORCED> note<initial pack
 CONFIG_NF_CONNTRACK_PROCFS                      flag<DEPRECATED>
 
 #
-CONFIG_SAMPLE_TRACE_PRINTK                      policy<{'amd64': '-', 'arm64': 'm'}>
-#
+CONFIG_SAMPLE_TRACE_PRINTK                      policy<{'amd64': 'm', 'arm64': 'm'}>
 CONFIG_SAMPLE_TRACE_PRINTK                      mark<ENFORCED> note<Required for ftrace selftests>
 
 CONFIG_ATARI_PARTITION                          policy<{'amd64': 'n', 'arm64': 'n'}>
