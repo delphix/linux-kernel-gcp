@@ -1925,8 +1925,10 @@ enum netdev_ml_priv_type {
  *	@rtnl_link_ops:	Rtnl_link_ops
  *
  *	@gso_max_size:	Maximum size of generic segmentation offload
+ *	@tso_max_size:	Device (as in HW) limit on the max TSO request size
  *	@gso_max_segs:	Maximum number of segments that can be passed to the
  *			NIC for GSO
+ *	@tso_max_segs:	Device (as in HW) limit on the max TSO segment count
  *
  *	@dcbnl_ops:	Data Center Bridging netlink ops
  *	@num_tc:	Number of traffic classes in the net device
@@ -2253,8 +2255,13 @@ struct net_device {
 	/* for setting kernel sock attribute on TCP connection setup */
 #define GSO_MAX_SIZE		65536
 	unsigned int		gso_max_size;
+#define TSO_LEGACY_MAX_SIZE	65536
+#define TSO_MAX_SIZE		UINT_MAX
+	unsigned int		tso_max_size;
 #define GSO_MAX_SEGS		65535
 	u16			gso_max_segs;
+#define TSO_MAX_SEGS		U16_MAX
+	u16			tso_max_segs;
 
 #ifdef CONFIG_DCB
 	const struct dcbnl_rtnl_ops *dcbnl_ops;
@@ -5138,6 +5145,9 @@ static inline void netif_set_gso_max_size(struct net_device *dev,
 {
 	dev->gso_max_size = size;
 }
+
+void netif_set_tso_max_size(struct net_device *dev, unsigned int size);
+void netif_set_tso_max_segs(struct net_device *dev, unsigned int segs);
 
 static inline void skb_gso_error_unwind(struct sk_buff *skb, __be16 protocol,
 					int pulled_hlen, u16 mac_offset,
