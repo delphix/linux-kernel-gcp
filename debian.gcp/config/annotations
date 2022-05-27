@@ -99,3 +99,16 @@ CONFIG_ARM64_64K_PAGES                          policy<{'arm64': 'n'}>
 CONFIG_MESON_SM                                 policy<{'arm64': 'y'}>
 
 CONFIG_SYSFB_SIMPLEFB				policy<{'amd64': 'y', 'arm64': 'y'}>
+
+CONFIG_SPEAKUP_SYNTH_TXPRT                      policy<{'amd64': '-'}>
+CONFIG_SPEAKUP_SYNTH_SOFT                       policy<{'amd64': '-'}>
+CONFIG_SPEAKUP_SYNTH_BNS                        policy<{'amd64': '-'}>
+CONFIG_SPEAKUP_SYNTH_ACNTSA                     policy<{'amd64': '-'}>
+CONFIG_SPEAKUP                                  policy<{'amd64': '-'}>
+CONFIG_SPEAKUP_SYNTH_DUMMY                      policy<{'amd64': '-'}>
+CONFIG_SPEAKUP_SYNTH_DECTLK                     policy<{'amd64': '-'}>
+CONFIG_SPEAKUP_SYNTH_APOLLO                     policy<{'amd64': '-'}>
+CONFIG_SPEAKUP_SYNTH_DECEXT                     policy<{'amd64': '-'}>
+CONFIG_SPEAKUP_SYNTH_AUDPTR                     policy<{'amd64': '-'}>
+CONFIG_SPEAKUP_SYNTH_LTLK                       policy<{'amd64': '-'}>
+CONFIG_SPEAKUP_SYNTH_SPKOUT                     policy<{'amd64': '-'}>
