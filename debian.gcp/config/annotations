@@ -104,3 +104,4 @@ CONFIG_CEC_PIN_ERROR_INJ			policy<{'amd64': '-', 'arm64': 'n'}>
 CONFIG_CEC_GPIO					policy<{'amd64': '-', 'arm64': '-'}>
 CONFIG_CEC_GPIO					policy<{'amd64': '-', 'arm64': '-'}>
 CONFIG_NTFS_RW					policy<{'amd64': 'n', 'arm64': 'n'}>
+CONFIG_GPIO_CDEV_V1				policy<{'amd64': 'n', 'arm64': 'n'}>
