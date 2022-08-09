@@ -936,6 +936,9 @@ struct kvm_arch {
 	bool exception_payload_enabled;
 
 	struct kvm_pmu_event_filter *pmu_event_filter;
+
+	u32 hypercall_exit_enabled;
+
 	struct task_struct *nx_lpage_recovery_thread;
 };
 
