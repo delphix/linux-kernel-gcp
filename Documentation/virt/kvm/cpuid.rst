@@ -86,10 +86,17 @@ KVM_FEATURE_PV_SCHED_YIELD        13          guest checks this feature bit
                                               before using paravirtualized
                                               sched yield.
 
-KVM_FEATURE_CLOCSOURCE_STABLE_BIT 24          host will warn if no guest-side
+KVM_FEATURE_HC_MAP_GPA_RANGE       16         guest checks this feature bit before
+                                              using the map gpa range hypercall
+                                              to notify the page state change
+
+KVM_FEATURE_MIGRATION_CONTROL      17         guest checks this feature bit before
+                                              using MSR_KVM_MIGRATION_CONTROL
+
+KVM_FEATURE_CLOCSOURCE_STABLE_BIT  24         host will warn if no guest-side
                                               per-cpu warps are expeced in
                                               kvmclock
-================================= =========== ================================
+================================== =========== ================================
 
 ::
 
