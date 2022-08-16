@@ -2780,7 +2780,6 @@ lib80211_crypt_tkip
 lib80211_crypt_wep
 libarc4
 libblake2s
-libblake2s-generic
 libceph
 libchacha
 libchacha20poly1305
@@ -6563,8 +6562,10 @@ vme_user
 vme_vmivme7805
 vmk80xx
 vmw_pvrdma
+vmw_vmci
 vmw_vsock_virtio_transport
 vmw_vsock_virtio_transport_common
+vmw_vsock_vmci_transport
 vmwgfx
 vmxnet3
 vp27smpx
