@@ -6043,7 +6043,6 @@ EXPORT_SYMBOL	 vmlinux 0x14d7c0f5	locks_copy_lock
 EXPORT_SYMBOL	 vmlinux 0x14dc354f	tcf_exts_validate
 EXPORT_SYMBOL	 vmlinux 0x14e3cb26	keyring_clear
 EXPORT_SYMBOL	 vmlinux 0x14e9be9f	rproc_report_crash
-EXPORT_SYMBOL	 vmlinux 0x14e9e1d2	blk_mq_complete_request
 EXPORT_SYMBOL	 vmlinux 0x14ecba00	get_cached_acl_rcu
 EXPORT_SYMBOL	 vmlinux 0x14f45fcc	bman_free_pool
 EXPORT_SYMBOL	 vmlinux 0x14fb2365	cmdline_parts_set
@@ -9204,6 +9203,7 @@ EXPORT_SYMBOL	 vmlinux 0xac64a975	__zerocopy_sg_from_iter
 EXPORT_SYMBOL	 vmlinux 0xac8597d5	mb_cache_entry_get
 EXPORT_SYMBOL	 vmlinux 0xac94e86b	vsprintf
 EXPORT_SYMBOL	 vmlinux 0xac95b2eb	pci_write_config_dword
+EXPORT_SYMBOL	 vmlinux 0xac9848ae	blk_mq_complete_request
 EXPORT_SYMBOL	 vmlinux 0xaca67f9c	cpufreq_get_policy
 EXPORT_SYMBOL	 vmlinux 0xacaa4c72	dma_fence_match_context
 EXPORT_SYMBOL	 vmlinux 0xacab29b7	seq_hlist_start_percpu
