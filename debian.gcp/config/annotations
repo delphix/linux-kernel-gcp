@@ -105,3 +105,6 @@ CONFIG_CEC_GPIO					policy<{'amd64': '-', 'arm64': '-'}>
 CONFIG_CEC_GPIO					policy<{'amd64': '-', 'arm64': '-'}>
 CONFIG_NTFS_RW					policy<{'amd64': 'n', 'arm64': 'n'}>
 CONFIG_GPIO_CDEV_V1				policy<{'amd64': 'n', 'arm64': 'n'}>
+
+CONFIG_SND_SOC_AMD_PS_MACH      policy<{'amd64': '-'}>
+CONFIG_SND_SOC_AMD_PS           policy<{'amd64': 'n'}>
