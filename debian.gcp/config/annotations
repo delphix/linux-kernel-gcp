@@ -53,8 +53,6 @@ CONFIG_NF_CONNTRACK_PROCFS                      flag<DEPRECATED>
 CONFIG_BLK_DEV_NVME                             policy<{'amd64': 'y', 'arm64': 'y'}>
 CONFIG_BLK_DEV_NVME                             mark<ENFORCED> note<Needed for minimal images>
 
-CONFIG_ANDROID                                  policy<{'amd64': 'y', 'arm64': 'y'}>
-CONFIG_ANDROID                                  mark<ENFORCED> note<needed for Anbox - LP #1928686>
 CONFIG_ANDROID_BINDERFS                         policy<{'amd64': 'm', 'arm64': 'm'}>
 CONFIG_ANDROID_BINDERFS                         mark<ENFORCED> note<needed for Anbox - LP #1928686>
 CONFIG_ANDROID_BINDER_DEVICES                   policy<{'amd64': '""', 'arm64': '""'}>
