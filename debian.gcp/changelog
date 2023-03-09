@@ -1,4 +1,4 @@
-linux-gcp (6.1.0-1001.1) lunar; urgency=medium
+linux-gcp (6.2.0-1000.0) lunar; urgency=medium
 
   * lunar/linux-gcp: 6.1.0-1001.1 -proposed tracker (LP: #1998334)
 
