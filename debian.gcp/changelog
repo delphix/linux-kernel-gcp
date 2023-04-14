@@ -4,6 +4,8 @@ linux-gcp (6.2.0-1006.6) UNRELEASED; urgency=medium
   CHANGELOG: Use the printchanges target to see the curent changes.
   CHANGELOG: Use the insertchanges target to create the final log.
 
+  * Rebase on Ubuntu-6.2.0-21.21
+
  -- Paolo Pisati <paolo.pisati@canonical.com>  Fri, 14 Apr 2023 16:35:00 +0200
 
 linux-gcp (6.2.0-1005.5) lunar; urgency=medium
