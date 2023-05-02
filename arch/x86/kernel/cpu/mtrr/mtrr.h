@@ -57,7 +57,6 @@ void mtrr_bp_pat_init(void);
 
 extern void __init set_mtrr_ops(const struct mtrr_ops *ops);
 
-extern u64 size_or_mask, size_and_mask;
 extern const struct mtrr_ops *mtrr_if;
 
 #define is_cpu(vnd)	(mtrr_if && mtrr_if->vendor == X86_VENDOR_##vnd)
@@ -67,6 +66,7 @@ extern unsigned int num_var_ranges;
 extern u64 mtrr_tom2;
 extern struct mtrr_state_type mtrr_state;
 
+void mtrr_set_mask(void);
 void mtrr_state_warn(void);
 const char *mtrr_attrib_to_str(int x);
 void mtrr_wrmsr(unsigned, unsigned, unsigned);
@@ -77,4 +77,4 @@ int cyrix_init_mtrr(void);
 int centaur_init_mtrr(void);
 
 extern int changed_by_mtrr_cleanup;
-extern int mtrr_cleanup(unsigned address_bits);
+extern int mtrr_cleanup(void);
