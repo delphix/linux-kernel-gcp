@@ -53,9 +53,6 @@ CONFIG_RAID6_PQ_DEFAULT_ALG_BOOL                note<'LP:1812728'>
 CONFIG_RUST                                     policy<{'amd64': 'n', 'arm64': '-'}>
 CONFIG_RUST                                     note<'required to enable Rust support, LP: #1993183'>
 
-CONFIG_SCSI_VIRTIO                              policy<{'amd64': 'y', 'arm64': 'y'}>
-CONFIG_SCSI_VIRTIO                              note<'tech preview of new feature'>
-
 
 # ---- Annotations without notes ----
 
@@ -352,7 +349,6 @@ CONFIG_USB_EHCI_BRCMSTB                         policy<{'arm64': 'm'}>
 CONFIG_VCHIQ_CDEV                               policy<{'arm64': 'y'}>
 CONFIG_VERSION_SIGNATURE                        policy<{'amd64': '"Ubuntu 5.15.0-22.22-generic 5.15.19"', 'arm64': '"Ubuntu 5.15.0-22.22-generic 5.15.19"'}>
 CONFIG_VFIO_PLATFORM_BCMFLEXRM_RESET            policy<{'arm64': 'm'}>
-CONFIG_VIDEO_ATOMISP_ISP2401                    policy<{'amd64': 'n'}>
 CONFIG_VIDEO_BCM2835                            policy<{'arm64': 'm'}>
 CONFIG_VIDEO_ZORAN                              policy<{'amd64': 'm', 'arm64': 'm'}>
 CONFIG_VIDEO_ZORAN_AVS6EYES                     policy<{'amd64': 'y', 'arm64': 'y'}>
