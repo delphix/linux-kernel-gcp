@@ -31,11 +31,6 @@ SKIP_RULES_D=${SKIP_RULES_D:-}
 rsync -avc --delete "${DEBIAN_MASTER}/d-i/" "${DEBIAN}/d-i"
 
 #
-# Update configs from master
-#
-rsync -avc --delete "${DEBIAN_MASTER}/config/" "${DEBIAN}/config"
-
-#
 # Update package and DTB settings from master.
 #
 if [ -z "${SKIP_RULES_D}" ] ; then
