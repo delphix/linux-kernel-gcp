@@ -5,71 +5,20 @@
 
 include "../../debian.gcp/config/annotations"
 
-CONFIG_ANDROID                                  policy<{'amd64': 'y', 'arm64': 'y'}>
-CONFIG_ANDROID                                  note<'needed for Anbox - LP #1928686'>
-
-CONFIG_ANDROID_BINDERFS                         policy<{'amd64': 'm', 'arm64': 'm'}>
-CONFIG_ANDROID_BINDERFS                         note<'needed for Anbox - LP #1928686'>
-
-CONFIG_ANDROID_BINDER_DEVICES                   policy<{'amd64': '""', 'arm64': '""'}>
-CONFIG_ANDROID_BINDER_DEVICES                   note<'needed for Anbox - LP #1928686'>
-
-CONFIG_ANDROID_BINDER_IPC                       policy<{'amd64': 'm', 'arm64': 'm'}>
-CONFIG_ANDROID_BINDER_IPC                       note<'needed for Anbox - LP #1928686'>
-
 CONFIG_ARM64_BTI_KERNEL                         policy<{'arm64': '-'}>
 CONFIG_ARM64_BTI_KERNEL                         note<'{Do not enforce CONFIG_ARM64_BTI_KERNEL in Focal, as it depends on a newer gcc version}'>
-
-CONFIG_ASHMEM                                   policy<{'amd64': 'm', 'arm64': 'm'}>
-CONFIG_ASHMEM                                   note<'needed for Anbox - LP #1928686'>
 
 CONFIG_AUFS_FS                                  policy<{'amd64': 'm', 'arm64': 'm'}>
 CONFIG_AUFS_FS                                  note<'{We are still supporting AUFS in focal, so make sure to re-enable it}'>
 
-CONFIG_BLK_DEV_FD                               policy<{'amd64': 'n'}>
-CONFIG_BLK_DEV_FD                               note<'LP:1729673'>
-
-CONFIG_BLK_DEV_NVME                             policy<{'amd64': 'y', 'arm64': 'y'}>
-CONFIG_BLK_DEV_NVME                             note<'Needed for minimal images'>
-
-CONFIG_BOOTPARAM_HARDLOCKUP_PANIC               policy<{'amd64': 'y'}>
-CONFIG_BOOTPARAM_HARDLOCKUP_PANIC               note<'initial packaging'>
-
-CONFIG_BOOTPARAM_SOFTLOCKUP_PANIC               policy<{'amd64': 'y', 'arm64': 'y'}>
-CONFIG_BOOTPARAM_SOFTLOCKUP_PANIC               note<'initial packaging'>
-
 CONFIG_KCSAN                                    policy<{'amd64': '-', 'arm64': '-'}>
 CONFIG_KCSAN                                    note<'{KCSAN cannot be enabled in focal}'>
-
-CONFIG_LOOPBACK_TARGET                          policy<{'amd64': 'm', 'arm64': 'm'}>
-CONFIG_LOOPBACK_TARGET                          note<'Specifically requested by GCP. Must ensure tcm_loop.ko is in default module list'>
-
-CONFIG_NETFILTER_NETLINK_LOG                    policy<{'amd64': 'y', 'arm64': 'y'}>
-CONFIG_NETFILTER_NETLINK_LOG                    note<'initial packaging'>
-
-CONFIG_NETFILTER_NETLINK_QUEUE                  policy<{'amd64': 'y', 'arm64': 'y'}>
-CONFIG_NETFILTER_NETLINK_QUEUE                  note<'initial packaging'>
-
-CONFIG_NF_CONNTRACK                             policy<{'amd64': 'y', 'arm64': 'y'}>
-CONFIG_NF_CONNTRACK                             note<'initial packaging'>
-
-CONFIG_NF_CONNTRACK_PROCFS                      policy<{'amd64': 'y', 'arm64': 'y'}>
-CONFIG_NF_CONNTRACK_PROCFS                      note<'initial packaging'>
-
-CONFIG_NF_CT_NETLINK                            policy<{'amd64': 'y', 'arm64': 'y'}>
-CONFIG_NF_CT_NETLINK                            note<'initial packaging'>
-
-CONFIG_PANIC_ON_OOPS                            policy<{'amd64': 'y', 'arm64': 'y'}>
-CONFIG_PANIC_ON_OOPS                            note<'keep working if at all possible'>
 
 CONFIG_RAID6_PQ_DEFAULT_ALG                     policy<{'amd64': '-'}>
 CONFIG_RAID6_PQ_DEFAULT_ALG                     note<'LP:1812728'>
 
 CONFIG_RAID6_PQ_DEFAULT_ALG_BOOL                policy<{'amd64': '-'}>
 CONFIG_RAID6_PQ_DEFAULT_ALG_BOOL                note<'LP:1812728'>
-
-CONFIG_SCSI_VIRTIO                              policy<{'amd64': 'y', 'arm64': 'y'}>
-CONFIG_SCSI_VIRTIO                              note<'tech preview of new feature'>
 
 
 # ---- Annotations without notes ----
