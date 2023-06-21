@@ -4228,6 +4228,7 @@ pci-epf-ntb
 pci-epf-vntb
 pci-hyperv
 pci-hyperv-intf
+pci-meson
 pci-pf-stub
 pci-stub
 pci200syn
