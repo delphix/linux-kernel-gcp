@@ -20574,7 +20574,6 @@ EXPORT_SYMBOL_GPL	 vmlinux 0x12d113db	spi_mem_supports_op
 EXPORT_SYMBOL_GPL	 vmlinux 0x12de3ee9	iommu_detach_device_pasid
 EXPORT_SYMBOL_GPL	 vmlinux 0x12ed763c	xen_xlate_unmap_gfn_range
 EXPORT_SYMBOL_GPL	 vmlinux 0x12ee1173	memory_group_unregister
-EXPORT_SYMBOL_GPL	 vmlinux 0x1300b89e	find_extend_vma
 EXPORT_SYMBOL_GPL	 vmlinux 0x13090724	add_vmfork_randomness
 EXPORT_SYMBOL_GPL	 vmlinux 0x130a1d0f	devlink_params_register
 EXPORT_SYMBOL_GPL	 vmlinux 0x1315a1f1	devm_kasprintf
@@ -22885,7 +22884,6 @@ EXPORT_SYMBOL_GPL	 vmlinux 0x6349fa43	k3_udma_glue_rx_flow_init
 EXPORT_SYMBOL_GPL	 vmlinux 0x634b9d42	__SCK__tp_func_block_unplug
 EXPORT_SYMBOL_GPL	 vmlinux 0x6356ea6a	edac_mc_handle_error
 EXPORT_SYMBOL_GPL	 vmlinux 0x63584c6f	tpm_pm_resume
-EXPORT_SYMBOL_GPL	 vmlinux 0x63662fa8	__vfs_setxattr_noperm
 EXPORT_SYMBOL_GPL	 vmlinux 0x6377ad7f	vcap_del_rule
 EXPORT_SYMBOL_GPL	 vmlinux 0x63835f16	tty_buffer_set_limit
 EXPORT_SYMBOL_GPL	 vmlinux 0x638aff11	proc_douintvec_minmax
@@ -27099,7 +27097,6 @@ EXPORT_SYMBOL_GPL	 vmlinux 0xf28bd398	usb_wakeup_notification
 EXPORT_SYMBOL_GPL	 vmlinux 0xf2967796	ring_buffer_record_on
 EXPORT_SYMBOL_GPL	 vmlinux 0xf2b0ee14	i2c_dw_probe_master
 EXPORT_SYMBOL_GPL	 vmlinux 0xf2b33cb7	memory_cgrp_subsys_on_dfl_key
-EXPORT_SYMBOL_GPL	 vmlinux 0xf2b81a62	__vfs_removexattr_noperm
 EXPORT_SYMBOL_GPL	 vmlinux 0xf2b81ce4	of_pci_get_max_link_speed
 EXPORT_SYMBOL_GPL	 vmlinux 0xf2d94c2d	led_set_brightness_nopm
 EXPORT_SYMBOL_GPL	 vmlinux 0xf2e2e81c	nf_ct_frag6_gather
