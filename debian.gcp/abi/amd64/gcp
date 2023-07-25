@@ -21239,7 +21239,6 @@ EXPORT_SYMBOL_GPL	 vmlinux 0x32cca846	dev_pm_clear_wake_irq
 EXPORT_SYMBOL_GPL	 vmlinux 0x32df33e7	x509_cert_parse
 EXPORT_SYMBOL_GPL	 vmlinux 0x32e3b076	mxcsr_feature_mask
 EXPORT_SYMBOL_GPL	 vmlinux 0x32e4d1e0	sgx_virt_ecreate
-EXPORT_SYMBOL_GPL	 vmlinux 0x32e91ff4	find_extend_vma
 EXPORT_SYMBOL_GPL	 vmlinux 0x32f9fab4	bus_register
 EXPORT_SYMBOL_GPL	 vmlinux 0x330010b6	cpuset_cgrp_subsys_enabled_key
 EXPORT_SYMBOL_GPL	 vmlinux 0x330219f0	device_property_read_u16_array
@@ -22694,7 +22693,6 @@ EXPORT_SYMBOL_GPL	 vmlinux 0x67d59d53	locks_alloc_lock
 EXPORT_SYMBOL_GPL	 vmlinux 0x67da9f7c	sha512_zero_message_hash
 EXPORT_SYMBOL_GPL	 vmlinux 0x67dcd76b	uv_setup_irq
 EXPORT_SYMBOL_GPL	 vmlinux 0x67e5d1f1	da9052_adc_manual_read
-EXPORT_SYMBOL_GPL	 vmlinux 0x67e9ee0a	__vfs_setxattr_noperm
 EXPORT_SYMBOL_GPL	 vmlinux 0x67ed2b03	umd_unload_blob
 EXPORT_SYMBOL_GPL	 vmlinux 0x6814b166	ata_pci_sff_init_host
 EXPORT_SYMBOL_GPL	 vmlinux 0x681cb299	serdev_device_write_room
@@ -24877,7 +24875,6 @@ EXPORT_SYMBOL_GPL	 vmlinux 0xb7e97b33	spi_unregister_device
 EXPORT_SYMBOL_GPL	 vmlinux 0xb7f49f73	nf_hook_entries_delete_raw
 EXPORT_SYMBOL_GPL	 vmlinux 0xb7f8dad5	fwnode_get_next_available_child_node
 EXPORT_SYMBOL_GPL	 vmlinux 0xb7f990e9	rht_bucket_nested
-EXPORT_SYMBOL_GPL	 vmlinux 0xb7fdbf2f	__vfs_removexattr_noperm
 EXPORT_SYMBOL_GPL	 vmlinux 0xb7fddc5c	acpi_dev_ready_for_enumeration
 EXPORT_SYMBOL_GPL	 vmlinux 0xb80f88a9	iommu_map
 EXPORT_SYMBOL_GPL	 vmlinux 0xb8101456	blkg_conf_finish
