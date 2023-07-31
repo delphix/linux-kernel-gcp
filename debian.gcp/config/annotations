@@ -5,8 +5,21 @@
 
 include "../../debian.master/config/annotations"
 
-CONFIG_ACCESSIBILITY                            policy<{'amd64': 'n', 'arm64': 'n'}>
-CONFIG_ACCESSIBILITY                            note<'LP: #1967702'>
+
+
+# GCP-requested settings:
+
+
+#########################
+# NOTE: The following modules should be included 
+# in the default included modules (linux-modules) not 
+# linux-modules-extra:
+#
+# drivers/target/loopback/tcm_loop.ko  (CONFIG_LOOPBACK_TARGET)
+# drivers/target/loopback/target_core*.ko  (CONFIG_LOOPBACK_TARGET)
+#########################
+
+
 
 CONFIG_BLK_DEV_FD                               policy<{'amd64': 'n'}>
 CONFIG_BLK_DEV_FD                               note<'LP:1729673'>
@@ -22,9 +35,6 @@ CONFIG_BOOTPARAM_SOFTLOCKUP_PANIC               note<'initial packaging'>
 
 CONFIG_GPIO_CDEV_V1                             policy<{'amd64': 'n', 'arm64': 'n'}>
 CONFIG_GPIO_CDEV_V1                             note<'LP: #1953613'>
-
-CONFIG_KERNEL_ZSTD                              policy<{'amd64': 'y', 'arm64': 'n'}>
-CONFIG_KERNEL_ZSTD                              note<'LP: #1931725'>
 
 CONFIG_NETFILTER_NETLINK_LOG                    policy<{'amd64': 'y', 'arm64': 'y'}>
 CONFIG_NETFILTER_NETLINK_LOG                    note<'initial packaging'>
@@ -50,8 +60,23 @@ CONFIG_RAID6_PQ_DEFAULT_ALG                     note<'LP:1812728'>
 CONFIG_RAID6_PQ_DEFAULT_ALG_BOOL                policy<{'amd64': '-'}>
 CONFIG_RAID6_PQ_DEFAULT_ALG_BOOL                note<'LP:1812728'>
 
+
+
+
+
+
+
+# General cloud settings
+
 CONFIG_RUST                                     policy<{'amd64': 'n', 'arm64': '-'}>
 CONFIG_RUST                                     note<'required to enable Rust support, LP: #1993183'>
+
+CONFIG_ACCESSIBILITY                            policy<{'amd64': 'n', 'arm64': 'n'}>
+CONFIG_ACCESSIBILITY                            note<'LP: #1967702'>
+
+CONFIG_KERNEL_ZSTD                              policy<{'amd64': 'y', 'arm64': 'n'}>
+CONFIG_KERNEL_ZSTD                              note<'LP: #1931725'>
+
 
 
 # ---- Annotations without notes ----
