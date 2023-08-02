@@ -5,21 +5,8 @@
 
 include "../../debian.master/config/annotations"
 
-
-
-# GCP-requested settings:
-
-
-#########################
-# NOTE: The following modules should be included 
-# in the default included modules (linux-modules) not 
-# linux-modules-extra:
-#
-# drivers/target/loopback/tcm_loop.ko  (CONFIG_LOOPBACK_TARGET)
-# drivers/target/loopback/target_core*.ko  (CONFIG_LOOPBACK_TARGET)
-#########################
-
-
+CONFIG_ACCESSIBILITY                            policy<{'amd64': 'n', 'arm64': 'n'}>
+CONFIG_ACCESSIBILITY                            note<'LP: #1967702'>
 
 CONFIG_BLK_DEV_FD                               policy<{'amd64': 'n'}>
 CONFIG_BLK_DEV_FD                               note<'LP:1729673'>
@@ -27,7 +14,7 @@ CONFIG_BLK_DEV_FD                               note<'LP:1729673'>
 CONFIG_BLK_DEV_NVME                             policy<{'amd64': 'y', 'arm64': 'y'}>
 CONFIG_BLK_DEV_NVME                             note<'Needed for minimal images'>
 
-CONFIG_BOOTPARAM_HARDLOCKUP_PANIC               policy<{'amd64': 'y'}>
+CONFIG_BOOTPARAM_HARDLOCKUP_PANIC               policy<{'amd64': 'y', 'arm64': 'n'}>
 CONFIG_BOOTPARAM_HARDLOCKUP_PANIC               note<'initial packaging'>
 
 CONFIG_BOOTPARAM_SOFTLOCKUP_PANIC               policy<{'amd64': 'y', 'arm64': 'y'}>
@@ -35,6 +22,9 @@ CONFIG_BOOTPARAM_SOFTLOCKUP_PANIC               note<'initial packaging'>
 
 CONFIG_GPIO_CDEV_V1                             policy<{'amd64': 'n', 'arm64': 'n'}>
 CONFIG_GPIO_CDEV_V1                             note<'LP: #1953613'>
+
+CONFIG_KERNEL_ZSTD                              policy<{'amd64': 'y', 'arm64': 'n'}>
+CONFIG_KERNEL_ZSTD                              note<'LP: #1931725'>
 
 CONFIG_NETFILTER_NETLINK_LOG                    policy<{'amd64': 'y', 'arm64': 'y'}>
 CONFIG_NETFILTER_NETLINK_LOG                    note<'initial packaging'>
@@ -60,23 +50,8 @@ CONFIG_RAID6_PQ_DEFAULT_ALG                     note<'LP:1812728'>
 CONFIG_RAID6_PQ_DEFAULT_ALG_BOOL                policy<{'amd64': '-'}>
 CONFIG_RAID6_PQ_DEFAULT_ALG_BOOL                note<'LP:1812728'>
 
-
-
-
-
-
-
-# General cloud settings
-
-CONFIG_RUST                                     policy<{'amd64': 'n', 'arm64': '-'}>
+CONFIG_RUST                                     policy<{'amd64': '-', 'arm64': '-'}>
 CONFIG_RUST                                     note<'required to enable Rust support, LP: #1993183'>
-
-CONFIG_ACCESSIBILITY                            policy<{'amd64': 'n', 'arm64': 'n'}>
-CONFIG_ACCESSIBILITY                            note<'LP: #1967702'>
-
-CONFIG_KERNEL_ZSTD                              policy<{'amd64': 'y', 'arm64': 'n'}>
-CONFIG_KERNEL_ZSTD                              note<'LP: #1931725'>
-
 
 
 # ---- Annotations without notes ----
@@ -91,7 +66,6 @@ CONFIG_ARCH_BCM2835                             policy<{'arm64': 'y'}>
 CONFIG_ARCH_BCMBCA                              policy<{'arm64': 'y'}>
 CONFIG_ARCH_BCM_IPROC                           policy<{'arm64': 'y'}>
 CONFIG_ARCH_BRCMSTB                             policy<{'arm64': 'y'}>
-CONFIG_ARCH_FORCE_MAX_ORDER                     policy<{'arm64': '13'}>
 CONFIG_ARCH_INLINE_READ_LOCK                    policy<{'arm64': 'y'}>
 CONFIG_ARCH_INLINE_READ_LOCK_BH                 policy<{'arm64': 'y'}>
 CONFIG_ARCH_INLINE_READ_LOCK_IRQ                policy<{'arm64': 'y'}>
@@ -118,23 +92,13 @@ CONFIG_ARCH_INLINE_WRITE_UNLOCK                 policy<{'arm64': 'y'}>
 CONFIG_ARCH_INLINE_WRITE_UNLOCK_BH              policy<{'arm64': 'y'}>
 CONFIG_ARCH_INLINE_WRITE_UNLOCK_IRQ             policy<{'arm64': 'y'}>
 CONFIG_ARCH_INLINE_WRITE_UNLOCK_IRQRESTORE      policy<{'arm64': 'y'}>
-CONFIG_ARCH_MMAP_RND_BITS_MAX                   policy<{'amd64': '32', 'arm64': '33'}>
-CONFIG_ARCH_MMAP_RND_BITS_MIN                   policy<{'amd64': '28', 'arm64': '18'}>
-CONFIG_ARCH_MMAP_RND_COMPAT_BITS_MIN            policy<{'amd64': '8', 'arm64': '11'}>
 CONFIG_ARCH_NR_GPIO                             policy<{'amd64': '-', 'arm64': '-'}>
-CONFIG_ARCH_WANTS_THP_SWAP                      policy<{'amd64': 'y', 'arm64': 'y'}>
-CONFIG_ARCH_WANT_HUGE_PMD_SHARE                 policy<{'amd64': 'y', 'arm64': 'y'}>
-CONFIG_ARM64_4K_PAGES                           policy<{'arm64': 'y'}>
-CONFIG_ARM64_64K_PAGES                          policy<{'arm64': 'n'}>
-CONFIG_ARM64_CONT_PMD_SHIFT                     policy<{'arm64': '4'}>
-CONFIG_ARM64_CONT_PTE_SHIFT                     policy<{'arm64': '4'}>
-CONFIG_ARM64_PAGE_SHIFT                         policy<{'arm64': '12'}>
-CONFIG_ARM64_VA_BITS_39                         policy<{'arm64': 'n'}>
 CONFIG_ARM_BRCMSTB_AVS_CPUFREQ                  policy<{'arm64': 'm'}>
 CONFIG_ARM_RASPBERRYPI_CPUFREQ                  policy<{'arm64': 'm'}>
 CONFIG_ARM_SCMI_TRANSPORT_SMC_ATOMIC_ENABLE     policy<{'arm64': 'n'}>
 CONFIG_ARM_SCMI_TRANSPORT_VIRTIO_ATOMIC_ENABLE  policy<{'arm64': 'n'}>
 CONFIG_ARM_SMMU_QCOM_DEBUG                      policy<{'arm64': 'n'}>
+CONFIG_AS_VERSION                               policy<{'amd64': '24100', 'arm64': '24100'}>
 CONFIG_BCM2711_THERMAL                          policy<{'arm64': 'm'}>
 CONFIG_BCM2835_MBOX                             policy<{'arm64': 'y'}>
 CONFIG_BCM2835_POWER                            policy<{'arm64': 'y'}>
@@ -157,15 +121,15 @@ CONFIG_BGMAC                                    policy<{'arm64': 'y'}>
 CONFIG_BGMAC_PLATFORM                           policy<{'arm64': 'y'}>
 CONFIG_BINDGEN_VERSION_TEXT                     policy<{'amd64': '-'}>
 CONFIG_BLK_DEV_FD_RAWCMD                        policy<{'amd64': '-'}>
-CONFIG_BLK_DEV_UBLK                             policy<{'amd64': 'm', 'arm64': 'm'}>
 CONFIG_BRCMSTB_DPFE                             policy<{'arm64': 'y'}>
 CONFIG_BRCMSTB_L2_IRQ                           policy<{'arm64': 'y'}>
 CONFIG_BRCMSTB_MEMC                             policy<{'arm64': 'm'}>
-CONFIG_BRCMSTB_PM                               policy<{'arm64': 'y'}>
+CONFIG_BRCMSTB_PM                               policy<{'arm64': '-'}>
 CONFIG_BRCMSTB_THERMAL                          policy<{'arm64': 'm'}>
 CONFIG_BRCM_USB_PINMAP                          policy<{'arm64': 'm'}>
 CONFIG_BUILD_BIN2C                              policy<{'amd64': '-', 'arm64': '-'}>
 CONFIG_CACHEFILES_ERROR_INJECTION               policy<{'amd64': 'n', 'arm64': 'n'}>
+CONFIG_CC_VERSION_TEXT                          policy<{'amd64': '"x86_64-linux-gnu-gcc-13 (Ubuntu 13.2.0-1ubuntu1) 13.2.0"', 'arm64': '"aarch64-linux-gnu-gcc-13 (Ubuntu 13.1.0-8ubuntu1) 13.1.0"'}>
 CONFIG_CEC_GPIO                                 policy<{'amd64': '-', 'arm64': '-'}>
 CONFIG_CEC_PIN                                  policy<{'amd64': '-', 'arm64': '-'}>
 CONFIG_CEC_PIN_ERROR_INJ                        policy<{'amd64': '-', 'arm64': '-'}>
@@ -196,8 +160,8 @@ CONFIG_EFI_ZBOOT                                policy<{'arm64': 'y'}>
 CONFIG_EROFS_FS_ZIP_LZMA                        policy<{'amd64': 'y', 'arm64': 'y'}>
 CONFIG_FORCE_MAX_ZONEORDER                      policy<{'arm64': '-'}>
 CONFIG_FPGA_M10_BMC_SEC_UPDATE                  policy<{'amd64': 'm', 'arm64': 'm'}>
-CONFIG_FW_UPLOAD                                policy<{'amd64': 'y', 'arm64': 'y'}>
 CONFIG_GCC_SUPPORTS_DYNAMIC_FTRACE_WITH_REGS    policy<{'arm64': '-'}>
+CONFIG_GCC_VERSION                              policy<{'amd64': '130200', 'arm64': '130100'}>
 CONFIG_GENERIC_MSI_IRQ_DOMAIN                   policy<{'amd64': '-', 'arm64': '-'}>
 CONFIG_GPIO_AAEON                               policy<{'amd64': '-'}>
 CONFIG_GPIO_BCM_XGS_IPROC                       policy<{'arm64': 'm'}>
@@ -217,7 +181,6 @@ CONFIG_I2C_BCM2835                              policy<{'arm64': 'm'}>
 CONFIG_I2C_BCM_IPROC                            policy<{'arm64': 'm'}>
 CONFIG_I2C_BRCMSTB                              policy<{'arm64': 'm'}>
 CONFIG_I8K                                      policy<{'amd64': 'n'}>
-CONFIG_INFINIBAND_VMWARE_PVRDMA                 policy<{'amd64': 'm', 'arm64': 'm'}>
 CONFIG_INLINE_READ_LOCK                         policy<{'arm64': 'y'}>
 CONFIG_INLINE_READ_LOCK_BH                      policy<{'arm64': 'y'}>
 CONFIG_INLINE_READ_LOCK_IRQ                     policy<{'arm64': 'y'}>
@@ -248,14 +211,13 @@ CONFIG_KERNEL_LZ4                               policy<{'amd64': 'n', 'arm64': '
 CONFIG_KERNEL_LZMA                              policy<{'amd64': 'n', 'arm64': 'n'}>
 CONFIG_KERNEL_LZO                               policy<{'amd64': 'n', 'arm64': 'n'}>
 CONFIG_KERNEL_XZ                                policy<{'amd64': 'n', 'arm64': 'n'}>
+CONFIG_LD_VERSION                               policy<{'amd64': '24100', 'arm64': '24100'}>
 CONFIG_LEDS_AAEON                               policy<{'amd64': '-'}>
 CONFIG_LIBCRC32C                                policy<{'amd64': 'y', 'arm64': 'y'}>
 CONFIG_MDIO_BCM_IPROC                           policy<{'arm64': 'n'}>
 CONFIG_MDIO_BUS_MUX                             policy<{'arm64': 'y'}>
 CONFIG_MDIO_BUS_MUX_BCM_IPROC                   policy<{'arm64': 'y'}>
 CONFIG_MESON_EFUSE                              policy<{'arm64': '-'}>
-CONFIG_MESON_SECURE_PM_DOMAINS                  policy<{'arm64': 'y'}>
-CONFIG_MESON_SM                                 policy<{'arm64': 'y'}>
 CONFIG_MFD_AAEON                                policy<{'amd64': '-'}>
 CONFIG_MLX5_EN_MACSEC                           policy<{'amd64': 'y', 'arm64': 'y'}>
 CONFIG_MMC_BCM2835                              policy<{'arm64': 'm'}>
@@ -270,20 +232,16 @@ CONFIG_NF_DEFRAG_IPV4                           policy<{'amd64': 'y', 'arm64': '
 CONFIG_NF_DEFRAG_IPV6                           policy<{'amd64': 'y', 'arm64': 'y'}>
 CONFIG_NINTENDO_FF                              policy<{'amd64': '-', 'arm64': '-'}>
 CONFIG_NPCM7XX_WATCHDOG                         policy<{'arm64': 'm'}>
-CONFIG_NTFS_RW                                  policy<{'amd64': 'n', 'arm64': 'n'}>
 CONFIG_NVMEM_BCM_OCOTP                          policy<{'arm64': 'm'}>
-CONFIG_NVMEM_MESON_EFUSE                        policy<{'arm64': 'm'}>
 CONFIG_NVME_COMMON                              policy<{'amd64': 'y', 'arm64': 'y'}>
 CONFIG_NVME_CORE                                policy<{'amd64': 'y', 'arm64': 'y'}>
 CONFIG_OMAP_GPMC                                policy<{'arm64': 'm'}>
-CONFIG_PAGE_SIZE_LESS_THAN_64KB                 policy<{'amd64': 'y', 'arm64': 'y'}>
 CONFIG_PANIC_ON_OOPS_VALUE                      policy<{'amd64': '1', 'arm64': '1'}>
 CONFIG_PCIE_BRCMSTB                             policy<{'arm64': 'm'}>
 CONFIG_PCIE_IPROC                               policy<{'arm64': 'm'}>
 CONFIG_PCIE_IPROC_MSI                           policy<{'arm64': 'y'}>
 CONFIG_PCIE_IPROC_PLATFORM                      policy<{'arm64': 'm'}>
 CONFIG_PCI_MSI_IRQ_DOMAIN                       policy<{'amd64': '-', 'arm64': '-'}>
-CONFIG_PGTABLE_LEVELS                           policy<{'amd64': '5', 'arm64': '4'}>
 CONFIG_PHY_BCM_NS_USB2                          policy<{'arm64': 'm'}>
 CONFIG_PHY_BCM_NS_USB3                          policy<{'arm64': 'm'}>
 CONFIG_PHY_BCM_SR_PCIE                          policy<{'arm64': 'm'}>
@@ -353,6 +311,7 @@ CONFIG_SPI_AX88796C_COMPRESSION                 policy<{'amd64': 'y', 'arm64': '
 CONFIG_SPI_BCM2835                              policy<{'arm64': 'm'}>
 CONFIG_SPI_BCM2835AUX                           policy<{'arm64': 'm'}>
 CONFIG_SPI_BCM63XX_HSSPI                        policy<{'arm64': 'm'}>
+CONFIG_SPI_BCMBCA_HSSPI                         policy<{'arm64': 'm'}>
 CONFIG_SPI_BCM_QSPI                             policy<{'arm64': 'm'}>
 CONFIG_SPI_INTEL                                policy<{'amd64': '-'}>
 CONFIG_SPI_INTEL_PCI                            policy<{'amd64': 'n'}>
@@ -362,7 +321,6 @@ CONFIG_TASKS_RCU                                policy<{'amd64': '-', 'arm64': '
 CONFIG_TEE_BNXT_FW                              policy<{'arm64': 'm'}>
 CONFIG_TEST_DIV64                               policy<{'amd64': 'n', 'arm64': 'm'}>
 CONFIG_TEST_SIPHASH                             policy<{'amd64': '-', 'arm64': '-'}>
-CONFIG_THP_SWAP                                 policy<{'amd64': 'y', 'arm64': 'y'}>
 CONFIG_TOUCHSCREEN_IPROC                        policy<{'arm64': 'm'}>
 CONFIG_TOUCHSCREEN_RASPBERRYPI_FW               policy<{'arm64': 'm'}>
 CONFIG_TRACE_MMIO_ACCESS                        policy<{'arm64': 'n'}>
@@ -383,4 +341,3 @@ CONFIG_VIDEO_ZORAN_DC30                         policy<{'amd64': 'y', 'arm64': '
 CONFIG_VIDEO_ZORAN_LML33                        policy<{'amd64': 'y', 'arm64': 'y'}>
 CONFIG_VIDEO_ZORAN_LML33R10                     policy<{'amd64': 'y', 'arm64': 'y'}>
 CONFIG_VIDEO_ZORAN_ZR36060                      policy<{'amd64': 'y', 'arm64': 'y'}>
-CONFIG_VMXNET3                                  policy<{'amd64': 'm', 'arm64': 'm'}>
