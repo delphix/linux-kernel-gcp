@@ -1,4 +1,4 @@
-linux-gcp (6.2.0-1011.11) lunar; urgency=medium
+linux-gcp (6.5.0-1000.0) mantic; urgency=medium
 
   * lunar/linux-gcp: 6.2.0-1011.11 -proposed tracker (LP: #2026478)
 
