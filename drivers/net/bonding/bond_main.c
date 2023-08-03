@@ -86,6 +86,7 @@
 #if IS_ENABLED(CONFIG_TLS_DEVICE)
 #include <net/tls.h>
 #endif
+#include <net/xdp.h>
 
 #include "bonding_priv.h"
 
