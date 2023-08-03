@@ -14,6 +14,7 @@
 #include <linux/interrupt.h>
 #include <linux/netdevice.h>
 #include <linux/skbuff.h>
+#include <net/xdp.h>
 
 #include "ena_com.h"
 #include "ena_eth_com.h"
