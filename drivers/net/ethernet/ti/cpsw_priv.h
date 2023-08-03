@@ -7,6 +7,7 @@
 #define DRIVERS_NET_ETHERNET_TI_CPSW_PRIV_H_
 
 #include "davinci_cpdma.h"
+#include <net/xdp.h>
 
 #define CPSW_DEBUG	(NETIF_MSG_HW		| NETIF_MSG_WOL		| \
 			 NETIF_MSG_DRV		| NETIF_MSG_LINK	| \
