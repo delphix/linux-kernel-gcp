@@ -1962,7 +1962,7 @@ void idpf_tx_splitq_build_flow_desc(union idpf_tx_flex_desc *desc,
  *
  * Returns 0 if stop is not needed
  */
-static int idpf_tx_maybe_stop_common(struct idpf_queue *tx_q, unsigned int size)
+int idpf_tx_maybe_stop_common(struct idpf_queue *tx_q, unsigned int size)
 {
 	struct netdev_queue *nq;
 	int res;
@@ -2039,8 +2039,8 @@ splitq_stop:
  * to do a register write to update our queue status. We know this can only
  * mean tail here as HW should be owning head for TX.
  */
-static void idpf_tx_buf_hw_update(struct idpf_queue *tx_q, u32 val,
-				  bool xmit_more)
+void idpf_tx_buf_hw_update(struct idpf_queue *tx_q, u32 val,
+			   bool xmit_more)
 {
 	struct netdev_queue *nq;
 
@@ -2063,11 +2063,13 @@ static void idpf_tx_buf_hw_update(struct idpf_queue *tx_q, u32 val,
 
 /**
  * idpf_tx_desc_count_required - calculate number of Tx descriptors needed
+ * @txq: queue to send buffer on
  * @skb: send buffer
  *
  * Returns number of data descriptors needed for this skb.
  */
-static unsigned int idpf_tx_desc_count_required(struct sk_buff *skb)
+unsigned int idpf_tx_desc_count_required(struct idpf_queue *txq,
+					 struct sk_buff *skb)
 {
 	const struct skb_shared_info *shinfo;
 	unsigned int count = 0, i;
@@ -2093,6 +2095,16 @@ static unsigned int idpf_tx_desc_count_required(struct sk_buff *skb)
 			count++;
 	}
 
+	if (idpf_chk_linearize(skb, txq->tx_max_bufs, count)) {
+		if (__skb_linearize(skb))
+			return 0;
+
+		count = idpf_size_to_txd_count(skb->len);
+		u64_stats_update_begin(&txq->stats_sync);
+		u64_stats_inc(&txq->q_stats.tx.linearize);
+		u64_stats_update_end(&txq->stats_sync);
+	}
+
 	return count;
 }
 
@@ -2103,8 +2115,8 @@ static unsigned int idpf_tx_desc_count_required(struct sk_buff *skb)
  * @first: original first buffer info buffer for packet
  * @idx: starting point on ring to unwind
  */
-static void idpf_tx_dma_map_error(struct idpf_queue *txq, struct sk_buff *skb,
-				  struct idpf_tx_buf *first, u16 idx)
+void idpf_tx_dma_map_error(struct idpf_queue *txq, struct sk_buff *skb,
+			   struct idpf_tx_buf *first, u16 idx)
 {
 	u64_stats_update_begin(&txq->stats_sync);
 	u64_stats_inc(&txq->q_stats.tx.dma_map_errs);
@@ -2349,7 +2361,7 @@ static void idpf_tx_splitq_map(struct idpf_queue *tx_q,
  * Returns error (negative) if TSO was requested but cannot be applied to the
  * given skb, 0 if TSO does not apply to the given skb, or 1 otherwise.
  */
-static int idpf_tso(struct sk_buff *skb, struct idpf_tx_offload_params *off)
+int idpf_tso(struct sk_buff *skb, struct idpf_tx_offload_params *off)
 {
 	const struct skb_shared_info *shinfo = skb_shinfo(skb);
 	union {
@@ -2510,8 +2522,8 @@ static bool __idpf_chk_linearize(struct sk_buff *skb, unsigned int max_bufs)
  * E.g.: a packet with 7 fragments can require 9 DMA transactions; 1 for TSO
  * header, 1 for segment payload, and then 7 for the fragments.
  */
-static bool idpf_chk_linearize(struct sk_buff *skb, unsigned int max_bufs,
-			       unsigned int count)
+bool idpf_chk_linearize(struct sk_buff *skb, unsigned int max_bufs,
+			unsigned int count)
 {
 	if (likely(count < max_bufs))
 		return false;
@@ -2549,8 +2561,7 @@ idpf_tx_splitq_get_ctx_desc(struct idpf_queue *txq)
  * @tx_q: queue to send buffer on
  * @skb: pointer to skb
  */
-static netdev_tx_t idpf_tx_drop_skb(struct idpf_queue *tx_q,
-				    struct sk_buff *skb)
+netdev_tx_t idpf_tx_drop_skb(struct idpf_queue *tx_q, struct sk_buff *skb)
 {
 	u64_stats_update_begin(&tx_q->stats_sync);
 	u64_stats_inc(&tx_q->q_stats.tx.skb_drops);
@@ -2578,16 +2589,9 @@ static netdev_tx_t idpf_tx_splitq_frame(struct sk_buff *skb,
 	unsigned int count;
 	int tso;
 
-	count = idpf_tx_desc_count_required(skb);
-	if (idpf_chk_linearize(skb, tx_q->tx_max_bufs, count)) {
-		if (__skb_linearize(skb))
-			return idpf_tx_drop_skb(tx_q, skb);
-
-		count = idpf_size_to_txd_count(skb->len);
-		u64_stats_update_begin(&tx_q->stats_sync);
-		u64_stats_inc(&tx_q->q_stats.tx.linearize);
-		u64_stats_update_end(&tx_q->stats_sync);
-	}
+	count = idpf_tx_desc_count_required(tx_q, skb);
+	if (unlikely(!count))
+		return idpf_tx_drop_skb(tx_q, skb);
 
 	tso = idpf_tso(skb, &tx_params.offload);
 	if (unlikely(tso < 0))
@@ -2705,8 +2709,7 @@ netdev_tx_t idpf_tx_splitq_start(struct sk_buff *skb,
  * skb_set_hash based on PTYPE as parsed by HW Rx pipeline and is part of
  * Rx desc.
  */
-static enum pkt_hash_types
-idpf_ptype_to_htype(const struct idpf_rx_ptype_decoded *decoded)
+enum pkt_hash_types idpf_ptype_to_htype(const struct idpf_rx_ptype_decoded *decoded)
 {
 	if (!decoded->known)
 		return PKT_HASH_TYPE_NONE;
@@ -2966,8 +2969,8 @@ static int idpf_rx_process_skb_fields(struct idpf_queue *rxq,
  * It will just attach the page as a frag to the skb.
  * The function will then update the page offset.
  */
-static void idpf_rx_add_frag(struct idpf_rx_buf *rx_buf, struct sk_buff *skb,
-			     unsigned int size)
+void idpf_rx_add_frag(struct idpf_rx_buf *rx_buf, struct sk_buff *skb,
+		      unsigned int size)
 {
 	skb_add_rx_frag(skb, skb_shinfo(skb)->nr_frags, rx_buf->page,
 			rx_buf->page_offset, size, rx_buf->truesize);
@@ -2985,9 +2988,9 @@ static void idpf_rx_add_frag(struct idpf_rx_buf *rx_buf, struct sk_buff *skb,
  * data from the current receive descriptor, taking care to set up the
  * skb correctly.
  */
-static struct sk_buff *idpf_rx_construct_skb(struct idpf_queue *rxq,
-					     struct idpf_rx_buf *rx_buf,
-					     unsigned int size)
+struct sk_buff *idpf_rx_construct_skb(struct idpf_queue *rxq,
+				      struct idpf_rx_buf *rx_buf,
+				      unsigned int size)
 {
 	unsigned int headlen;
 	struct sk_buff *skb;
@@ -3617,7 +3620,7 @@ check_rx_itr:
  * Update the net_dim() algorithm and re-enable the interrupt associated with
  * this vector.
  */
-static void idpf_vport_intr_update_itr_ena_irq(struct idpf_q_vector *q_vector)
+void idpf_vport_intr_update_itr_ena_irq(struct idpf_q_vector *q_vector)
 {
 	u32 intval;
 
