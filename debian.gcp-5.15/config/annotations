@@ -1,7 +1,7 @@
 # Menu: HEADER
 # FORMAT: 4
-# ARCH: amd64 arm64
-# FLAVOUR: amd64-gcp arm64-gcp
+# ARCH: amd64
+# FLAVOUR: amd64-gcp
 
 include "../../debian.gcp/config/annotations"
 
