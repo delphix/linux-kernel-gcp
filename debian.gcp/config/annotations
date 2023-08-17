@@ -44,11 +44,9 @@ CONFIG_BOOTPARAM_HARDLOCKUP_PANIC               policy<{'amd64': 'y'}>
 CONFIG_BOOTPARAM_HARDLOCKUP_PANIC_VALUE         policy<{'amd64': '1'}>
 CONFIG_BOOTPARAM_SOFTLOCKUP_PANIC               policy<{'amd64': 'y', 'arm64': 'y'}>
 CONFIG_BOOTPARAM_SOFTLOCKUP_PANIC_VALUE         policy<{'amd64': '1', 'arm64': '1'}>
-CONFIG_CC_VERSION_TEXT                          policy<{'amd64': '"x86_64-linux-gnu-gcc (Ubuntu 11.4.0-1ubuntu1~22.04) 11.4.0"', 'arm64': '"aarch64-linux-gnu-gcc (Ubuntu 11.4.0-1ubuntu1~22.04) 11.4.0"'}>
 CONFIG_COMEDI_TESTS_EXAMPLE                     policy<{'amd64': 'n', 'arm64': 'm'}>
 CONFIG_COMEDI_TESTS_NI_ROUTES                   policy<{'amd64': 'n', 'arm64': 'm'}>
 CONFIG_FORCE_MAX_ZONEORDER                      policy<{'arm64': '13'}>
-CONFIG_GCC_VERSION                              policy<{'amd64': '110400', 'arm64': '110400'}>
 CONFIG_GPIO_AAEON                               policy<{'amd64': '-'}>
 CONFIG_HP_WATCHDOG                              policy<{'amd64': 'm', 'arm64': 'n'}>
 CONFIG_INFINIBAND_VMWARE_PVRDMA                 policy<{'amd64': 'm', 'arm64': 'm'}>
@@ -67,7 +65,6 @@ CONFIG_NF_CT_NETLINK                            policy<{'amd64': 'y', 'arm64': '
 CONFIG_NF_DEFRAG_IPV4                           policy<{'amd64': 'y', 'arm64': 'y'}>
 CONFIG_NF_DEFRAG_IPV6                           policy<{'amd64': 'y', 'arm64': 'y'}>
 CONFIG_NVME_CORE                                policy<{'amd64': 'y', 'arm64': 'y'}>
-CONFIG_PAHOLE_VERSION                           policy<{'amd64': '125', 'arm64': '125'}>
 CONFIG_PANIC_ON_OOPS_VALUE                      policy<{'amd64': '1', 'arm64': '1'}>
 CONFIG_PGTABLE_LEVELS                           policy<{'amd64': '5', 'arm64': '4'}>
 CONFIG_SENSORS_AAEON                            policy<{'amd64': '-'}>
