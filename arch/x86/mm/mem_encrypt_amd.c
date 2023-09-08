@@ -292,11 +292,10 @@ static unsigned long pg_level_to_pfn(int level, pte_t *kpte, pgprot_t *ret_prot)
 	return pfn;
 }
 
-void notify_range_enc_status_changed(unsigned long vaddr, int npages, bool enc)
+void notify_range_enc_status_changed(unsigned long vaddr, unsigned long size, bool enc)
 {
 #ifdef CONFIG_PARAVIRT
-	unsigned long sz = npages << PAGE_SHIFT;
-	unsigned long vaddr_end = vaddr + sz;
+	unsigned long vaddr_end = vaddr + size;
 
 	while (vaddr < vaddr_end) {
 		int psize, pmask, level;
@@ -316,7 +315,7 @@ void notify_range_enc_status_changed(unsigned long vaddr, int npages, bool enc)
 		psize = page_level_size(level);
 		pmask = page_level_mask(level);
 
-		notify_page_enc_status_changed(pfn, psize >> PAGE_SHIFT, enc);
+		notify_page_enc_status_changed(pfn, size, enc);
 
 		vaddr = (vaddr & pmask) + psize;
 	}
@@ -442,7 +441,7 @@ static int __init early_set_memory_enc_dec(unsigned long vaddr,
 
 	ret = 0;
 
-	notify_range_enc_status_changed(start, PAGE_ALIGN(size) >> PAGE_SHIFT, enc);
+	notify_range_enc_status_changed(start, size, enc);
 out:
 	__flush_tlb_all();
 	return ret;
@@ -458,9 +457,9 @@ int __init early_set_memory_encrypted(unsigned long vaddr, unsigned long size)
 	return early_set_memory_enc_dec(vaddr, size, true);
 }
 
-void __init early_set_mem_enc_dec_hypercall(unsigned long vaddr, int npages, bool enc)
+void __init early_set_mem_enc_dec_hypercall(unsigned long vaddr, unsigned long size, bool enc)
 {
-	notify_range_enc_status_changed(vaddr, npages, enc);
+	notify_range_enc_status_changed(vaddr, size, enc);
 }
 
 /*
