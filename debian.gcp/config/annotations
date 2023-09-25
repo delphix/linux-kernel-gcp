@@ -50,7 +50,7 @@ CONFIG_RAID6_PQ_DEFAULT_ALG                     note<'LP:1812728'>
 CONFIG_RAID6_PQ_DEFAULT_ALG_BOOL                policy<{'amd64': '-'}>
 CONFIG_RAID6_PQ_DEFAULT_ALG_BOOL                note<'LP:1812728'>
 
-CONFIG_RUST                                     policy<{'amd64': '-', 'arm64': '-'}>
+CONFIG_RUST                                     policy<{'amd64': 'n', 'arm64': '-'}>
 CONFIG_RUST                                     note<'required to enable Rust support, LP: #1993183'>
 
 
@@ -128,6 +128,7 @@ CONFIG_BRCMSTB_THERMAL                          policy<{'arm64': 'm'}>
 CONFIG_BRCM_USB_PINMAP                          policy<{'arm64': 'm'}>
 CONFIG_BUILD_BIN2C                              policy<{'amd64': '-', 'arm64': '-'}>
 CONFIG_CACHEFILES_ERROR_INJECTION               policy<{'amd64': 'n', 'arm64': 'n'}>
+CONFIG_CC_VERSION_TEXT                          policy<{'amd64': '"x86_64-linux-gnu-gcc-13 (Ubuntu 13.2.0-4ubuntu2) 13.2.0"', 'arm64': '"aarch64-linux-gnu-gcc-13 (Ubuntu 13.2.0-2ubuntu1) 13.2.0"'}>
 CONFIG_CEC_GPIO                                 policy<{'amd64': '-', 'arm64': '-'}>
 CONFIG_CEC_PIN                                  policy<{'amd64': '-', 'arm64': '-'}>
 CONFIG_CEC_PIN_ERROR_INJ                        policy<{'amd64': '-', 'arm64': '-'}>
@@ -154,7 +155,6 @@ CONFIG_DRM_V3D                                  policy<{'arm64': 'm'}>
 CONFIG_DRM_VC4                                  policy<{'arm64': 'm'}>
 CONFIG_DRM_VC4_HDMI_CEC                         policy<{'arm64': 'y'}>
 CONFIG_DTPM_DEVFREQ                             policy<{'arm64': 'y'}>
-CONFIG_EFI_ZBOOT                                policy<{'arm64': 'y'}>
 CONFIG_EROFS_FS_ZIP_LZMA                        policy<{'amd64': 'y', 'arm64': 'y'}>
 CONFIG_FORCE_MAX_ZONEORDER                      policy<{'arm64': '-'}>
 CONFIG_FPGA_M10_BMC_SEC_UPDATE                  policy<{'amd64': 'm', 'arm64': 'm'}>
@@ -164,12 +164,6 @@ CONFIG_GPIO_AAEON                               policy<{'amd64': '-'}>
 CONFIG_GPIO_BCM_XGS_IPROC                       policy<{'arm64': 'm'}>
 CONFIG_GPIO_BRCMSTB                             policy<{'arm64': 'm'}>
 CONFIG_GPIO_RASPBERRYPI_EXP                     policy<{'arm64': 'm'}>
-CONFIG_HAVE_KERNEL_GZIP                         policy<{'amd64': 'y', 'arm64': 'y'}>
-CONFIG_HAVE_KERNEL_LZ4                          policy<{'amd64': 'y', 'arm64': 'y'}>
-CONFIG_HAVE_KERNEL_LZMA                         policy<{'amd64': 'y', 'arm64': 'y'}>
-CONFIG_HAVE_KERNEL_LZO                          policy<{'amd64': 'y', 'arm64': 'y'}>
-CONFIG_HAVE_KERNEL_XZ                           policy<{'amd64': 'y', 'arm64': 'y'}>
-CONFIG_HAVE_KERNEL_ZSTD                         policy<{'amd64': 'y', 'arm64': 'y'}>
 CONFIG_HID_NINTENDO                             policy<{'amd64': 'n', 'arm64': 'n'}>
 CONFIG_HID_RAZER                                policy<{'amd64': 'n', 'arm64': 'm'}>
 CONFIG_HW_RANDOM_BCM2835                        policy<{'arm64': 'm'}>
@@ -204,10 +198,6 @@ CONFIG_INLINE_WRITE_UNLOCK_BH                   policy<{'arm64': 'y'}>
 CONFIG_INLINE_WRITE_UNLOCK_IRQ                  policy<{'amd64': 'y', 'arm64': 'y'}>
 CONFIG_INLINE_WRITE_UNLOCK_IRQRESTORE           policy<{'arm64': 'y'}>
 CONFIG_KERNEL_GZIP                              policy<{'amd64': 'n', 'arm64': 'y'}>
-CONFIG_KERNEL_LZ4                               policy<{'amd64': 'n', 'arm64': 'n'}>
-CONFIG_KERNEL_LZMA                              policy<{'amd64': 'n', 'arm64': 'n'}>
-CONFIG_KERNEL_LZO                               policy<{'amd64': 'n', 'arm64': 'n'}>
-CONFIG_KERNEL_XZ                                policy<{'amd64': 'n', 'arm64': 'n'}>
 CONFIG_LEDS_AAEON                               policy<{'amd64': '-'}>
 CONFIG_LIBCRC32C                                policy<{'amd64': 'y', 'arm64': 'y'}>
 CONFIG_MDIO_BCM_IPROC                           policy<{'arm64': 'n'}>
