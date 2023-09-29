@@ -223,6 +223,7 @@ sg
 sha1_generic
 sha256_generic
 sha3_generic
+sha512-ssse3
 sha512_generic
 sig
 skcipher
@@ -261,6 +262,7 @@ virt-dma
 virtio
 virtio-iommu
 virtio_balloon
+virtio_blk
 virtio_console
 virtio_mmio
 virtio_pci
