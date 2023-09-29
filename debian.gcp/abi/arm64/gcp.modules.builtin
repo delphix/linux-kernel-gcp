@@ -433,8 +433,8 @@ reset-brcmstb-rescal
 reset-imx7
 reset-meson
 reset-qcom-aoss
+reset-rzg2l-usbphy-ctrl
 rfkill
-rk8xx-core
 rng
 rng-core
 roles
@@ -464,6 +464,8 @@ sh-sci
 sha1_generic
 sha256_generic
 sha3_generic
+sha512-arm64
+sha512-ce
 sha512_generic
 sig
 skcipher
@@ -526,6 +528,7 @@ virt-dma
 virtio
 virtio-iommu
 virtio_balloon
+virtio_blk
 virtio_console
 virtio_mmio
 virtio_pci
