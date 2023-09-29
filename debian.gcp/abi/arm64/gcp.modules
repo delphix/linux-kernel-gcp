@@ -5073,7 +5073,6 @@ reset-hi3660
 reset-meson-audio-arb
 reset-qcom-pdc
 reset-raspberrypi
-reset-rzg2l-usbphy-ctrl
 reset-scmi
 reset-ti-sci
 reset-ti-syscon
@@ -5098,6 +5097,7 @@ rk3399_dmc
 rk805-pwrkey
 rk808-regulator
 rk817_charger
+rk8xx-core
 rk8xx-i2c
 rk8xx-spi
 rk_crypto
@@ -5595,8 +5595,6 @@ sha1-ce
 sha2-ce
 sha256-arm64
 sha3-ce
-sha512-arm64
-sha512-ce
 shark2
 shiftfs
 shmob-drm
@@ -6396,6 +6394,7 @@ spi-zynqmp-gqspi
 spi_ks8995
 spidev
 spinand
+spl
 spm
 spmi
 spmi-mtk-pmif
@@ -7206,7 +7205,6 @@ viperboard_adc
 virt_wifi
 virtio-gpu
 virtio-rng
-virtio_blk
 virtio_bt
 virtio_crypto
 virtio_dma_buf
@@ -7532,6 +7530,7 @@ zd1301
 zd1301_demod
 zet6223
 zforce_ts
+zfs
 zhenhua
 ziirave_wdt
 zinitix
