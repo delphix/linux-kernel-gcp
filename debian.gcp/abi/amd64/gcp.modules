@@ -2355,6 +2355,7 @@ iptable_mangle
 iptable_nat
 iptable_raw
 iptable_security
+ipu-bridge
 ipu3-cio2
 ipu3-imgu
 ipvlan
@@ -4546,7 +4547,6 @@ sgp30
 sgp40
 sha1-ssse3
 sha256-ssse3
-sha512-ssse3
 shark2
 shiftfs
 sht15
@@ -5293,6 +5293,7 @@ spi-zynqmp-gqspi
 spi_ks8995
 spidev
 spinand
+spl
 spmi
 sprd_serial
 sps30
@@ -5868,6 +5869,7 @@ v4l2-flash-led-class
 v4l2-fwnode
 v4l2-mem2mem
 v4l2-tpg
+v4l2loopback
 vboxguest
 vboxsf
 vboxvideo
@@ -5931,7 +5933,6 @@ viperboard_adc
 virt_wifi
 virtio-gpu
 virtio-rng
-virtio_blk
 virtio_bt
 virtio_crypto
 virtio_dma_buf
@@ -6259,6 +6260,7 @@ zd1301
 zd1301_demod
 zet6223
 zforce_ts
+zfs
 zhenhua
 ziirave_wdt
 zinitix
