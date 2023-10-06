@@ -217,6 +217,7 @@ evdev
 exportfs
 ext4
 extcon-core
+failover
 fan
 fat
 fb
@@ -341,6 +342,7 @@ mtk-regulator-coupler
 mx3fb
 mxc-clk
 n_null
+net_failover
 nf_conntrack
 nf_conntrack_netlink
 nf_defrag_ipv4
@@ -531,6 +533,7 @@ virtio_balloon
 virtio_blk
 virtio_console
 virtio_mmio
+virtio_net
 virtio_pci
 virtio_pci_legacy_dev
 virtio_pci_modern_dev
