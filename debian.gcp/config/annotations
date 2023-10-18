@@ -80,7 +80,6 @@ CONFIG_SPEAKUP_SYNTH_LTLK                       policy<{'amd64': '-', 'arm64': '
 CONFIG_SPEAKUP_SYNTH_SOFT                       policy<{'amd64': '-', 'arm64': '-'}>
 CONFIG_SPEAKUP_SYNTH_SPKOUT                     policy<{'amd64': '-', 'arm64': '-'}>
 CONFIG_SPEAKUP_SYNTH_TXPRT                      policy<{'amd64': '-', 'arm64': '-'}>
-CONFIG_SYSFB_SIMPLEFB                           policy<{'amd64': 'y', 'arm64': 'y'}>
 CONFIG_UBUNTU_ODM_DRIVERS                       policy<{'amd64': '-'}>
 CONFIG_VERSION_SIGNATURE                        policy<{'amd64': '"Ubuntu 5.15.0-22.22-generic 5.15.19"', 'arm64': '"Ubuntu 5.15.0-22.22-generic 5.15.19"'}>
 CONFIG_VIDEO_ADV7511_CEC                        policy<{'amd64': 'n'}>
