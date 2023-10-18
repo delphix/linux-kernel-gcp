@@ -301,7 +301,6 @@ CONFIG_SPI_BCM_QSPI                             policy<{'arm64': 'm'}>
 CONFIG_SPI_INTEL                                policy<{'amd64': '-'}>
 CONFIG_SPI_INTEL_PCI                            policy<{'amd64': 'n'}>
 CONFIG_SPI_INTEL_PLATFORM                       policy<{'amd64': 'n'}>
-CONFIG_SYSFB_SIMPLEFB                           policy<{'amd64': 'y', 'arm64': 'y'}>
 CONFIG_TASKS_RCU                                policy<{'amd64': '-', 'arm64': '-'}>
 CONFIG_TEE_BNXT_FW                              policy<{'arm64': 'm'}>
 CONFIG_TEST_DIV64                               policy<{'amd64': 'n', 'arm64': 'm'}>
