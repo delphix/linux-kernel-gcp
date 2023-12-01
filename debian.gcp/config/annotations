@@ -50,7 +50,7 @@ CONFIG_RAID6_PQ_DEFAULT_ALG                     note<'LP:1812728'>
 CONFIG_RAID6_PQ_DEFAULT_ALG_BOOL                policy<{'amd64': '-'}>
 CONFIG_RAID6_PQ_DEFAULT_ALG_BOOL                note<'LP:1812728'>
 
-CONFIG_RUST                                     policy<{'amd64': 'n', 'arm64': '-'}>
+CONFIG_RUST                                     policy<{'amd64': '-', 'arm64': '-'}>
 CONFIG_RUST                                     note<'required to enable Rust support, LP: #1993183'>
 
 
@@ -109,6 +109,7 @@ CONFIG_BCM4908_ENET                             policy<{'arm64': 'm'}>
 CONFIG_BCM7038_L1_IRQ                           policy<{'arm64': 'y'}>
 CONFIG_BCM7038_WDT                              policy<{'arm64': 'm'}>
 CONFIG_BCM7120_L2_IRQ                           policy<{'arm64': 'm'}>
+CONFIG_BCMASP                                   policy<{'arm64': 'm'}>
 CONFIG_BCM_FLEXRM_MBOX                          policy<{'arm64': 'm'}>
 CONFIG_BCM_IPROC_ADC                            policy<{'arm64': 'm'}>
 CONFIG_BCM_NS_THERMAL                           policy<{'arm64': 'm'}>
@@ -198,13 +199,15 @@ CONFIG_INLINE_WRITE_UNLOCK_IRQ                  policy<{'amd64': 'y', 'arm64': '
 CONFIG_INLINE_WRITE_UNLOCK_IRQRESTORE           policy<{'arm64': 'y'}>
 CONFIG_KERNEL_GZIP                              policy<{'amd64': 'n', 'arm64': 'y'}>
 CONFIG_LEDS_AAEON                               policy<{'amd64': '-'}>
+CONFIG_LEDS_BCM63138                            policy<{'arm64': 'm'}>
 CONFIG_LIBCRC32C                                policy<{'amd64': 'y', 'arm64': 'y'}>
+CONFIG_MARVELL_GTI_WDT                          policy<{'arm64': 'm'}>
 CONFIG_MDIO_BCM_IPROC                           policy<{'arm64': 'n'}>
 CONFIG_MDIO_BUS_MUX                             policy<{'arm64': 'y'}>
 CONFIG_MDIO_BUS_MUX_BCM_IPROC                   policy<{'arm64': 'y'}>
 CONFIG_MESON_EFUSE                              policy<{'arm64': '-'}>
 CONFIG_MFD_AAEON                                policy<{'amd64': '-'}>
-CONFIG_MLX5_EN_MACSEC                           policy<{'amd64': 'y', 'arm64': 'y'}>
+CONFIG_MLX5_EN_MACSEC                           policy<{'amd64': '-', 'arm64': '-'}>
 CONFIG_MMC_BCM2835                              policy<{'arm64': 'm'}>
 CONFIG_MMC_SDHCI_BRCMSTB                        policy<{'arm64': 'm'}>
 CONFIG_MMC_SDHCI_IPROC                          policy<{'arm64': 'm'}>
