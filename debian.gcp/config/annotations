@@ -23,6 +23,9 @@ CONFIG_SCSI_VIRTIO                              note<'tech preview of new featur
 CONFIG_SPEAKUP                                  policy<{'amd64': '-', 'arm64': '-'}>
 CONFIG_SPEAKUP                                  note<'LP: #1967702'>
 
+CONFIG_IDPF                                     policy<{'amd64': 'y', 'arm64': 'n'}>
+CONFIG_IDPF                                     note<'LP:2039720'>
+
 
 # ---- Annotations without notes ----
 
