@@ -68,6 +68,7 @@ CONFIG_NF_DEFRAG_IPV6                           policy<{'amd64': 'y', 'arm64': '
 CONFIG_NVME_CORE                                policy<{'amd64': 'y', 'arm64': 'y'}>
 CONFIG_PANIC_ON_OOPS_VALUE                      policy<{'amd64': '1', 'arm64': '1'}>
 CONFIG_PGTABLE_LEVELS                           policy<{'amd64': '5', 'arm64': '4'}>
+CONFIG_RTC_DRV_PCF85263                         policy<{'amd64': '-'}>
 CONFIG_SENSORS_AAEON                            policy<{'amd64': '-'}>
 CONFIG_SEV_GUEST                                policy<{'amd64': 'y'}>
 CONFIG_SPEAKUP_SYNTH_ACNTSA                     policy<{'amd64': '-', 'arm64': '-'}>
