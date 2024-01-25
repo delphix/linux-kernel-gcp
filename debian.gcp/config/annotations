@@ -11,6 +11,9 @@ CONFIG_ACCESSIBILITY                            note<'LP: #1967702'>
 CONFIG_BLK_DEV_NVME                             policy<{'amd64': 'y', 'arm64': 'y'}>
 CONFIG_BLK_DEV_NVME                             note<'LP:#1759893'>
 
+CONFIG_IDPF                                     policy<{'amd64': 'y', 'arm64': 'n'}>
+CONFIG_IDPF                                     note<'LP:2039720'>
+
 CONFIG_PANIC_ON_OOPS                            policy<{'amd64': 'y', 'arm64': 'y'}>
 CONFIG_PANIC_ON_OOPS                            note<'keep working if at all possible'>
 
@@ -22,9 +25,6 @@ CONFIG_SCSI_VIRTIO                              note<'tech preview of new featur
 
 CONFIG_SPEAKUP                                  policy<{'amd64': '-', 'arm64': '-'}>
 CONFIG_SPEAKUP                                  note<'LP: #1967702'>
-
-CONFIG_IDPF                                     policy<{'amd64': 'y', 'arm64': 'n'}>
-CONFIG_IDPF                                     note<'LP:2039720'>
 
 
 # ---- Annotations without notes ----
