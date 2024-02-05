@@ -315,7 +315,7 @@ void notify_range_enc_status_changed(unsigned long vaddr, unsigned long size, bo
 		psize = page_level_size(level);
 		pmask = page_level_mask(level);
 
-		notify_page_enc_status_changed(pfn, size, enc);
+		notify_page_enc_status_changed(pfn, psize >> PAGE_SHIFT, enc);
 
 		vaddr = (vaddr & pmask) + psize;
 	}
