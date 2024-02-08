@@ -127,6 +127,7 @@ i2c-designware-platform
 i2c-dev
 i8042
 icc-core
+idpf
 imsttfb
 input-core
 intel-agp
