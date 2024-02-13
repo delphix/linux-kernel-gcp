@@ -50,8 +50,8 @@ CONFIG_RAID6_PQ_DEFAULT_ALG                     note<'LP:1812728'>
 CONFIG_RAID6_PQ_DEFAULT_ALG_BOOL                policy<{'amd64': '-'}>
 CONFIG_RAID6_PQ_DEFAULT_ALG_BOOL                note<'LP:1812728'>
 
-CONFIG_RUST                                     policy<{'amd64': '-', 'arm64': '-'}>
-CONFIG_RUST                                     note<'required to enable Rust support, LP: #1993183'>
+CONFIG_RUST                                     policy<{'amd64': 'n', 'arm64': '-'}>
+CONFIG_RUST                                     note<'TODO: update note'>
 
 
 # ---- Annotations without notes ----
@@ -59,7 +59,6 @@ CONFIG_RUST                                     note<'required to enable Rust su
 CONFIG_A11Y_BRAILLE_CONSOLE                     policy<{'amd64': '-', 'arm64': '-'}>
 CONFIG_AAEON_IWMI_WDT                           policy<{'amd64': '-'}>
 CONFIG_AHCI_BRCM                                policy<{'arm64': 'm'}>
-CONFIG_APPLE_RTKIT                              policy<{'arm64': 'y'}>
 CONFIG_APPLE_SART                               policy<{'arm64': 'y'}>
 CONFIG_ARCH_BCM                                 policy<{'arm64': 'y'}>
 CONFIG_ARCH_BCM2835                             policy<{'arm64': 'y'}>
@@ -98,6 +97,7 @@ CONFIG_ARM_RASPBERRYPI_CPUFREQ                  policy<{'arm64': 'm'}>
 CONFIG_ARM_SCMI_TRANSPORT_SMC_ATOMIC_ENABLE     policy<{'arm64': 'n'}>
 CONFIG_ARM_SCMI_TRANSPORT_VIRTIO_ATOMIC_ENABLE  policy<{'arm64': 'n'}>
 CONFIG_ARM_SMMU_QCOM_DEBUG                      policy<{'arm64': 'n'}>
+CONFIG_AX88796B_RUST_PHY                        policy<{'amd64': '-'}>
 CONFIG_BCM2711_THERMAL                          policy<{'arm64': 'm'}>
 CONFIG_BCM2835_MBOX                             policy<{'arm64': 'y'}>
 CONFIG_BCM2835_POWER                            policy<{'arm64': 'y'}>
@@ -122,6 +122,7 @@ CONFIG_BGMAC_PLATFORM                           policy<{'arm64': 'y'}>
 CONFIG_BINDGEN_VERSION_TEXT                     policy<{'amd64': '-'}>
 CONFIG_BLK_DEV_FD_RAWCMD                        policy<{'amd64': '-'}>
 CONFIG_BRCMSTB_DPFE                             policy<{'arm64': 'y'}>
+CONFIG_BRCMSTB_GISB_ARB                         policy<{'arm64': 'm'}>
 CONFIG_BRCMSTB_L2_IRQ                           policy<{'arm64': 'y'}>
 CONFIG_BRCMSTB_MEMC                             policy<{'arm64': 'm'}>
 CONFIG_BRCMSTB_PM                               policy<{'arm64': '-'}>
@@ -221,7 +222,8 @@ CONFIG_NF_DEFRAG_IPV6                           policy<{'amd64': 'y', 'arm64': '
 CONFIG_NINTENDO_FF                              policy<{'amd64': '-', 'arm64': '-'}>
 CONFIG_NPCM7XX_WATCHDOG                         policy<{'arm64': 'm'}>
 CONFIG_NVMEM_BCM_OCOTP                          policy<{'arm64': 'm'}>
-CONFIG_NVME_COMMON                              policy<{'amd64': 'y', 'arm64': 'y'}>
+CONFIG_NVME_AUTH                                policy<{'amd64': 'y', 'arm64': 'y'}>
+CONFIG_NVME_COMMON                              policy<{'amd64': '-', 'arm64': '-'}>
 CONFIG_NVME_CORE                                policy<{'amd64': 'y', 'arm64': 'y'}>
 CONFIG_OMAP_GPMC                                policy<{'arm64': 'm'}>
 CONFIG_PANIC_ON_OOPS_VALUE                      policy<{'amd64': '1', 'arm64': '1'}>
@@ -242,6 +244,7 @@ CONFIG_PINCTRL_BCM2835                          policy<{'arm64': 'y'}>
 CONFIG_PINCTRL_BCM4908                          policy<{'arm64': 'm'}>
 CONFIG_PINCTRL_IPROC_GPIO                       policy<{'arm64': 'y'}>
 CONFIG_PINCTRL_NS2_MUX                          policy<{'arm64': 'y'}>
+CONFIG_POWER_RESET_BRCMSTB                      policy<{'arm64': 'y'}>
 CONFIG_PREEMPTION                               policy<{'amd64': '-', 'arm64': '-'}>
 CONFIG_PREEMPT_BUILD                            policy<{'amd64': '-', 'arm64': '-'}>
 CONFIG_PREEMPT_COUNT                            policy<{'amd64': '-', 'arm64': '-'}>
@@ -266,6 +269,7 @@ CONFIG_RUSTC_VERSION_TEXT                       policy<{'amd64': '-'}>
 CONFIG_RUST_BUILD_ASSERT_ALLOW                  policy<{'amd64': '-'}>
 CONFIG_RUST_DEBUG_ASSERTIONS                    policy<{'amd64': '-'}>
 CONFIG_RUST_OVERFLOW_CHECKS                     policy<{'amd64': '-'}>
+CONFIG_RUST_PHYLIB_ABSTRACTIONS                 policy<{'amd64': '-'}>
 CONFIG_RV_MON_WWNR                              policy<{'amd64': 'n', 'arm64': 'n'}>
 CONFIG_SAMPLES_RUST                             policy<{'amd64': '-'}>
 CONFIG_SCSI_UFS_HWMON                           policy<{'amd64': 'y', 'arm64': 'y'}>
@@ -283,6 +287,7 @@ CONFIG_SND_CTL_FAST_LOOKUP                      policy<{'amd64': 'y', 'arm64': '
 CONFIG_SND_SOC_AMD_PS                           policy<{'amd64': 'n'}>
 CONFIG_SND_SOC_AMD_PS_MACH                      policy<{'amd64': '-'}>
 CONFIG_SND_TEST_COMPONENT                       policy<{'arm64': 'n'}>
+CONFIG_SOC_BRCMSTB                              policy<{'arm64': 'y'}>
 CONFIG_SPEAKUP                                  policy<{'amd64': '-', 'arm64': '-'}>
 CONFIG_SPEAKUP_SYNTH_ACNTSA                     policy<{'amd64': '-', 'arm64': '-'}>
 CONFIG_SPEAKUP_SYNTH_APOLLO                     policy<{'amd64': '-', 'arm64': '-'}>
@@ -306,6 +311,7 @@ CONFIG_SPI_INTEL_PCI                            policy<{'amd64': 'n'}>
 CONFIG_SPI_INTEL_PLATFORM                       policy<{'amd64': 'n'}>
 CONFIG_TASKS_RCU                                policy<{'amd64': '-', 'arm64': '-'}>
 CONFIG_TEE_BNXT_FW                              policy<{'arm64': 'm'}>
+CONFIG_TEE_STMM_EFI                             policy<{'arm64': 'm'}>
 CONFIG_TEST_DIV64                               policy<{'amd64': 'n', 'arm64': 'm'}>
 CONFIG_TEST_SIPHASH                             policy<{'amd64': '-', 'arm64': '-'}>
 CONFIG_TOUCHSCREEN_IPROC                        policy<{'arm64': 'm'}>
