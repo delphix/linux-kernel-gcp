@@ -55,6 +55,7 @@ clk-cpu-dyndiv
 clk-cpumux
 clk-dualdiv
 clk-gate
+clk-imx-acm
 clk-imx-lpcg-scu
 clk-imx-scu
 clk-imx8mm
@@ -249,6 +250,7 @@ gpio-davinci
 gpio-generic
 gpio-mxc
 gpio-pl061
+gpio-sifive
 gpio-tegra
 gpio-tegra186
 gpio-xilinx
@@ -323,6 +325,7 @@ mdio-mux-bcm-iproc
 mdio_devres
 meson-aoclk
 meson-clk-measure
+meson-clkc-utils
 meson-ee-pwrc
 meson-eeclk
 meson-gx-pwrc-vpu
@@ -339,7 +342,6 @@ mq-deadline
 msm_serial
 mtk-eint
 mtk-regulator-coupler
-mx3fb
 mxc-clk
 n_null
 net_failover
@@ -370,6 +372,7 @@ pcie-altera
 pcie-altera-msi
 pcie-kirin
 pcie-mediatek
+pcie-microchip-host
 pcs-lynx
 phy-bcm-ns2-pcie
 phy-brcm-sata
@@ -504,6 +507,7 @@ thermal
 ti-cpufreq
 ti-msgmgr
 ti-opp-supply
+ti-sysc
 ti_sci
 tpm
 tpm_crb
@@ -541,7 +545,6 @@ virtio_ring
 virtio_scsi
 vivaldi-fmap
 watchdog
-wwan
 x509_key_parser
 xen-blkfront
 xen-netfront
