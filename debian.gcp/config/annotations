@@ -44,6 +44,9 @@ CONFIG_NF_CT_NETLINK                            note<'initial packaging'>
 CONFIG_PANIC_ON_OOPS                            policy<{'amd64': 'y', 'arm64': 'y'}>
 CONFIG_PANIC_ON_OOPS                            note<'keep working if at all possible'>
 
+CONFIG_PREEMPT_DYNAMIC                          policy<{'amd64': 'n', 'arm64': 'n'}>
+CONFIG_PREEMPT_DYNAMIC                          note<'LP: #2051342'>
+
 CONFIG_RAID6_PQ_DEFAULT_ALG                     policy<{'amd64': '-'}>
 CONFIG_RAID6_PQ_DEFAULT_ALG                     note<'LP:1812728'>
 
@@ -130,6 +133,7 @@ CONFIG_BRCMSTB_THERMAL                          policy<{'arm64': 'm'}>
 CONFIG_BRCM_USB_PINMAP                          policy<{'arm64': 'm'}>
 CONFIG_BUILD_BIN2C                              policy<{'amd64': '-', 'arm64': '-'}>
 CONFIG_CACHEFILES_ERROR_INJECTION               policy<{'amd64': 'n', 'arm64': 'n'}>
+CONFIG_CC_VERSION_TEXT                          policy<{'amd64': '"x86_64-linux-gnu-gcc-13 (Ubuntu 13.2.0-23ubuntu3) 13.2.0"', 'arm64': '"aarch64-linux-gnu-gcc-13 (Ubuntu 13.2.0-23ubuntu2) 13.2.0"'}>
 CONFIG_CEC_GPIO                                 policy<{'amd64': '-', 'arm64': '-'}>
 CONFIG_CEC_PIN                                  policy<{'amd64': '-', 'arm64': '-'}>
 CONFIG_CEC_PIN_ERROR_INJ                        policy<{'amd64': '-', 'arm64': '-'}>
@@ -248,7 +252,6 @@ CONFIG_POWER_RESET_BRCMSTB                      policy<{'arm64': 'y'}>
 CONFIG_PREEMPTION                               policy<{'amd64': '-', 'arm64': '-'}>
 CONFIG_PREEMPT_BUILD                            policy<{'amd64': '-', 'arm64': '-'}>
 CONFIG_PREEMPT_COUNT                            policy<{'amd64': '-', 'arm64': '-'}>
-CONFIG_PREEMPT_DYNAMIC                          policy<{'amd64': 'n', 'arm64': 'n'}>
 CONFIG_PREEMPT_RCU                              policy<{'amd64': '-', 'arm64': '-'}>
 CONFIG_PREEMPT_TRACER                           policy<{'amd64': '-', 'arm64': '-'}>
 CONFIG_PREEMPT_VOLUNTARY_BUILD                  policy<{'amd64': 'y', 'arm64': 'y'}>
@@ -318,7 +321,7 @@ CONFIG_TOUCHSCREEN_IPROC                        policy<{'arm64': 'm'}>
 CONFIG_TOUCHSCREEN_RASPBERRYPI_FW               policy<{'arm64': 'm'}>
 CONFIG_TRACE_MMIO_ACCESS                        policy<{'arm64': 'n'}>
 CONFIG_TYPEC_WCOVE                              policy<{'amd64': 'n'}>
-CONFIG_UBUNTU_ODM_DRIVERS                       policy<{'amd64': '-'}>
+CONFIG_UBUNTU_ODM_DRIVERS                       policy<{'amd64': 'n', 'arm64': 'n'}>
 CONFIG_UNINLINE_SPIN_UNLOCK                     policy<{'amd64': '-', 'arm64': '-'}>
 CONFIG_USB_BRCMSTB                              policy<{'arm64': 'm'}>
 CONFIG_USB_EHCI_BRCMSTB                         policy<{'arm64': 'm'}>
