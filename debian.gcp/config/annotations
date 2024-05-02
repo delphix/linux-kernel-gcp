@@ -23,6 +23,9 @@ CONFIG_BOOTPARAM_SOFTLOCKUP_PANIC               note<'initial packaging'>
 CONFIG_GPIO_CDEV_V1                             policy<{'amd64': 'n', 'arm64': 'n'}>
 CONFIG_GPIO_CDEV_V1                             note<'LP: #1953613'>
 
+CONFIG_IDPF                                     policy<{'amd64': 'y', 'arm64': 'y'}>
+CONFIG_IDPF                                     note<'LP: #2039720, LP: #2058052'>
+
 CONFIG_KERNEL_ZSTD                              policy<{'amd64': 'y', 'arm64': 'n'}>
 CONFIG_KERNEL_ZSTD                              note<'LP: #1931725'>
 
