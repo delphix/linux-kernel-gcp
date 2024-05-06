@@ -175,6 +175,7 @@ drivers/vhost/*
 drivers/video/fbdev/*
 drivers/video/vgastate.ko
 drivers/virt/coco/sev-guest/sev-guest.ko
+drivers/virt/coco/tdx-guest/tdx-guest.ko
 drivers/virt/vboxguest/vboxguest.ko
 drivers/virtio/*
 drivers/watchdog/softdog.ko
