@@ -137,6 +137,7 @@ struct netns_ipv4 {
 	u8 sysctl_tcp_window_scaling;
 	u8 sysctl_tcp_timestamps;
 	u8 sysctl_tcp_early_retrans;
+	int sysctl_tcp_rto_min_us;
 	u8 sysctl_tcp_recovery;
 	u8 sysctl_tcp_thin_linear_timeouts;
 	u8 sysctl_tcp_slow_start_after_idle;
