@@ -56,7 +56,7 @@ CONFIG_RAID6_PQ_DEFAULT_ALG                     note<'LP:1812728'>
 CONFIG_RAID6_PQ_DEFAULT_ALG_BOOL                policy<{'amd64': '-'}>
 CONFIG_RAID6_PQ_DEFAULT_ALG_BOOL                note<'LP:1812728'>
 
-CONFIG_RUST                                     policy<{'amd64': 'n', 'arm64': '-'}>
+CONFIG_RUST                                     policy<{'amd64': '-', 'arm64': '-'}>
 CONFIG_RUST                                     note<'TODO: update note'>
 
 
@@ -103,7 +103,9 @@ CONFIG_ARM_RASPBERRYPI_CPUFREQ                  policy<{'arm64': 'm'}>
 CONFIG_ARM_SCMI_TRANSPORT_SMC_ATOMIC_ENABLE     policy<{'arm64': 'n'}>
 CONFIG_ARM_SCMI_TRANSPORT_VIRTIO_ATOMIC_ENABLE  policy<{'arm64': 'n'}>
 CONFIG_ARM_SMMU_QCOM_DEBUG                      policy<{'arm64': 'n'}>
+CONFIG_AS_VERSION                               policy<{'amd64': '24290', 'arm64': '24290'}>
 CONFIG_AX88796B_RUST_PHY                        policy<{'amd64': '-'}>
+CONFIG_BATTERY_LENOVO_YOGA_C630                 policy<{'arm64': 'm'}>
 CONFIG_BCM2711_THERMAL                          policy<{'arm64': 'm'}>
 CONFIG_BCM2835_MBOX                             policy<{'arm64': 'y'}>
 CONFIG_BCM2835_POWER                            policy<{'arm64': 'y'}>
@@ -136,6 +138,7 @@ CONFIG_BRCMSTB_THERMAL                          policy<{'arm64': 'm'}>
 CONFIG_BRCM_USB_PINMAP                          policy<{'arm64': 'm'}>
 CONFIG_BUILD_BIN2C                              policy<{'amd64': '-', 'arm64': '-'}>
 CONFIG_CACHEFILES_ERROR_INJECTION               policy<{'amd64': 'n', 'arm64': 'n'}>
+CONFIG_CC_VERSION_TEXT                          policy<{'amd64': '"x86_64-linux-gnu-gcc-14 (Ubuntu 14.2.0-1ubuntu1) 14.2.0"', 'arm64': '"aarch64-linux-gnu-gcc-14 (Ubuntu 14.2.0-1ubuntu1) 14.2.0"'}>
 CONFIG_CEC_GPIO                                 policy<{'amd64': '-', 'arm64': '-'}>
 CONFIG_CEC_PIN                                  policy<{'amd64': '-', 'arm64': '-'}>
 CONFIG_CEC_PIN_ERROR_INJ                        policy<{'amd64': '-', 'arm64': '-'}>
@@ -144,33 +147,42 @@ CONFIG_CLK_BCM2835                              policy<{'arm64': 'y'}>
 CONFIG_CLK_BCM_63XX                             policy<{'arm64': 'y'}>
 CONFIG_CLK_BCM_NS2                              policy<{'arm64': 'y'}>
 CONFIG_CLK_BCM_SR                               policy<{'arm64': 'y'}>
+CONFIG_CLK_QCM2290_GPUCC                        policy<{'arm64': 'm'}>
 CONFIG_CLK_RASPBERRYPI                          policy<{'arm64': 'm'}>
 CONFIG_COMEDI_TESTS_EXAMPLE                     policy<{'amd64': 'n', 'arm64': 'm'}>
 CONFIG_COMEDI_TESTS_NI_ROUTES                   policy<{'amd64': 'n', 'arm64': 'm'}>
+CONFIG_COMMON_CLK_C3_PERIPHERALS                policy<{'arm64': 'm'}>
 CONFIG_COMMON_CLK_IPROC                         policy<{'arm64': 'y'}>
 CONFIG_CONSTRUCTORS                             policy<{'amd64': '-'}>
 CONFIG_CRYPTO_DEV_BCM_SPU                       policy<{'arm64': 'm'}>
 CONFIG_CRYPTO_GF128MUL                          policy<{'amd64': '-', 'arm64': '-'}>
 CONFIG_CS_DSP                                   policy<{'amd64': '-', 'arm64': '-'}>
+CONFIG_CZNIC_PLATFORMS                          policy<{'amd64': 'n', 'arm64': 'y'}>
 CONFIG_DA_MON_EVENTS                            policy<{'amd64': '-', 'arm64': '-'}>
 CONFIG_DA_MON_EVENTS_ID                         policy<{'amd64': '-', 'arm64': '-'}>
 CONFIG_DEBUG_PREEMPT                            policy<{'amd64': '-', 'arm64': '-'}>
 CONFIG_DMA_BCM2835                              policy<{'arm64': 'y'}>
 CONFIG_DRM_NOMODESET                            policy<{'amd64': '-', 'arm64': '-'}>
+CONFIG_DRM_PANEL_HIMAX_HX83102                  policy<{'arm64': 'm'}>
+CONFIG_DRM_PANEL_ILITEK_ILI9806E                policy<{'arm64': 'm'}>
+CONFIG_DRM_PANEL_LINCOLNTECH_LCD197             policy<{'arm64': 'm'}>
+CONFIG_DRM_STM_LVDS                             policy<{'arm64': 'm'}>
 CONFIG_DRM_USE_DYNAMIC_DEBUG                    policy<{'amd64': '-', 'arm64': '-'}>
 CONFIG_DRM_V3D                                  policy<{'arm64': 'm'}>
 CONFIG_DRM_VC4                                  policy<{'arm64': 'm'}>
 CONFIG_DRM_VC4_HDMI_CEC                         policy<{'arm64': 'y'}>
 CONFIG_DTPM_DEVFREQ                             policy<{'arm64': 'y'}>
-CONFIG_EROFS_FS_ZIP_LZMA                        policy<{'amd64': 'y', 'arm64': 'y'}>
+CONFIG_EC_LENOVO_YOGA_C630                      policy<{'arm64': 'm'}>
 CONFIG_FORCE_MAX_ZONEORDER                      policy<{'arm64': '-'}>
 CONFIG_FPGA_M10_BMC_SEC_UPDATE                  policy<{'amd64': 'm', 'arm64': 'm'}>
 CONFIG_GCC_SUPPORTS_DYNAMIC_FTRACE_WITH_REGS    policy<{'arm64': '-'}>
+CONFIG_GCC_VERSION                              policy<{'amd64': '140200', 'arm64': '140200'}>
 CONFIG_GENERIC_MSI_IRQ_DOMAIN                   policy<{'amd64': '-', 'arm64': '-'}>
 CONFIG_GPIO_AAEON                               policy<{'amd64': '-'}>
 CONFIG_GPIO_BCM_XGS_IPROC                       policy<{'arm64': 'm'}>
 CONFIG_GPIO_BRCMSTB                             policy<{'arm64': 'm'}>
 CONFIG_GPIO_RASPBERRYPI_EXP                     policy<{'arm64': 'm'}>
+CONFIG_HAVE_PAGE_SIZE_4KB                       policy<{'amd64': 'y', 'arm64': 'y'}>
 CONFIG_HID_NINTENDO                             policy<{'amd64': 'n', 'arm64': 'n'}>
 CONFIG_HID_RAZER                                policy<{'amd64': 'n', 'arm64': 'm'}>
 CONFIG_HW_RANDOM_BCM2835                        policy<{'arm64': 'm'}>
@@ -205,9 +217,11 @@ CONFIG_INLINE_WRITE_UNLOCK_BH                   policy<{'arm64': 'y'}>
 CONFIG_INLINE_WRITE_UNLOCK_IRQ                  policy<{'amd64': 'y', 'arm64': 'y'}>
 CONFIG_INLINE_WRITE_UNLOCK_IRQRESTORE           policy<{'arm64': 'y'}>
 CONFIG_KERNEL_GZIP                              policy<{'amd64': 'n', 'arm64': 'y'}>
+CONFIG_LD_VERSION                               policy<{'amd64': '24290', 'arm64': '24290'}>
 CONFIG_LEDS_AAEON                               policy<{'amd64': '-'}>
 CONFIG_LEDS_BCM63138                            policy<{'arm64': 'm'}>
 CONFIG_LIBCRC32C                                policy<{'amd64': 'y', 'arm64': 'y'}>
+CONFIG_LIBETH                                   policy<{'amd64': 'y', 'arm64': 'y'}>
 CONFIG_MARVELL_GTI_WDT                          policy<{'arm64': 'm'}>
 CONFIG_MDIO_BCM_IPROC                           policy<{'arm64': 'n'}>
 CONFIG_MDIO_BUS_MUX                             policy<{'arm64': 'y'}>
@@ -232,6 +246,8 @@ CONFIG_NVME_AUTH                                policy<{'amd64': 'y', 'arm64': '
 CONFIG_NVME_COMMON                              policy<{'amd64': '-', 'arm64': '-'}>
 CONFIG_NVME_CORE                                policy<{'amd64': 'y', 'arm64': 'y'}>
 CONFIG_OMAP_GPMC                                policy<{'arm64': 'm'}>
+CONFIG_PAGE_SHIFT                               policy<{'amd64': '12', 'arm64': '12'}>
+CONFIG_PAGE_SIZE_4KB                            policy<{'amd64': 'y', 'arm64': 'y'}>
 CONFIG_PANIC_ON_OOPS_VALUE                      policy<{'amd64': '1', 'arm64': '1'}>
 CONFIG_PCIE_BRCMSTB                             policy<{'arm64': 'm'}>
 CONFIG_PCIE_IPROC                               policy<{'arm64': 'm'}>
@@ -291,6 +307,8 @@ CONFIG_SND_BCM2835_SOC_I2S                      policy<{'arm64': 'm'}>
 CONFIG_SND_CTL_FAST_LOOKUP                      policy<{'amd64': 'y', 'arm64': 'y'}>
 CONFIG_SND_SOC_AMD_PS                           policy<{'amd64': 'n'}>
 CONFIG_SND_SOC_AMD_PS_MACH                      policy<{'amd64': '-'}>
+CONFIG_SND_SOC_AMD_SOUNDWIRE                    policy<{'amd64': '-'}>
+CONFIG_SND_SOC_AMD_SOUNDWIRE_LINK_BASELINE      policy<{'amd64': '-'}>
 CONFIG_SND_TEST_COMPONENT                       policy<{'arm64': 'n'}>
 CONFIG_SOC_BRCMSTB                              policy<{'arm64': 'y'}>
 CONFIG_SPEAKUP                                  policy<{'amd64': '-', 'arm64': '-'}>
@@ -324,6 +342,7 @@ CONFIG_TOUCHSCREEN_RASPBERRYPI_FW               policy<{'arm64': 'm'}>
 CONFIG_TRACE_MMIO_ACCESS                        policy<{'arm64': 'n'}>
 CONFIG_TYPEC_WCOVE                              policy<{'amd64': 'n'}>
 CONFIG_UBUNTU_ODM_DRIVERS                       policy<{'amd64': 'n', 'arm64': 'n'}>
+CONFIG_UCSI_LENOVO_YOGA_C630                    policy<{'arm64': 'm'}>
 CONFIG_UNINLINE_SPIN_UNLOCK                     policy<{'amd64': '-', 'arm64': '-'}>
 CONFIG_USB_BRCMSTB                              policy<{'arm64': 'm'}>
 CONFIG_USB_EHCI_BRCMSTB                         policy<{'arm64': 'm'}>
@@ -331,6 +350,7 @@ CONFIG_VCHIQ_CDEV                               policy<{'arm64': 'y'}>
 CONFIG_VERSION_SIGNATURE                        policy<{'amd64': '"Ubuntu 5.15.0-22.22-generic 5.15.19"', 'arm64': '"Ubuntu 5.15.0-22.22-generic 5.15.19"'}>
 CONFIG_VFIO_PLATFORM_BCMFLEXRM_RESET            policy<{'arm64': 'm'}>
 CONFIG_VIDEO_BCM2835                            policy<{'arm64': 'm'}>
+CONFIG_VIDEO_BCM2835_UNICAM                     policy<{'arm64': 'm'}>
 CONFIG_VIDEO_ZORAN                              policy<{'amd64': 'm', 'arm64': 'm'}>
 CONFIG_VIDEO_ZORAN_AVS6EYES                     policy<{'amd64': 'y', 'arm64': 'y'}>
 CONFIG_VIDEO_ZORAN_BUZ                          policy<{'amd64': 'y', 'arm64': 'y'}>
