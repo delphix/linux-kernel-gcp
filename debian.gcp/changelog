@@ -1,3 +1,9 @@
+linux-gcp (6.11.0-1000.0) oracular; urgency=medium
+
+  * Empty entry.
+
+ -- Paolo Pisati <paolo.pisati@canonical.com>  Mon, 09 Sep 2024 16:14:07 +0200
+
 linux-gcp (6.8.0-1015.17) noble; urgency=medium
 
   * noble/linux-gcp: 6.8.0-1015.17 -proposed tracker (LP: #2078076)
