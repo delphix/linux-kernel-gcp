@@ -17,7 +17,6 @@ do_tools_x86	= true
 do_tools_hyperv	= false
 do_tools_bpftool = true
 do_extras_package = true
-do_tools_common = true
 do_zfs		= true
 disable_d_i	= true
 do_source_package = false
