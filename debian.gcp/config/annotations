@@ -56,7 +56,7 @@ CONFIG_RAID6_PQ_DEFAULT_ALG                     note<'LP:1812728'>
 CONFIG_RAID6_PQ_DEFAULT_ALG_BOOL                policy<{'amd64': '-'}>
 CONFIG_RAID6_PQ_DEFAULT_ALG_BOOL                note<'LP:1812728'>
 
-CONFIG_RUST                                     policy<{'amd64': '-', 'arm64': '-'}>
+CONFIG_RUST                                     policy<{'amd64': 'n', 'arm64': '-'}>
 CONFIG_RUST                                     note<'TODO: update note'>
 
 
@@ -103,7 +103,6 @@ CONFIG_ARM_RASPBERRYPI_CPUFREQ                  policy<{'arm64': 'm'}>
 CONFIG_ARM_SCMI_TRANSPORT_SMC_ATOMIC_ENABLE     policy<{'arm64': 'n'}>
 CONFIG_ARM_SCMI_TRANSPORT_VIRTIO_ATOMIC_ENABLE  policy<{'arm64': 'n'}>
 CONFIG_ARM_SMMU_QCOM_DEBUG                      policy<{'arm64': 'n'}>
-CONFIG_AS_VERSION                               policy<{'amd64': '24290', 'arm64': '24290'}>
 CONFIG_AX88796B_RUST_PHY                        policy<{'amd64': '-'}>
 CONFIG_BATTERY_LENOVO_YOGA_C630                 policy<{'arm64': 'm'}>
 CONFIG_BCM2711_THERMAL                          policy<{'arm64': 'm'}>
@@ -129,6 +128,7 @@ CONFIG_BGMAC                                    policy<{'arm64': 'y'}>
 CONFIG_BGMAC_PLATFORM                           policy<{'arm64': 'y'}>
 CONFIG_BINDGEN_VERSION_TEXT                     policy<{'amd64': '-'}>
 CONFIG_BLK_DEV_FD_RAWCMD                        policy<{'amd64': '-'}>
+CONFIG_BLK_DEV_RUST_NULL                        policy<{'amd64': '-'}>
 CONFIG_BRCMSTB_DPFE                             policy<{'arm64': 'y'}>
 CONFIG_BRCMSTB_GISB_ARB                         policy<{'arm64': 'm'}>
 CONFIG_BRCMSTB_L2_IRQ                           policy<{'arm64': 'y'}>
@@ -138,7 +138,7 @@ CONFIG_BRCMSTB_THERMAL                          policy<{'arm64': 'm'}>
 CONFIG_BRCM_USB_PINMAP                          policy<{'arm64': 'm'}>
 CONFIG_BUILD_BIN2C                              policy<{'amd64': '-', 'arm64': '-'}>
 CONFIG_CACHEFILES_ERROR_INJECTION               policy<{'amd64': 'n', 'arm64': 'n'}>
-CONFIG_CC_VERSION_TEXT                          policy<{'amd64': '"x86_64-linux-gnu-gcc-14 (Ubuntu 14.2.0-1ubuntu1) 14.2.0"', 'arm64': '"aarch64-linux-gnu-gcc-14 (Ubuntu 14.2.0-1ubuntu1) 14.2.0"'}>
+CONFIG_CC_VERSION_TEXT                          policy<{'amd64': '"x86_64-linux-gnu-gcc-14 (Ubuntu 14.2.0-4ubuntu2) 14.2.0"', 'arm64': '"aarch64-linux-gnu-gcc-14 (Ubuntu 14.2.0-4ubuntu2) 14.2.0"'}>
 CONFIG_CEC_GPIO                                 policy<{'amd64': '-', 'arm64': '-'}>
 CONFIG_CEC_PIN                                  policy<{'amd64': '-', 'arm64': '-'}>
 CONFIG_CEC_PIN_ERROR_INJ                        policy<{'amd64': '-', 'arm64': '-'}>
@@ -176,7 +176,6 @@ CONFIG_EC_LENOVO_YOGA_C630                      policy<{'arm64': 'm'}>
 CONFIG_FORCE_MAX_ZONEORDER                      policy<{'arm64': '-'}>
 CONFIG_FPGA_M10_BMC_SEC_UPDATE                  policy<{'amd64': 'm', 'arm64': 'm'}>
 CONFIG_GCC_SUPPORTS_DYNAMIC_FTRACE_WITH_REGS    policy<{'arm64': '-'}>
-CONFIG_GCC_VERSION                              policy<{'amd64': '140200', 'arm64': '140200'}>
 CONFIG_GENERIC_MSI_IRQ_DOMAIN                   policy<{'amd64': '-', 'arm64': '-'}>
 CONFIG_GPIO_AAEON                               policy<{'amd64': '-'}>
 CONFIG_GPIO_BCM_XGS_IPROC                       policy<{'arm64': 'm'}>
@@ -217,7 +216,6 @@ CONFIG_INLINE_WRITE_UNLOCK_BH                   policy<{'arm64': 'y'}>
 CONFIG_INLINE_WRITE_UNLOCK_IRQ                  policy<{'amd64': 'y', 'arm64': 'y'}>
 CONFIG_INLINE_WRITE_UNLOCK_IRQRESTORE           policy<{'arm64': 'y'}>
 CONFIG_KERNEL_GZIP                              policy<{'amd64': 'n', 'arm64': 'y'}>
-CONFIG_LD_VERSION                               policy<{'amd64': '24290', 'arm64': '24290'}>
 CONFIG_LEDS_AAEON                               policy<{'amd64': '-'}>
 CONFIG_LEDS_BCM63138                            policy<{'arm64': 'm'}>
 CONFIG_LIBCRC32C                                policy<{'amd64': 'y', 'arm64': 'y'}>
@@ -289,6 +287,7 @@ CONFIG_RTC_DRV_BRCMSTB                          policy<{'arm64': 'm'}>
 CONFIG_RUSTC_VERSION_TEXT                       policy<{'amd64': '-'}>
 CONFIG_RUST_BUILD_ASSERT_ALLOW                  policy<{'amd64': '-'}>
 CONFIG_RUST_DEBUG_ASSERTIONS                    policy<{'amd64': '-'}>
+CONFIG_RUST_FW_LOADER_ABSTRACTIONS              policy<{'amd64': '-'}>
 CONFIG_RUST_OVERFLOW_CHECKS                     policy<{'amd64': '-'}>
 CONFIG_RUST_PHYLIB_ABSTRACTIONS                 policy<{'amd64': '-'}>
 CONFIG_RV_MON_WWNR                              policy<{'amd64': 'n', 'arm64': 'n'}>
