@@ -59,6 +59,11 @@ CONFIG_RAID6_PQ_DEFAULT_ALG_BOOL                note<'LP:1812728'>
 CONFIG_RUST                                     policy<{'amd64': 'n', 'arm64': '-'}>
 CONFIG_RUST                                     note<'TODO: update note'>
 
+CONFIG_SEV_GUEST                                policy<{'amd64': 'y'}>
+CONFIG_SEV_GUEST                                note<'LP: #2083848'>
+
+CONFIG_TSM_REPORTS                              policy<{'amd64': 'y'}>
+CONFIG_TSM_REPORTS                              note<'LP: #2083848, selected by CONFIG_SEV_GUEST'>
 
 # ---- Annotations without notes ----
 
