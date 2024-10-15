@@ -65,6 +65,7 @@ CONFIG_SEV_GUEST                                note<'LP: #2083848'>
 CONFIG_TSM_REPORTS                              policy<{'amd64': 'y'}>
 CONFIG_TSM_REPORTS                              note<'LP: #2083848, selected by CONFIG_SEV_GUEST'>
 
+
 # ---- Annotations without notes ----
 
 CONFIG_A11Y_BRAILLE_CONSOLE                     policy<{'amd64': '-', 'arm64': '-'}>
