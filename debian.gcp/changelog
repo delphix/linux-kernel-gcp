@@ -1,3 +1,9 @@
+linux-gcp (6.12.0-1000.0) plucky; urgency=medium
+
+  * Empty entry
+
+ -- Paolo Pisati <paolo.pisati@canonical.com>  Tue, 28 Jan 2025 15:44:17 +0100
+
 linux-gcp (6.11.0-1004.4) oracular; urgency=medium
 
   * oracular/linux-gcp: 6.11.0-1004.4 -proposed tracker (LP: #2084416)
