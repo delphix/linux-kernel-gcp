@@ -1166,10 +1166,8 @@ int idpf_vport_singleq_napi_poll(struct napi_struct *napi, int budget)
 						    &work_done);
 
 	/* If work not completed, return budget and polling will return */
-	if (!clean_complete) {
-		idpf_vport_intr_set_wb_on_itr(q_vector);
+	if (!clean_complete)
 		return budget;
-	}
 
 	work_done = min_t(int, work_done, budget - 1);
 
@@ -1178,8 +1176,6 @@ int idpf_vport_singleq_napi_poll(struct napi_struct *napi, int budget)
 	 */
 	if (likely(napi_complete_done(napi, work_done)))
 		idpf_vport_intr_update_itr_ena_irq(q_vector);
-	else
-		idpf_vport_intr_set_wb_on_itr(q_vector);
 
 	return work_done;
 }
