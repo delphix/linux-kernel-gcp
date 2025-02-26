@@ -16,10 +16,7 @@ CONFIG_CC_HAS_SANE_FUNCTION_ALIGNMENT           policy<{'amd64': '-', 'arm64': '
 CONFIG_CC_VERSION_TEXT                          policy<{'amd64': '"x86_64-linux-gnu-gcc-13 (Ubuntu 13.3.0-6ubuntu2~24.04) 13.3.0"', 'arm64': '"aarch64-linux-gnu-gcc-13 (Ubuntu 13.3.0-6ubuntu2~24.04) 13.3.0"'}>
 CONFIG_GCC_ASM_GOTO_OUTPUT_BROKEN               policy<{'amd64': '-', 'arm64': '-'}>
 CONFIG_GCC_VERSION                              policy<{'amd64': '130300', 'arm64': '130300'}>
-CONFIG_HAVE_PAGE_SIZE_4KB                       policy<{'amd64': 'y', 'arm64': 'y', 'arm64-gcp-64k': '-'}>
 CONFIG_LD_VERSION                               policy<{'amd64': '24200', 'arm64': '24200'}>
-CONFIG_PAGE_SHIFT                               policy<{'amd64': '12', 'arm64': '12', 'arm64-gcp-64k': '16'}>
-CONFIG_PAGE_SIZE_4KB                            policy<{'amd64': 'y', 'arm64': 'y', 'arm64-gcp-64k': '-'}>
 CONFIG_PAHOLE_VERSION                           policy<{'amd64': '125', 'arm64': '125'}>
 CONFIG_RELR                                     policy<{'arm64': '-'}>
 CONFIG_TOOLS_SUPPORT_RELR                       policy<{'amd64': 'y', 'arm64': '-'}>
