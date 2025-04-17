@@ -182,6 +182,7 @@ drivers/virt/coco/tdx-guest/tdx-guest.ko
 drivers/virt/vboxguest/vboxguest.ko
 drivers/virtio/*
 drivers/watchdog/softdog.ko
+drivers/watchdog/wdat_wdt.ko
 drivers/xen/*
 ! find sound/core -name oss -prune -o -name *.ko -print
 fs/9p/*
