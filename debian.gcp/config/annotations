@@ -166,7 +166,7 @@ CONFIG_CONSTRUCTORS                             policy<{'amd64': '-'}>
 CONFIG_CRYPTO_DEV_BCM_SPU                       policy<{'arm64': 'm'}>
 CONFIG_CRYPTO_GF128MUL                          policy<{'amd64': '-', 'arm64': '-'}>
 CONFIG_CS_DSP                                   policy<{'amd64': '-', 'arm64': '-'}>
-CONFIG_CZNIC_PLATFORMS                          policy<{'amd64': 'n', 'arm64': 'y'}>
+CONFIG_CZNIC_PLATFORMS                          policy<{'amd64': '-', 'arm64': 'y'}>
 CONFIG_DA_MON_EVENTS                            policy<{'amd64': '-', 'arm64': '-'}>
 CONFIG_DA_MON_EVENTS_ID                         policy<{'amd64': '-', 'arm64': '-'}>
 CONFIG_DEBUG_PREEMPT                            policy<{'amd64': '-', 'arm64': '-'}>
