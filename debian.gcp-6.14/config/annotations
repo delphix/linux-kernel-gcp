@@ -24,7 +24,8 @@ CONFIG_LD_VERSION                               policy<{'amd64': '24200', 'arm64
 CONFIG_PAHOLE_VERSION                           policy<{'amd64': '125', 'arm64': '125'}>
 CONFIG_RELR                                     policy<{'arm64': '-'}>
 CONFIG_RUSTC_HAS_COERCE_POINTEE                 policy<{'amd64': '-', 'arm64': '-'}>
-CONFIG_RUSTC_LLVM_VERSION                       policy<{'amd64': '180103', 'arm64': '180103'}>
+CONFIG_RUSTC_LLVM_VERSION                       policy<{'amd64': '0', 'arm64': '0'}>
 CONFIG_RUSTC_SUPPORTS_ARM64                     policy<{'arm64': '-'}>
-CONFIG_RUSTC_VERSION                            policy<{'amd64': '108001', 'arm64': '108001'}>
+CONFIG_RUSTC_VERSION                            policy<{'amd64': '0', 'arm64': '0'}>
+CONFIG_RUST_IS_AVAILABLE                        policy<{'amd64': '-', 'arm64': '-'}>
 CONFIG_TOOLS_SUPPORT_RELR                       policy<{'amd64': 'y', 'arm64': '-'}>
