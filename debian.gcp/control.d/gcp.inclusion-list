@@ -132,6 +132,7 @@ drivers/pci/host/vmd.ko
 drivers/platform/x86/pvpanic.ko
 drivers/pps/pps_core.ko
 drivers/ptp/ptp.ko
+drivers/ptp/ptp_kvm.ko
 drivers/s390/*
 drivers/s390/block/xpram.ko
 drivers/scsi/aacraid/*
