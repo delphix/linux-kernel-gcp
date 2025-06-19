@@ -1,0 +1,6 @@
+arch="arm64"
+supported="arm64"
+target="Geared toward GCP or GKE systems."
+desc="=HUMAN= SMP"
+bootloader="grub-pc | grub-efi-amd64 | grub-efi-ia32 | grub | lilo | grub-efi-arm64 [arm64]"
+provides=""
