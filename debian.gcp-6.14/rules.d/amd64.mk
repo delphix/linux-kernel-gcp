@@ -23,4 +23,4 @@ do_dtbs		= false
 do_common_headers_indep = false
 do_dkms_nvidia  = true
 do_dkms_nvidia_server = true
-do_lib_rust	= true
+do_lib_rust	= false
