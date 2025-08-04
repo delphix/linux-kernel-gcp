@@ -1,6 +1,6 @@
 # Menu: HEADER
 # FORMAT: 4
-# ARCH: amd64 arm64
+# ARCH: amd64
 # FLAVOUR: amd64-gcp
 # FLAVOUR_DEP: {'amd64-gcp': 'amd64-generic'}
 
