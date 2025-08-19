@@ -57,7 +57,7 @@ CONFIG_RAID6_PQ_DEFAULT_ALG                     note<'LP:1812728'>
 CONFIG_RAID6_PQ_DEFAULT_ALG_BOOL                policy<{'amd64': '-'}>
 CONFIG_RAID6_PQ_DEFAULT_ALG_BOOL                note<'LP:1812728'>
 
-CONFIG_RUST                                     policy<{'amd64': 'n', 'arm64': 'n'}>
+CONFIG_RUST                                     policy<{'amd64': '-', 'arm64': 'n'}>
 CONFIG_RUST                                     note<'TODO: update note'>
 
 CONFIG_SEV_GUEST                                policy<{'amd64': 'y'}>
@@ -117,6 +117,7 @@ CONFIG_ARM_SMMU_QCOM_DEBUG                      policy<{'arm64': 'n'}>
 CONFIG_AX88796B_RUST_PHY                        policy<{'amd64': '-', 'arm64': '-'}>
 CONFIG_BATTERY_LENOVO_YOGA_C630                 policy<{'arm64': 'm'}>
 CONFIG_BCM2711_THERMAL                          policy<{'arm64': 'm'}>
+CONFIG_BCM2712_MIP                              policy<{'arm64': 'm'}>
 CONFIG_BCM2835_MBOX                             policy<{'arm64': 'y'}>
 CONFIG_BCM2835_POWER                            policy<{'arm64': 'y'}>
 CONFIG_BCM2835_THERMAL                          policy<{'arm64': 'm'}>
@@ -164,15 +165,16 @@ CONFIG_COMEDI_TESTS_NI_ROUTES                   policy<{'amd64': 'n', 'arm64': '
 CONFIG_COMMON_CLK_C3_PERIPHERALS                policy<{'arm64': 'm'}>
 CONFIG_COMMON_CLK_IPROC                         policy<{'arm64': 'y'}>
 CONFIG_CONSTRUCTORS                             policy<{'amd64': '-'}>
+CONFIG_CPUFREQ_DT_RUST                          policy<{'arm64': '-'}>
 CONFIG_CRYPTO_DEV_BCM_SPU                       policy<{'arm64': 'm'}>
 CONFIG_CRYPTO_GF128MUL                          policy<{'amd64': '-', 'arm64': '-'}>
 CONFIG_CS_DSP                                   policy<{'amd64': '-', 'arm64': '-'}>
-CONFIG_CZNIC_PLATFORMS                          policy<{'amd64': '-', 'arm64': 'y'}>
-CONFIG_DA_MON_EVENTS                            policy<{'amd64': '-', 'arm64': '-'}>
-CONFIG_DA_MON_EVENTS_ID                         policy<{'amd64': '-', 'arm64': '-'}>
+CONFIG_DA_MON_EVENTS                            policy<{'amd64': 'y', 'arm64': '-', 'arm64-gcp': 'y'}>
+CONFIG_DA_MON_EVENTS_ID                         policy<{'amd64': 'y', 'arm64': '-', 'arm64-gcp': 'y'}>
 CONFIG_DEBUG_PREEMPT                            policy<{'amd64': '-', 'arm64': '-'}>
 CONFIG_DMA_BCM2835                              policy<{'arm64': 'y'}>
 CONFIG_DRM_NOMODESET                            policy<{'amd64': '-', 'arm64': '-'}>
+CONFIG_DRM_NOVA                                 policy<{'arm64': '-'}>
 CONFIG_DRM_PANEL_HIMAX_HX83102                  policy<{'arm64': 'm'}>
 CONFIG_DRM_PANEL_ILITEK_ILI9806E                policy<{'arm64': 'm'}>
 CONFIG_DRM_PANEL_LINCOLNTECH_LCD197             policy<{'arm64': 'm'}>
@@ -231,7 +233,7 @@ CONFIG_INLINE_WRITE_UNLOCK_IRQRESTORE           policy<{'arm64': 'y'}>
 CONFIG_KERNEL_GZIP                              policy<{'amd64': 'n', 'arm64': 'y'}>
 CONFIG_LEDS_AAEON                               policy<{'amd64': '-'}>
 CONFIG_LEDS_BCM63138                            policy<{'arm64': 'm'}>
-CONFIG_LIBCRC32C                                policy<{'amd64': 'y', 'arm64': 'y'}>
+CONFIG_LIBCRC32C                                policy<{'amd64': '-', 'arm64': '-'}>
 CONFIG_MARVELL_GTI_WDT                          policy<{'arm64': 'm'}>
 CONFIG_MDIO_BCM_IPROC                           policy<{'arm64': 'n'}>
 CONFIG_MDIO_BUS_MUX                             policy<{'arm64': 'y'}>
