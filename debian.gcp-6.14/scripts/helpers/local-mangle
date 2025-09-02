@@ -9,8 +9,6 @@ GCC="gcc-13"
 # file but it got added for generic annotations enforcement. Must replace the
 # file, otherwise it continues to grow.
 cat <<EOD >"${DEBIAN}/rules.d/hooks.mk"
-do_libc_dev_package	= false
-do_doc_package		= false
 do_tools_common		= false
 do_tools_host		= false
 do_lib_rust		= true
