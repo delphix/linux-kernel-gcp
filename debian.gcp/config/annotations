@@ -57,7 +57,7 @@ CONFIG_RAID6_PQ_DEFAULT_ALG                     note<'LP:1812728'>
 CONFIG_RAID6_PQ_DEFAULT_ALG_BOOL                policy<{'amd64': '-'}>
 CONFIG_RAID6_PQ_DEFAULT_ALG_BOOL                note<'LP:1812728'>
 
-CONFIG_RUST                                     policy<{'amd64': '-', 'arm64': 'n'}>
+CONFIG_RUST                                     policy<{'amd64': 'n', 'arm64': 'n'}>
 CONFIG_RUST                                     note<'TODO: update note'>
 
 CONFIG_SEV_GUEST                                policy<{'amd64': 'y'}>
@@ -128,6 +128,7 @@ CONFIG_BCM4908_ENET                             policy<{'arm64': 'm'}>
 CONFIG_BCM7038_L1_IRQ                           policy<{'arm64': 'y'}>
 CONFIG_BCM7038_WDT                              policy<{'arm64': 'm'}>
 CONFIG_BCM7120_L2_IRQ                           policy<{'arm64': 'm'}>
+CONFIG_BCM74110_MAILBOX                         policy<{'arm64': 'y'}>
 CONFIG_BCMASP                                   policy<{'arm64': 'm'}>
 CONFIG_BCM_FLEXRM_MBOX                          policy<{'arm64': 'm'}>
 CONFIG_BCM_IPROC_ADC                            policy<{'arm64': 'm'}>
@@ -150,6 +151,7 @@ CONFIG_BRCMSTB_THERMAL                          policy<{'arm64': 'm'}>
 CONFIG_BRCM_USB_PINMAP                          policy<{'arm64': 'm'}>
 CONFIG_BUILD_BIN2C                              policy<{'amd64': '-', 'arm64': '-'}>
 CONFIG_CACHEFILES_ERROR_INJECTION               policy<{'amd64': 'n', 'arm64': 'n'}>
+CONFIG_CC_VERSION_TEXT                          policy<{'amd64': '"x86_64-linux-gnu-gcc (Ubuntu 15.2.0-2ubuntu2) 15.2.0"', 'arm64': '"aarch64-linux-gnu-gcc (Ubuntu 15.2.0-2ubuntu2) 15.2.0"'}>
 CONFIG_CEC_GPIO                                 policy<{'amd64': '-', 'arm64': '-'}>
 CONFIG_CEC_PIN                                  policy<{'amd64': '-', 'arm64': '-'}>
 CONFIG_CEC_PIN_ERROR_INJ                        policy<{'amd64': '-', 'arm64': '-'}>
@@ -169,17 +171,13 @@ CONFIG_CPUFREQ_DT_RUST                          policy<{'arm64': '-'}>
 CONFIG_CRYPTO_DEV_BCM_SPU                       policy<{'arm64': 'm'}>
 CONFIG_CRYPTO_GF128MUL                          policy<{'amd64': '-', 'arm64': '-'}>
 CONFIG_CS_DSP                                   policy<{'amd64': '-', 'arm64': '-'}>
-CONFIG_DA_MON_EVENTS                            policy<{'amd64': 'y', 'arm64': '-', 'arm64-gcp': 'y'}>
-CONFIG_DA_MON_EVENTS_ID                         policy<{'amd64': 'y', 'arm64': '-', 'arm64-gcp': 'y'}>
+CONFIG_DA_MON_EVENTS                            policy<{'amd64': '-', 'arm64': '-'}>
+CONFIG_DA_MON_EVENTS_ID                         policy<{'amd64': '-', 'arm64': '-'}>
 CONFIG_DEBUG_PREEMPT                            policy<{'amd64': '-', 'arm64': '-'}>
 CONFIG_DMA_BCM2835                              policy<{'arm64': 'y'}>
 CONFIG_DRM_NOMODESET                            policy<{'amd64': '-', 'arm64': '-'}>
-CONFIG_DRM_NOVA                                 policy<{'arm64': '-'}>
-CONFIG_DRM_PANEL_HIMAX_HX83102                  policy<{'arm64': 'm'}>
-CONFIG_DRM_PANEL_ILITEK_ILI9806E                policy<{'arm64': 'm'}>
-CONFIG_DRM_PANEL_LINCOLNTECH_LCD197             policy<{'arm64': 'm'}>
+CONFIG_DRM_NOVA                                 policy<{'amd64': '-', 'arm64': '-'}>
 CONFIG_DRM_PANIC_SCREEN_QR_CODE                 policy<{'amd64': '-', 'arm64': '-'}>
-CONFIG_DRM_STM_LVDS                             policy<{'arm64': 'm'}>
 CONFIG_DRM_USE_DYNAMIC_DEBUG                    policy<{'amd64': '-', 'arm64': '-'}>
 CONFIG_DRM_V3D                                  policy<{'arm64': 'm'}>
 CONFIG_DRM_VC4                                  policy<{'arm64': 'm'}>
@@ -305,6 +303,8 @@ CONFIG_RUST_DEBUG_ASSERTIONS                    policy<{'amd64': '-', 'arm64': '
 CONFIG_RUST_FW_LOADER_ABSTRACTIONS              policy<{'amd64': '-', 'arm64': '-'}>
 CONFIG_RUST_OVERFLOW_CHECKS                     policy<{'amd64': '-', 'arm64': '-'}>
 CONFIG_RUST_PHYLIB_ABSTRACTIONS                 policy<{'amd64': '-', 'arm64': '-'}>
+CONFIG_RV_MON_EVENTS                            policy<{'amd64': '-', 'arm64': '-'}>
+CONFIG_RV_MON_MAINTENANCE_EVENTS                policy<{'amd64': '-', 'arm64': '-'}>
 CONFIG_RV_MON_WWNR                              policy<{'amd64': 'n', 'arm64': 'n'}>
 CONFIG_SAMPLES_RUST                             policy<{'amd64': '-', 'arm64': '-'}>
 CONFIG_SCSI_UFS_HWMON                           policy<{'amd64': 'y', 'arm64': 'y'}>
