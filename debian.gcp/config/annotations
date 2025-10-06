@@ -63,6 +63,9 @@ CONFIG_RUST                                     note<'TODO: update note'>
 CONFIG_SEV_GUEST                                policy<{'amd64': 'y'}>
 CONFIG_SEV_GUEST                                note<'LP: #2083848'>
 
+CONFIG_TCG_SVSM                                 policy<{'amd64': 'y'}>
+CONFIG_TCG_SVSM                                 note<'LP: #2111956'>
+
 CONFIG_TSM_REPORTS                              policy<{'amd64': 'y', 'arm64': 'm'}>
 CONFIG_TSM_REPORTS                              note<'LP: #2083848, selected by CONFIG_SEV_GUEST'>
 
