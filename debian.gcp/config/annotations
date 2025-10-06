@@ -9,6 +9,9 @@ include "../../debian.master/config/annotations"
 CONFIG_ACCESSIBILITY                            policy<{'amd64': 'n', 'arm64': 'n'}>
 CONFIG_ACCESSIBILITY                            note<'LP: #1967702'>
 
+CONFIG_ARM64_CONTPTE                            policy<{'arm64': 'y'}>
+CONFIG_ARM64_CONTPTE                            note<'LP: #2111859, Google Grace'>
+
 CONFIG_BLK_DEV_FD                               policy<{'amd64': 'n'}>
 CONFIG_BLK_DEV_FD                               note<'LP:1729673'>
 
