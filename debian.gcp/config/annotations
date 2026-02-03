@@ -90,7 +90,8 @@ CONFIG_VIRTIO_BALLOON                           note<'LP: #2105142'>
 CONFIG_A11Y_BRAILLE_CONSOLE                     policy<{'amd64': '-', 'arm64': '-'}>
 CONFIG_AAEON_IWMI_WDT                           policy<{'amd64': '-'}>
 CONFIG_AHCI_BRCM                                policy<{'arm64': 'm'}>
-CONFIG_AMCC_QT2025_PHY                          policy<{'amd64': '-'}>
+CONFIG_AMCC_QT2025_PHY                          policy<{'amd64': '-', 'arm64': '-'}>
+CONFIG_ANDROID_BINDER_IPC_RUST                  policy<{'amd64': '-', 'arm64': '-'}>
 CONFIG_APPLE_SART                               policy<{'arm64': 'y'}>
 CONFIG_ARCH_BCM                                 policy<{'arm64': 'y'}>
 CONFIG_ARCH_BCM2835                             policy<{'arm64': 'y'}>
@@ -184,6 +185,7 @@ CONFIG_CONSTRUCTORS                             policy<{'amd64': '-'}>
 CONFIG_CPUFREQ_DT_RUST                          policy<{'arm64': '-'}>
 CONFIG_CRYPTO_DEV_BCM_SPU                       policy<{'arm64': 'm'}>
 CONFIG_CRYPTO_GF128MUL                          policy<{'amd64': '-', 'arm64': '-'}>
+CONFIG_CRYPTO_HKDF                              policy<{'amd64': 'y', 'arm64': 'y'}>
 CONFIG_CS_DSP                                   policy<{'amd64': '-', 'arm64': '-'}>
 CONFIG_DA_MON_EVENTS                            policy<{'amd64': '-', 'arm64': '-'}>
 CONFIG_DA_MON_EVENTS_ID                         policy<{'amd64': '-', 'arm64': '-'}>
@@ -192,12 +194,14 @@ CONFIG_DMA_BCM2835                              policy<{'arm64': 'y'}>
 CONFIG_DRM_NOMODESET                            policy<{'amd64': '-', 'arm64': '-'}>
 CONFIG_DRM_NOVA                                 policy<{'amd64': '-', 'arm64': '-'}>
 CONFIG_DRM_PANIC_SCREEN_QR_CODE                 policy<{'amd64': '-', 'arm64': '-'}>
+CONFIG_DRM_TYR                                  policy<{'arm64': '-'}>
 CONFIG_DRM_USE_DYNAMIC_DEBUG                    policy<{'amd64': '-', 'arm64': '-'}>
 CONFIG_DRM_V3D                                  policy<{'arm64': 'm'}>
 CONFIG_DRM_VC4                                  policy<{'arm64': 'm'}>
 CONFIG_DRM_VC4_HDMI_CEC                         policy<{'arm64': 'y'}>
 CONFIG_DTPM_DEVFREQ                             policy<{'arm64': 'y'}>
 CONFIG_EC_LENOVO_YOGA_C630                      policy<{'arm64': 'm'}>
+CONFIG_FIND_BIT_BENCHMARK_RUST                  policy<{'amd64': '-', 'arm64': '-'}>
 CONFIG_FORCE_MAX_ZONEORDER                      policy<{'arm64': '-'}>
 CONFIG_FPGA_M10_BMC_SEC_UPDATE                  policy<{'amd64': 'm', 'arm64': 'm'}>
 CONFIG_GCC_SUPPORTS_DYNAMIC_FTRACE_WITH_REGS    policy<{'arm64': '-'}>
@@ -242,6 +246,7 @@ CONFIG_INLINE_WRITE_UNLOCK                      policy<{'amd64': 'y', 'arm64': '
 CONFIG_INLINE_WRITE_UNLOCK_BH                   policy<{'arm64': 'y'}>
 CONFIG_INLINE_WRITE_UNLOCK_IRQ                  policy<{'amd64': 'y', 'arm64': 'y'}>
 CONFIG_INLINE_WRITE_UNLOCK_IRQRESTORE           policy<{'arm64': 'y'}>
+CONFIG_INTEL_IOMMU_FLOPPY_WA                    policy<{'amd64': '-'}>
 CONFIG_KERNEL_GZIP                              policy<{'amd64': 'n', 'arm64': 'y'}>
 CONFIG_LEDS_AAEON                               policy<{'amd64': '-'}>
 CONFIG_LEDS_BCM63138                            policy<{'arm64': 'm'}>
@@ -264,6 +269,7 @@ CONFIG_NFSD_V2_ACL                              policy<{'amd64': '-', 'arm64': '
 CONFIG_NF_DEFRAG_IPV4                           policy<{'amd64': 'y', 'arm64': 'y'}>
 CONFIG_NF_DEFRAG_IPV6                           policy<{'amd64': 'y', 'arm64': 'y'}>
 CONFIG_NINTENDO_FF                              policy<{'amd64': '-', 'arm64': '-'}>
+CONFIG_NOVA_CORE                                policy<{'amd64': '-', 'arm64': '-'}>
 CONFIG_NPCM7XX_WATCHDOG                         policy<{'arm64': 'm'}>
 CONFIG_NVMEM_BCM_OCOTP                          policy<{'arm64': 'm'}>
 CONFIG_NVME_AUTH                                policy<{'amd64': 'y', 'arm64': 'y'}>
@@ -273,7 +279,7 @@ CONFIG_NVME_KEYRING                             policy<{'amd64': 'y', 'arm64': '
 CONFIG_OMAP_GPMC                                policy<{'arm64': 'm'}>
 CONFIG_PAGE_SHIFT                               policy<{'amd64': '12', 'arm64': '12', 'arm64-gcp-64k': '16'}>
 CONFIG_PAGE_SIZE_4KB                            policy<{'amd64': 'y', 'arm64': 'y', 'arm64-gcp-64k': '-'}>
-CONFIG_PANIC_ON_OOPS_VALUE                      policy<{'amd64': '1', 'arm64': '1'}>
+CONFIG_PANIC_ON_OOPS_VALUE                      policy<{'amd64': '-', 'arm64': '-'}>
 CONFIG_PCIE_BRCMSTB                             policy<{'arm64': 'm'}>
 CONFIG_PCIE_IPROC                               policy<{'arm64': 'm'}>
 CONFIG_PCIE_IPROC_MSI                           policy<{'arm64': 'y'}>
@@ -289,6 +295,7 @@ CONFIG_PHY_NS2_PCIE                             policy<{'arm64': 'y'}>
 CONFIG_PHY_NS2_USB_DRD                          policy<{'arm64': 'm'}>
 CONFIG_PINCTRL_BCM2835                          policy<{'arm64': 'y'}>
 CONFIG_PINCTRL_BCM4908                          policy<{'arm64': 'm'}>
+CONFIG_PINCTRL_BRCMSTB                          policy<{'arm64': 'n'}>
 CONFIG_PINCTRL_IPROC_GPIO                       policy<{'arm64': 'y'}>
 CONFIG_PINCTRL_NS2_MUX                          policy<{'arm64': 'y'}>
 CONFIG_POWER_RESET_BRCMSTB                      policy<{'arm64': 'y'}>
@@ -312,6 +319,7 @@ CONFIG_RESET_BRCMSTB_RESCAL                     policy<{'arm64': 'y'}>
 CONFIG_RESET_RASPBERRYPI                        policy<{'arm64': 'm'}>
 CONFIG_RTC_DRV_BRCMSTB                          policy<{'arm64': 'm'}>
 CONFIG_RUSTC_VERSION_TEXT                       policy<{'amd64': '-', 'arm64': '-'}>
+CONFIG_RUST_BITMAP_HARDENED                     policy<{'amd64': '-', 'arm64': '-'}>
 CONFIG_RUST_BUILD_ASSERT_ALLOW                  policy<{'amd64': '-', 'arm64': '-'}>
 CONFIG_RUST_DEBUG_ASSERTIONS                    policy<{'amd64': '-', 'arm64': '-'}>
 CONFIG_RUST_FW_LOADER_ABSTRACTIONS              policy<{'amd64': '-', 'arm64': '-'}>
@@ -377,7 +385,7 @@ CONFIG_USB_EHCI_BRCMSTB                         policy<{'arm64': 'm'}>
 CONFIG_VCHIQ_CDEV                               policy<{'arm64': 'y'}>
 CONFIG_VERSION_SIGNATURE                        policy<{'amd64': '"Ubuntu 5.15.0-22.22-generic 5.15.19"', 'arm64': '"Ubuntu 5.15.0-22.22-generic 5.15.19"'}>
 CONFIG_VFIO_PLATFORM_BCMFLEXRM_RESET            policy<{'arm64': 'm'}>
-CONFIG_VIDEO_BCM2835                            policy<{'arm64': 'm'}>
+CONFIG_VIDEO_BCM2835                            policy<{'arm64': '-'}>
 CONFIG_VIDEO_BCM2835_UNICAM                     policy<{'arm64': 'm'}>
 CONFIG_VIDEO_RASPBERRYPI_PISP_BE                policy<{'arm64': 'n'}>
 CONFIG_VIDEO_ZORAN                              policy<{'amd64': 'm', 'arm64': 'm'}>
