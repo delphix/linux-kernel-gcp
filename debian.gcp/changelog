@@ -1,3 +1,9 @@
+linux-gcp (6.19.0-1000.0) resolute; urgency=medium
+
+  * Dummy entry.
+
+ -- Timo Aaltonen <timo.aaltonen@canonical.com>  Tue, 03 Feb 2026 16:47:42 +0200
+
 linux-gcp (6.17.0-1003.3) questing; urgency=medium
 
   * questing/linux-gcp: 6.17.0-1003.3 -proposed tracker (LP: #2126042)
