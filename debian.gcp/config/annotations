@@ -90,7 +90,7 @@ CONFIG_VIRTIO_BALLOON                           note<'LP: #2105142'>
 CONFIG_A11Y_BRAILLE_CONSOLE                     policy<{'amd64': '-', 'arm64': '-'}>
 CONFIG_AAEON_IWMI_WDT                           policy<{'amd64': '-'}>
 CONFIG_AHCI_BRCM                                policy<{'arm64': 'm'}>
-CONFIG_AMCC_QT2025_PHY                          policy<{'amd64': '-'}>
+CONFIG_AMCC_QT2025_PHY                          policy<{'amd64': '-', 'arm64': '-'}>
 CONFIG_APPLE_SART                               policy<{'arm64': 'y'}>
 CONFIG_ARCH_BCM                                 policy<{'arm64': 'y'}>
 CONFIG_ARCH_BCM2835                             policy<{'arm64': 'y'}>
@@ -264,6 +264,7 @@ CONFIG_NFSD_V2_ACL                              policy<{'amd64': '-', 'arm64': '
 CONFIG_NF_DEFRAG_IPV4                           policy<{'amd64': 'y', 'arm64': 'y'}>
 CONFIG_NF_DEFRAG_IPV6                           policy<{'amd64': 'y', 'arm64': 'y'}>
 CONFIG_NINTENDO_FF                              policy<{'amd64': '-', 'arm64': '-'}>
+CONFIG_NOVA_CORE                                policy<{'amd64': '-', 'arm64': '-'}>
 CONFIG_NPCM7XX_WATCHDOG                         policy<{'arm64': 'm'}>
 CONFIG_NVMEM_BCM_OCOTP                          policy<{'arm64': 'm'}>
 CONFIG_NVME_AUTH                                policy<{'amd64': 'y', 'arm64': 'y'}>
