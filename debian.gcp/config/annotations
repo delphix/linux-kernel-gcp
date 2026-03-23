@@ -242,6 +242,7 @@ CONFIG_INLINE_WRITE_UNLOCK                      policy<{'amd64': 'y', 'arm64': '
 CONFIG_INLINE_WRITE_UNLOCK_BH                   policy<{'arm64': 'y'}>
 CONFIG_INLINE_WRITE_UNLOCK_IRQ                  policy<{'amd64': 'y', 'arm64': 'y'}>
 CONFIG_INLINE_WRITE_UNLOCK_IRQRESTORE           policy<{'arm64': 'y'}>
+CONFIG_INTEL_IOMMU_FLOPPY_WA                    policy<{'amd64': '-'}>
 CONFIG_KERNEL_GZIP                              policy<{'amd64': 'n', 'arm64': 'y'}>
 CONFIG_LEDS_AAEON                               policy<{'amd64': '-'}>
 CONFIG_LEDS_BCM63138                            policy<{'arm64': 'm'}>
