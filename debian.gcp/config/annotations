@@ -30,8 +30,8 @@ CONFIG_CPUFREQ_ARCH_CUR_FREQ                    note<'LP: #2111859, Google Grace
 CONFIG_GPIO_CDEV_V1                             policy<{'amd64': 'n', 'arm64': 'n'}>
 CONFIG_GPIO_CDEV_V1                             note<'LP: #1953613'>
 
-CONFIG_IDPF                                     policy<{'amd64': 'm', 'arm64': 'm'}>
-CONFIG_IDPF                                     note<'LP: #2039720, LP: #2058052, LP: #2086212'>
+CONFIG_IDPF                                     policy<{'amd64': 'y', 'arm64': 'y'}>
+CONFIG_IDPF                                     note<'LP: #2039720, LP: #2058052, LP: #2086212, LP: #2144694'>
 
 CONFIG_IOMMU_DEFAULT_DMA_LAZY                   policy<{'amd64': 'y', 'arm64': 'y'}>
 CONFIG_IOMMU_DEFAULT_DMA_LAZY                   note<'LP: #2071471 LP: #2126453, Google Grace'>
@@ -248,6 +248,8 @@ CONFIG_KERNEL_GZIP                              policy<{'amd64': 'n', 'arm64': '
 CONFIG_LEDS_AAEON                               policy<{'amd64': '-'}>
 CONFIG_LEDS_BCM63138                            policy<{'arm64': 'm'}>
 CONFIG_LIBCRC32C                                policy<{'amd64': '-', 'arm64': '-'}>
+CONFIG_LIBETH                                   policy<{'amd64': 'y', 'arm64': 'y'}>
+CONFIG_LIBETH_XDP                               policy<{'amd64': 'y', 'arm64': 'y'}>
 CONFIG_MARVELL_GTI_WDT                          policy<{'arm64': 'm'}>
 CONFIG_MDIO_BCM_IPROC                           policy<{'arm64': 'n'}>
 CONFIG_MDIO_BUS_MUX                             policy<{'arm64': 'y'}>
