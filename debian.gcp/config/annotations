@@ -167,7 +167,6 @@ CONFIG_BRCMSTB_THERMAL                          policy<{'arm64': 'm'}>
 CONFIG_BRCM_USB_PINMAP                          policy<{'arm64': 'm'}>
 CONFIG_BUILD_BIN2C                              policy<{'amd64': '-', 'arm64': '-'}>
 CONFIG_CACHEFILES_ERROR_INJECTION               policy<{'amd64': 'n', 'arm64': 'n'}>
-CONFIG_CC_VERSION_TEXT                          policy<{'amd64': '"x86_64-linux-gnu-gcc (Ubuntu 15.2.0-16ubuntu1) 15.2.0"', 'arm64': '"aarch64-linux-gnu-gcc (Ubuntu 15.2.0-15ubuntu2) 15.2.0"'}>
 CONFIG_CLK_BCM2711_DVP                          policy<{'arm64': 'm'}>
 CONFIG_CLK_BCM2835                              policy<{'arm64': 'y'}>
 CONFIG_CLK_BCM_63XX                             policy<{'arm64': 'y'}>
