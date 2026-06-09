@@ -1,0 +1,1 @@
+zfs-linux 2.4.1-1ubuntu5 modulename=zfs debpath=pool/universe/z/%package%/zfs-dkms_%version%_all.deb arch=amd64 arch=arm64 arch=ppc64el arch=riscv64 arch=s390x rprovides=spl-modules rprovides=spl-dkms rprovides=zfs-modules rprovides=zfs-dkms off_series=true
