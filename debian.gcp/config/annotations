@@ -60,6 +60,9 @@ CONFIG_NF_CONNTRACK_PROCFS                      note<'initial packaging'>
 CONFIG_NF_CT_NETLINK                            policy<{'amd64': 'y', 'arm64': 'y'}>
 CONFIG_NF_CT_NETLINK                            note<'initial packaging'>
 
+CONFIG_NOVA_CORE                                policy<{'amd64': '-', 'arm64': '-'}>
+CONFIG_NOVA_CORE                                note<'LP: #2150845'>
+
 CONFIG_PANIC_ON_OOPS                            policy<{'amd64': 'y', 'arm64': 'y'}>
 CONFIG_PANIC_ON_OOPS                            note<'keep working if at all possible'>
 
@@ -269,7 +272,6 @@ CONFIG_NFSD_V2_ACL                              policy<{'amd64': '-', 'arm64': '
 CONFIG_NF_DEFRAG_IPV4                           policy<{'amd64': 'y', 'arm64': 'y'}>
 CONFIG_NF_DEFRAG_IPV6                           policy<{'amd64': 'y', 'arm64': 'y'}>
 CONFIG_NINTENDO_FF                              policy<{'amd64': '-', 'arm64': '-'}>
-CONFIG_NOVA_CORE                                policy<{'amd64': '-', 'arm64': '-'}>
 CONFIG_NPCM7XX_WATCHDOG                         policy<{'arm64': 'm'}>
 CONFIG_NVMEM_BCM_OCOTP                          policy<{'arm64': 'm'}>
 CONFIG_NVME_AUTH                                policy<{'amd64': 'y', 'arm64': 'y'}>
